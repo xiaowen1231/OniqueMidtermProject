@@ -57,6 +57,6 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             var query = db.OrderStatus.AsNoTracking()
                 .Select(x => x.StatusName.ToString());
             return query.ToList();
-        }
+        }            
     }
 }
