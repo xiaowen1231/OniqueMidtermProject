@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxOrderStatus = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.textBoxOrderId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonSearchAll = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,14 +54,14 @@
             this.label1.Text = "訂單管理";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBox1
+            // comboBoxOrderStatus
             // 
-            this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(717, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(142, 24);
-            this.comboBox1.TabIndex = 81;
+            this.comboBoxOrderStatus.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBoxOrderStatus.FormattingEnabled = true;
+            this.comboBoxOrderStatus.Location = new System.Drawing.Point(717, 119);
+            this.comboBoxOrderStatus.Name = "comboBoxOrderStatus";
+            this.comboBoxOrderStatus.Size = new System.Drawing.Size(142, 24);
+            this.comboBoxOrderStatus.TabIndex = 81;
             // 
             // label4
             // 
@@ -73,24 +73,25 @@
             this.label4.TabIndex = 80;
             this.label4.Text = "訂單狀態:";
             // 
-            // button1
+            // buttonSearch
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(865, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "查詢";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonSearch.BackColor = System.Drawing.Color.White;
+            this.buttonSearch.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonSearch.Location = new System.Drawing.Point(865, 118);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 82;
+            this.buttonSearch.Text = "查詢";
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // textBox1
+            // textBoxOrderId
             // 
-            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(542, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 84;
+            this.textBoxOrderId.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxOrderId.Location = new System.Drawing.Point(542, 118);
+            this.textBoxOrderId.Name = "textBoxOrderId";
+            this.textBoxOrderId.Size = new System.Drawing.Size(100, 25);
+            this.textBoxOrderId.TabIndex = 84;
             // 
             // label2
             // 
@@ -111,40 +112,40 @@
             this.dataGridView1.Size = new System.Drawing.Size(1006, 470);
             this.dataGridView1.TabIndex = 85;
             // 
-            // button4
+            // buttonSearchAll
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.Location = new System.Drawing.Point(949, 623);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 86;
-            this.button4.Text = "顯示所有";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buttonSearchAll.BackColor = System.Drawing.Color.White;
+            this.buttonSearchAll.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonSearchAll.Location = new System.Drawing.Point(949, 623);
+            this.buttonSearchAll.Name = "buttonSearchAll";
+            this.buttonSearchAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchAll.TabIndex = 86;
+            this.buttonSearchAll.Text = "顯示所有";
+            this.buttonSearchAll.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonReset
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(946, 118);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 87;
-            this.button3.Text = "清除查詢";
-            this.button3.UseVisualStyleBackColor = false;
+            this.buttonReset.BackColor = System.Drawing.Color.White;
+            this.buttonReset.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonReset.Location = new System.Drawing.Point(946, 118);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(75, 23);
+            this.buttonReset.TabIndex = 87;
+            this.buttonReset.Text = "清除查詢";
+            this.buttonReset.UseVisualStyleBackColor = false;
             // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 658);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonReset);
+            this.Controls.Add(this.buttonSearchAll);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxOrderId);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.comboBoxOrderStatus);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -152,6 +153,7 @@
             this.MinimumSize = new System.Drawing.Size(1049, 697);
             this.Name = "FormOrder";
             this.Text = "訂單管理";
+            this.Load += new System.EventHandler(this.FormOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,13 +163,13 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxOrderStatus;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.TextBox textBoxOrderId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSearchAll;
+        private System.Windows.Forms.Button buttonReset;
     }
 }
