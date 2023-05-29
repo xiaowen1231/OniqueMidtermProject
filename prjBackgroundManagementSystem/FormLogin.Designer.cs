@@ -28,14 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnForget = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,21 +66,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "請輸入電子郵件:";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(240, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 2;
+            this.txtEmail.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtEmail.Location = new System.Drawing.Point(240, 186);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(100, 25);
+            this.txtEmail.TabIndex = 2;
             // 
-            // textBox2
+            // txtPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox2.Location = new System.Drawing.Point(240, 227);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 4;
+            this.txtPassword.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtPassword.Location = new System.Drawing.Point(240, 227);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(100, 25);
+            this.txtPassword.TabIndex = 4;
             // 
             // label3
             // 
@@ -125,6 +128,10 @@
             this.btnForget.UseVisualStyleBackColor = false;
             this.btnForget.Click += new System.EventHandler(this.btnForget_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -133,9 +140,9 @@
             this.Controls.Add(this.btnForget);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
@@ -144,6 +151,7 @@
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登入系統";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,11 +161,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnForget;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
