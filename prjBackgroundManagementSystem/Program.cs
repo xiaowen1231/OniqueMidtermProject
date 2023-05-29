@@ -16,7 +16,7 @@ namespace prjBackgroundManagementSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormOrderDetail(4));
+            Application.Run(new FormOrder());
         }
     }
 }

@@ -14,6 +14,7 @@ namespace prjBackgroundManagementSystem
 {
     public partial class FormOrderDetail : Form
     {
+        List<OrderDetailDto> OrderProductsDetail = new List<OrderDetailDto>();
         private readonly int _orderId;
         public FormOrderDetail(int orderId)
         {
@@ -23,12 +24,53 @@ namespace prjBackgroundManagementSystem
 
         private void FormOrderDetail_Load(object sender, EventArgs e)
         {
-            OrderDto dto = new OrderRepository().Search(_orderId, null).FirstOrDefault();
+            var repo = new OrderRepository();
+            OrderDto dto = repo.Search(_orderId, null).FirstOrDefault();
+
+            if (dto == null) 
+            {
+                MessageBox.Show("找不到訂單紀錄!");
+                return;
+            }
+
             textBoxId.Text = dto.Id.ToString();
             textBoxName.Text = dto.MemberName;
-            dateTimePickerOrder.Value = dto.OrderDate;
-            dateTimePickerSendOut.Value = dto.ShippingDate.HasValue ?
-                (DateTime)dto.ShippingDate : dateTimePickerSendOut.MinDate;
+            textBoxOrderDate.Text = dto.OrderDate.ToShortDateString();
+
+            textBoxShippingDate.Text = dto.ShippingDate.HasValue ?
+                dto.ShippingDate.Value.ToShortDateString() : "訂單尚未出貨";
+
+            textBoxCompletionDate.Text = dto.CompletionDate.HasValue ?
+                dto.CompletionDate.Value.ToShortDateString() : "訂單尚未完成";
+
+            labelStatus.Text = dto.OrderStatus;
+            label1ShippingMethod.Text = dto.ShippingMethod;
+            labelPayment.Text = dto.PaymentMethod;
+            labelDiscount.Text = dto.Discount;
+            labelAddress.Text = dto.Address;
+
+            List<string> statusItems = repo.AllStatus();
+            foreach (var statusItem in statusItems)
+            {
+                comboBoxStatus.Items.Add(statusItem);
+            }
+
+            OrderProductsDetail = new OrderDetailRepository().ShowOrderDetail(_orderId);
+            dataGridView1.DataSource= OrderProductsDetail;
+            decimal ProductsPrice = OrderProductsDetail.Sum(x => x.Price*x.OrderQuantity);
+            labelPrice.Text = ProductsPrice.ToString("0");
+
+            decimal totalPrice = new DiscountRepository().CalculateDiscount(labelDiscount.Text, ProductsPrice);
+
+            labelTotal.Text = totalPrice.ToString("0");
+            if (labelDiscount.Text == "運費折抵")
+            {
+                labelFreight.Text = "0";
+            }
+            else
+            {
+                labelFreight.Text = "60";
+            }
         }
     }
 }

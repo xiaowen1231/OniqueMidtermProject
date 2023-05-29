@@ -86,5 +86,16 @@ namespace prjBackgroundManagementSystem
            data = new OrderRepository().Search(null, null);
            dataGridView1.DataSource = data;
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex<0) return;
+
+            int id = this.data[e.RowIndex].Id;
+
+            var frm = new FormOrderDetail(id);
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
     }
 }

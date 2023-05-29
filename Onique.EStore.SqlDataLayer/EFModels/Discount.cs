@@ -20,9 +20,8 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         [StringLength(50)]
         public string DiscountName { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string DiscountMethod { get; set; }
+        [Column(TypeName = "money")]
+        public decimal DiscountMethod { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

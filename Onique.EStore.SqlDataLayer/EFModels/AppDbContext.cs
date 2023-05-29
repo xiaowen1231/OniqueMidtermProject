@@ -67,6 +67,10 @@ namespace Onique.EStore.SqlDataLayer.EFModels
                 .HasForeignKey(e => e.Citys)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Discount>()
+                .Property(e => e.DiscountMethod)
+                .HasPrecision(19, 4);
+
             modelBuilder.Entity<Member>()
                 .HasMany(e => e.Orders)
                 .WithRequired(e => e.Member)

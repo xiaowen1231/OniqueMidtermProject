@@ -52,17 +52,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.商品名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品價格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.下單數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品尺寸 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品顏色 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.dateTimePickerOrder = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
-            this.dateTimePickerSendOut = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
-            this.dateTimePickerComplete = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
+            this.textBoxOrderDate = new System.Windows.Forms.TextBox();
+            this.textBoxShippingDate = new System.Windows.Forms.TextBox();
+            this.textBoxCompletionDate = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -115,6 +120,7 @@
             // label1ShippingMethod
             // 
             this.label1ShippingMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1ShippingMethod.ForeColor = System.Drawing.Color.DarkMagenta;
             this.label1ShippingMethod.Location = new System.Drawing.Point(101, 55);
             this.label1ShippingMethod.Name = "label1ShippingMethod";
             this.label1ShippingMethod.Size = new System.Drawing.Size(199, 24);
@@ -135,6 +141,7 @@
             // labelAddress
             // 
             this.labelAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAddress.ForeColor = System.Drawing.Color.DarkMagenta;
             this.labelAddress.Location = new System.Drawing.Point(73, 264);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(227, 90);
@@ -215,6 +222,7 @@
             // labelDiscount
             // 
             this.labelDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelDiscount.ForeColor = System.Drawing.Color.Red;
             this.labelDiscount.Location = new System.Drawing.Point(139, 219);
             this.labelDiscount.Name = "labelDiscount";
             this.labelDiscount.Size = new System.Drawing.Size(161, 24);
@@ -225,6 +233,7 @@
             // labelFreight
             // 
             this.labelFreight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelFreight.ForeColor = System.Drawing.Color.Red;
             this.labelFreight.Location = new System.Drawing.Point(139, 178);
             this.labelFreight.Name = "labelFreight";
             this.labelFreight.Size = new System.Drawing.Size(161, 24);
@@ -235,6 +244,7 @@
             // labelPrice
             // 
             this.labelPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPrice.ForeColor = System.Drawing.Color.Red;
             this.labelPrice.Location = new System.Drawing.Point(139, 137);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(161, 24);
@@ -245,6 +255,7 @@
             // labelPayment
             // 
             this.labelPayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPayment.ForeColor = System.Drawing.Color.DarkMagenta;
             this.labelPayment.Location = new System.Drawing.Point(139, 96);
             this.labelPayment.Name = "labelPayment";
             this.labelPayment.Size = new System.Drawing.Size(161, 24);
@@ -255,6 +266,7 @@
             // labelStatus
             // 
             this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelStatus.ForeColor = System.Drawing.Color.DarkMagenta;
             this.labelStatus.Location = new System.Drawing.Point(101, 14);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(199, 24);
@@ -325,17 +337,54 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 224);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.商品名稱,
+            this.商品價格,
+            this.下單數量,
+            this.商品尺寸,
+            this.商品顏色});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 224);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(695, 429);
             this.dataGridView1.TabIndex = 75;
             // 
+            // 商品名稱
+            // 
+            this.商品名稱.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.商品名稱.DataPropertyName = "ProductName";
+            this.商品名稱.HeaderText = "商品名稱";
+            this.商品名稱.Name = "商品名稱";
+            // 
+            // 商品價格
+            // 
+            this.商品價格.DataPropertyName = "Price";
+            this.商品價格.HeaderText = "商品價格";
+            this.商品價格.Name = "商品價格";
+            // 
+            // 下單數量
+            // 
+            this.下單數量.DataPropertyName = "OrderQuantity";
+            this.下單數量.HeaderText = "下單數量";
+            this.下單數量.Name = "下單數量";
+            // 
+            // 商品尺寸
+            // 
+            this.商品尺寸.DataPropertyName = "SizeName";
+            this.商品尺寸.HeaderText = "商品尺寸";
+            this.商品尺寸.Name = "商品尺寸";
+            // 
+            // 商品顏色
+            // 
+            this.商品顏色.DataPropertyName = "ColorName";
+            this.商品顏色.HeaderText = "商品顏色";
+            this.商品顏色.Name = "商品顏色";
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label15.Location = new System.Drawing.Point(12, 135);
+            this.label15.Location = new System.Drawing.Point(13, 133);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(63, 17);
             this.label15.TabIndex = 102;
@@ -354,7 +403,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.Location = new System.Drawing.Point(602, 130);
+            this.button4.Location = new System.Drawing.Point(601, 130);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 102;
@@ -374,79 +423,82 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label16.Location = new System.Drawing.Point(238, 135);
+            this.label16.Location = new System.Drawing.Point(238, 133);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 17);
             this.label16.TabIndex = 104;
             this.label16.Text = "買家名稱:";
             // 
-            // dateTimePickerOrder
-            // 
-            this.dateTimePickerOrder.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dateTimePickerOrder.Location = new System.Drawing.Point(81, 176);
-            this.dateTimePickerOrder.Name = "dateTimePickerOrder";
-            this.dateTimePickerOrder.Size = new System.Drawing.Size(142, 25);
-            this.dateTimePickerOrder.TabIndex = 107;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label21.Location = new System.Drawing.Point(12, 179);
+            this.label21.Location = new System.Drawing.Point(12, 177);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(63, 17);
             this.label21.TabIndex = 106;
             this.label21.Text = "下單日期:";
             this.label21.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // dateTimePickerSendOut
-            // 
-            this.dateTimePickerSendOut.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dateTimePickerSendOut.Location = new System.Drawing.Point(307, 176);
-            this.dateTimePickerSendOut.Name = "dateTimePickerSendOut";
-            this.dateTimePickerSendOut.Size = new System.Drawing.Size(142, 25);
-            this.dateTimePickerSendOut.TabIndex = 109;
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label22.Location = new System.Drawing.Point(238, 179);
+            this.label22.Location = new System.Drawing.Point(238, 177);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(63, 17);
             this.label22.TabIndex = 108;
             this.label22.Text = "出貨日期:";
             this.label22.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // dateTimePickerComplete
-            // 
-            this.dateTimePickerComplete.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dateTimePickerComplete.Location = new System.Drawing.Point(535, 176);
-            this.dateTimePickerComplete.Name = "dateTimePickerComplete";
-            this.dateTimePickerComplete.Size = new System.Drawing.Size(142, 25);
-            this.dateTimePickerComplete.TabIndex = 111;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label23.Location = new System.Drawing.Point(466, 179);
+            this.label23.Location = new System.Drawing.Point(466, 177);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(63, 17);
             this.label23.TabIndex = 110;
             this.label23.Text = "完成日期:";
             this.label23.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // textBoxOrderDate
+            // 
+            this.textBoxOrderDate.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxOrderDate.Location = new System.Drawing.Point(82, 173);
+            this.textBoxOrderDate.Name = "textBoxOrderDate";
+            this.textBoxOrderDate.ReadOnly = true;
+            this.textBoxOrderDate.Size = new System.Drawing.Size(141, 25);
+            this.textBoxOrderDate.TabIndex = 111;
+            // 
+            // textBoxShippingDate
+            // 
+            this.textBoxShippingDate.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxShippingDate.Location = new System.Drawing.Point(307, 173);
+            this.textBoxShippingDate.Name = "textBoxShippingDate";
+            this.textBoxShippingDate.ReadOnly = true;
+            this.textBoxShippingDate.Size = new System.Drawing.Size(141, 25);
+            this.textBoxShippingDate.TabIndex = 112;
+            // 
+            // textBoxCompletionDate
+            // 
+            this.textBoxCompletionDate.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxCompletionDate.Location = new System.Drawing.Point(535, 173);
+            this.textBoxCompletionDate.Name = "textBoxCompletionDate";
+            this.textBoxCompletionDate.ReadOnly = true;
+            this.textBoxCompletionDate.Size = new System.Drawing.Size(141, 25);
+            this.textBoxCompletionDate.TabIndex = 113;
+            // 
             // FormOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 658);
-            this.Controls.Add(this.dateTimePickerComplete);
+            this.Controls.Add(this.textBoxCompletionDate);
+            this.Controls.Add(this.textBoxShippingDate);
+            this.Controls.Add(this.textBoxOrderDate);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.dateTimePickerSendOut);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.dateTimePickerOrder);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label16);
@@ -501,11 +553,16 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1ShippingMethod;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.DateTimePicker dateTimePickerOrder;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DateTimePicker dateTimePickerSendOut;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DateTimePicker dateTimePickerComplete;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBoxOrderDate;
+        private System.Windows.Forms.TextBox textBoxShippingDate;
+        private System.Windows.Forms.TextBox textBoxCompletionDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 商品名稱;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 商品價格;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 下單數量;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 商品尺寸;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 商品顏色;
     }
 }
