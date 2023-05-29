@@ -16,5 +16,20 @@ namespace prjBackgroundManagementSystem
         {
             InitializeComponent();
         }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            var login = new FormLogin();
+            this.Hide();
+            login.ShowDialog();
+        }
+        private void FormForgetThePassword_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Owner.Show();
+        }
     }
 }
