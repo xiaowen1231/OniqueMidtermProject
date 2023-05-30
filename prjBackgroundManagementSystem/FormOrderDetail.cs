@@ -14,8 +14,11 @@ namespace prjBackgroundManagementSystem
 {
     public partial class FormOrderDetail : Form
     {
+
         List<OrderDetailDto> OrderProductsDetail = new List<OrderDetailDto>();
+
         private readonly int _orderId;
+
         public FormOrderDetail(int orderId)
         {
             InitializeComponent();
@@ -63,7 +66,7 @@ namespace prjBackgroundManagementSystem
             decimal totalPrice = new DiscountRepository().CalculateDiscount(labelDiscount.Text, ProductsPrice);
 
             labelTotal.Text = totalPrice.ToString("0");
-            if (labelDiscount.Text == "運費折抵")
+            if (labelDiscount.Text == "折抵運費")
             {
                 labelFreight.Text = "0";
             }

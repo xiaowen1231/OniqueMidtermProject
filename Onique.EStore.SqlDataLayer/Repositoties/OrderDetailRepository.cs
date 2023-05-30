@@ -13,6 +13,7 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
         public List<OrderDetailDto> ShowOrderDetail(int id)
         {
             var db = new AppDbContext();
+
             var query = from od in db.OrderDetails
                         join o in db.Orders
                         on od.OrderId equals o.OrderId
@@ -31,7 +32,9 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                             SizeName = ps.SizeName,
                             ColorName = pc.ColorName,
                         };
+
             return query.ToList();
+
         }
     }
 }

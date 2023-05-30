@@ -14,6 +14,7 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
         public List<OrderDto> Search(int? orderId, string orderStatus)
         {
             AppDbContext db = new AppDbContext();
+
             var orders = from o in db.Orders.AsNoTracking()
                          join m in db.Members.AsNoTracking()
                          on o.MemberId equals m.MemberId
@@ -54,8 +55,10 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
         public List<string> AllStatus()
         {
             var db = new AppDbContext();
+
             var query = db.OrderStatus.AsNoTracking()
                 .Select(x => x.StatusName.ToString());
+
             return query.ToList();
         }            
     }
