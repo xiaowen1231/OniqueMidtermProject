@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Dto\DiscountDto.cs" />
     <Compile Include="Dto\OrderDetailDto.cs" />
+    <Compile Include="Dto\OrderDetailProductDto.cs" />
     <Compile Include="Dto\OrderDto.cs" />
     <Compile Include="EFModels\AppDbContext.cs" />
     <Compile Include="EFModels\Area.cs" />

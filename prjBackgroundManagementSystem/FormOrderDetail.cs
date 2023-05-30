@@ -58,7 +58,7 @@ namespace prjBackgroundManagementSystem
                 comboBoxStatus.Items.Add(statusItem);
             }
 
-            OrderProductsDetail = new OrderDetailRepository().ShowOrderDetail(_orderId);
+            OrderProductsDetail = new OrderDetailRepository().GetOrderProductList(_orderId);
             dataGridView1.DataSource= OrderProductsDetail;
             decimal ProductsPrice = OrderProductsDetail.Sum(x => x.Price*x.OrderQuantity);
             labelPrice.Text = ProductsPrice.ToString("0");
@@ -74,6 +74,16 @@ namespace prjBackgroundManagementSystem
             {
                 labelFreight.Text = "60";
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) { return; }
+            int orderDetailId = this.OrderProductsDetail[e.RowIndex].OrderDetailId;
+
+            var frm = new FormEditOrderProduct(orderDetailId);
+            frm.Owner = this;
+            frm.ShowDialog();
         }
     }
 }

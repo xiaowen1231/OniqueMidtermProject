@@ -52,11 +52,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.商品名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品價格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.下單數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品尺寸 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品顏色 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -68,6 +63,12 @@
             this.textBoxOrderDate = new System.Windows.Forms.TextBox();
             this.textBoxShippingDate = new System.Windows.Forms.TextBox();
             this.textBoxCompletionDate = new System.Windows.Forms.TextBox();
+            this.編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品價格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.下單數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品尺寸 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品顏色 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -336,8 +337,11 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.編號,
             this.商品名稱,
             this.商品價格,
             this.下單數量,
@@ -345,40 +349,11 @@
             this.商品顏色});
             this.dataGridView1.Location = new System.Drawing.Point(12, 224);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(695, 429);
             this.dataGridView1.TabIndex = 75;
-            // 
-            // 商品名稱
-            // 
-            this.商品名稱.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.商品名稱.DataPropertyName = "ProductName";
-            this.商品名稱.HeaderText = "商品名稱";
-            this.商品名稱.Name = "商品名稱";
-            // 
-            // 商品價格
-            // 
-            this.商品價格.DataPropertyName = "Price";
-            this.商品價格.HeaderText = "商品價格";
-            this.商品價格.Name = "商品價格";
-            // 
-            // 下單數量
-            // 
-            this.下單數量.DataPropertyName = "OrderQuantity";
-            this.下單數量.HeaderText = "下單數量";
-            this.下單數量.Name = "下單數量";
-            // 
-            // 商品尺寸
-            // 
-            this.商品尺寸.DataPropertyName = "SizeName";
-            this.商品尺寸.HeaderText = "商品尺寸";
-            this.商品尺寸.Name = "商品尺寸";
-            // 
-            // 商品顏色
-            // 
-            this.商品顏色.DataPropertyName = "ColorName";
-            this.商品顏色.HeaderText = "商品顏色";
-            this.商品顏色.Name = "商品顏色";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label15
             // 
@@ -489,6 +464,50 @@
             this.textBoxCompletionDate.Size = new System.Drawing.Size(141, 25);
             this.textBoxCompletionDate.TabIndex = 113;
             // 
+            // 編號
+            // 
+            this.編號.DataPropertyName = "OrderDetailId";
+            this.編號.HeaderText = "編號";
+            this.編號.Name = "編號";
+            this.編號.ReadOnly = true;
+            this.編號.Visible = false;
+            // 
+            // 商品名稱
+            // 
+            this.商品名稱.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.商品名稱.DataPropertyName = "ProductName";
+            this.商品名稱.HeaderText = "商品名稱";
+            this.商品名稱.Name = "商品名稱";
+            this.商品名稱.ReadOnly = true;
+            // 
+            // 商品價格
+            // 
+            this.商品價格.DataPropertyName = "Price";
+            this.商品價格.HeaderText = "商品價格";
+            this.商品價格.Name = "商品價格";
+            this.商品價格.ReadOnly = true;
+            // 
+            // 下單數量
+            // 
+            this.下單數量.DataPropertyName = "OrderQuantity";
+            this.下單數量.HeaderText = "下單數量";
+            this.下單數量.Name = "下單數量";
+            this.下單數量.ReadOnly = true;
+            // 
+            // 商品尺寸
+            // 
+            this.商品尺寸.DataPropertyName = "SizeName";
+            this.商品尺寸.HeaderText = "商品尺寸";
+            this.商品尺寸.Name = "商品尺寸";
+            this.商品尺寸.ReadOnly = true;
+            // 
+            // 商品顏色
+            // 
+            this.商品顏色.DataPropertyName = "ColorName";
+            this.商品顏色.HeaderText = "商品顏色";
+            this.商品顏色.Name = "商品顏色";
+            this.商品顏色.ReadOnly = true;
+            // 
             // FormOrderDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -559,6 +578,7 @@
         private System.Windows.Forms.TextBox textBoxOrderDate;
         private System.Windows.Forms.TextBox textBoxShippingDate;
         private System.Windows.Forms.TextBox textBoxCompletionDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 編號;
         private System.Windows.Forms.DataGridViewTextBoxColumn 商品名稱;
         private System.Windows.Forms.DataGridViewTextBoxColumn 商品價格;
         private System.Windows.Forms.DataGridViewTextBoxColumn 下單數量;
