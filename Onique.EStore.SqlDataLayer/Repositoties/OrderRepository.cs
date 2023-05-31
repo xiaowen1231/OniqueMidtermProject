@@ -60,6 +60,14 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                 .Select(x => x.StatusName.ToString());
 
             return query.ToList();
-        }            
+        }
+        
+        //public int CreateOrder(string memberName)
+        //{
+        //    var db = new AppDbContext();
+        //    int memberId = db.Members.Where(m=>m.Name == memberName).Select(m=>m.MemberId).FirstOrDefault();
+
+        //    var order = new Order { MemberId = memberId };
+        //}
     }
 }

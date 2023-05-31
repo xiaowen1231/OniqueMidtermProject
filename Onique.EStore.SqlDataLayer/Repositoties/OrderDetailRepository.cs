@@ -79,5 +79,25 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
 
             return dto;
         }
+
+        public List<string> GetProductSize(string productName , string colorName)
+        {
+            var db = new AppDbContext();
+            int productId = db.Products
+                .Where(p=>p.ProductName==productName)
+                .Select(p=>p.ProductId)
+                .FirstOrDefault();
+            int colorId = db.ProductColors
+                .Where(c => c.ColorName==colorName)
+                .Select (c=>c.ColorId)
+                .FirstOrDefault();
+            var query = from psd in db.ProductStockDetails
+                        join ps in db.ProductSizes
+                        on psd.SizeId equals ps.SizeId
+                        where psd.ProductId == productId && psd.ColorId == colorId
+                        select ps.SizeName;
+
+            return query.ToList();
+        }
     }
 }

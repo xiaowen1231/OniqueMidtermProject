@@ -4,16 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace prjBackgroundManagementSystem
 {
-    public partial class FormLogin : Form
+    public partial class FormCreateOrder : Form
     {
-        public FormLogin()
+        public FormCreateOrder()
         {
             InitializeComponent();
         }

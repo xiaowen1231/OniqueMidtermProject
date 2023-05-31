@@ -49,6 +49,8 @@
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.comboBoxUpdateSize = new System.Windows.Forms.ComboBox();
             this.textBoxUpdateOrderQuantity = new System.Windows.Forms.TextBox();
+            this.textBoxColor = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductPhoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +102,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(211, 163);
+            this.label3.Location = new System.Drawing.Point(211, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 80;
@@ -110,7 +112,7 @@
             // textBoxProductName
             // 
             this.textBoxProductName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxProductName.Location = new System.Drawing.Point(280, 160);
+            this.textBoxProductName.Location = new System.Drawing.Point(280, 153);
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.ReadOnly = true;
             this.textBoxProductName.Size = new System.Drawing.Size(187, 25);
@@ -120,7 +122,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(211, 257);
+            this.label5.Location = new System.Drawing.Point(211, 236);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 17);
             this.label5.TabIndex = 84;
@@ -130,7 +132,7 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxPrice.Location = new System.Drawing.Point(280, 254);
+            this.textBoxPrice.Location = new System.Drawing.Point(280, 233);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(187, 25);
@@ -140,7 +142,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(211, 304);
+            this.label6.Location = new System.Drawing.Point(211, 276);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 17);
             this.label6.TabIndex = 86;
@@ -151,7 +153,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(211, 351);
+            this.label7.Location = new System.Drawing.Point(211, 356);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 17);
             this.label7.TabIndex = 87;
@@ -161,7 +163,7 @@
             // textBoxStockQuantity
             // 
             this.textBoxStockQuantity.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxStockQuantity.Location = new System.Drawing.Point(280, 301);
+            this.textBoxStockQuantity.Location = new System.Drawing.Point(280, 273);
             this.textBoxStockQuantity.Name = "textBoxStockQuantity";
             this.textBoxStockQuantity.ReadOnly = true;
             this.textBoxStockQuantity.Size = new System.Drawing.Size(187, 25);
@@ -206,7 +208,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(211, 398);
+            this.label4.Location = new System.Drawing.Point(211, 396);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 17);
             this.label4.TabIndex = 106;
@@ -216,7 +218,7 @@
             // textBoxSize
             // 
             this.textBoxSize.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxSize.Location = new System.Drawing.Point(280, 207);
+            this.textBoxSize.Location = new System.Drawing.Point(280, 193);
             this.textBoxSize.Name = "textBoxSize";
             this.textBoxSize.ReadOnly = true;
             this.textBoxSize.Size = new System.Drawing.Size(187, 25);
@@ -226,7 +228,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(211, 210);
+            this.label8.Location = new System.Drawing.Point(211, 196);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 17);
             this.label8.TabIndex = 108;
@@ -237,7 +239,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(211, 441);
+            this.label9.Location = new System.Drawing.Point(211, 436);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 17);
             this.label9.TabIndex = 110;
@@ -247,7 +249,7 @@
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxDescription.Location = new System.Drawing.Point(280, 438);
+            this.textBoxDescription.Location = new System.Drawing.Point(280, 433);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.Size = new System.Drawing.Size(344, 141);
@@ -257,7 +259,7 @@
             // 
             this.comboBoxUpdateSize.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxUpdateSize.FormattingEnabled = true;
-            this.comboBoxUpdateSize.Location = new System.Drawing.Point(280, 347);
+            this.comboBoxUpdateSize.Location = new System.Drawing.Point(280, 353);
             this.comboBoxUpdateSize.Name = "comboBoxUpdateSize";
             this.comboBoxUpdateSize.Size = new System.Drawing.Size(121, 25);
             this.comboBoxUpdateSize.TabIndex = 112;
@@ -265,10 +267,30 @@
             // textBoxUpdateOrderQuantity
             // 
             this.textBoxUpdateOrderQuantity.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxUpdateOrderQuantity.Location = new System.Drawing.Point(280, 394);
+            this.textBoxUpdateOrderQuantity.Location = new System.Drawing.Point(280, 393);
             this.textBoxUpdateOrderQuantity.Name = "textBoxUpdateOrderQuantity";
             this.textBoxUpdateOrderQuantity.Size = new System.Drawing.Size(100, 25);
             this.textBoxUpdateOrderQuantity.TabIndex = 113;
+            // 
+            // textBoxColor
+            // 
+            this.textBoxColor.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxColor.Location = new System.Drawing.Point(280, 313);
+            this.textBoxColor.Name = "textBoxColor";
+            this.textBoxColor.ReadOnly = true;
+            this.textBoxColor.Size = new System.Drawing.Size(187, 25);
+            this.textBoxColor.TabIndex = 115;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label10.Location = new System.Drawing.Point(211, 316);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 17);
+            this.label10.TabIndex = 114;
+            this.label10.Text = "產品顏色:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // FormEditOrderProduct
             // 
@@ -276,6 +298,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 646);
             this.ControlBox = false;
+            this.Controls.Add(this.textBoxColor);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.textBoxUpdateOrderQuantity);
             this.Controls.Add(this.comboBoxUpdateSize);
             this.Controls.Add(this.textBoxDescription);
@@ -332,5 +356,7 @@
         private System.Windows.Forms.TextBox textBoxDescription;
         private System.Windows.Forms.ComboBox comboBoxUpdateSize;
         private System.Windows.Forms.TextBox textBoxUpdateOrderQuantity;
+        private System.Windows.Forms.TextBox textBoxColor;
+        private System.Windows.Forms.Label label10;
     }
 }

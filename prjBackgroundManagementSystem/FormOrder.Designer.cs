@@ -35,9 +35,6 @@
             this.textBoxOrderId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonSearchAll = new System.Windows.Forms.Button();
-            this.buttonReset = new System.Windows.Forms.Button();
-            this.labelHint = new System.Windows.Forms.Label();
             this.編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.會員名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.運送方式 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +45,10 @@
             this.完成日期 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.付款方式 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.折扣內容 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonSearchAll = new System.Windows.Forms.Button();
+            this.buttonReset = new System.Windows.Forms.Button();
+            this.labelHint = new System.Windows.Forms.Label();
+            this.buttonCreateOrder = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,42 +140,6 @@
             this.dataGridView1.TabIndex = 85;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // buttonSearchAll
-            // 
-            this.buttonSearchAll.BackColor = System.Drawing.Color.White;
-            this.buttonSearchAll.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonSearchAll.Location = new System.Drawing.Point(997, 623);
-            this.buttonSearchAll.Name = "buttonSearchAll";
-            this.buttonSearchAll.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearchAll.TabIndex = 4;
-            this.buttonSearchAll.Text = "顯示所有";
-            this.buttonSearchAll.UseVisualStyleBackColor = false;
-            this.buttonSearchAll.Click += new System.EventHandler(this.buttonSearchAll_Click);
-            // 
-            // buttonReset
-            // 
-            this.buttonReset.BackColor = System.Drawing.Color.White;
-            this.buttonReset.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonReset.Location = new System.Drawing.Point(997, 118);
-            this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(75, 23);
-            this.buttonReset.TabIndex = 3;
-            this.buttonReset.Text = "清除查詢";
-            this.buttonReset.UseVisualStyleBackColor = false;
-            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
-            // 
-            // labelHint
-            // 
-            this.labelHint.AutoSize = true;
-            this.labelHint.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelHint.ForeColor = System.Drawing.Color.Red;
-            this.labelHint.Location = new System.Drawing.Point(415, 121);
-            this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(103, 17);
-            this.labelHint.TabIndex = 88;
-            this.labelHint.Text = "請確認查詢條件!";
-            this.labelHint.Visible = false;
-            // 
             // 編號
             // 
             this.編號.DataPropertyName = "Id";
@@ -246,12 +211,61 @@
             this.折扣內容.Name = "折扣內容";
             this.折扣內容.ReadOnly = true;
             // 
+            // buttonSearchAll
+            // 
+            this.buttonSearchAll.BackColor = System.Drawing.Color.White;
+            this.buttonSearchAll.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonSearchAll.Location = new System.Drawing.Point(997, 623);
+            this.buttonSearchAll.Name = "buttonSearchAll";
+            this.buttonSearchAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearchAll.TabIndex = 4;
+            this.buttonSearchAll.Text = "顯示所有";
+            this.buttonSearchAll.UseVisualStyleBackColor = false;
+            this.buttonSearchAll.Click += new System.EventHandler(this.buttonSearchAll_Click);
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.BackColor = System.Drawing.Color.White;
+            this.buttonReset.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonReset.Location = new System.Drawing.Point(997, 118);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(75, 23);
+            this.buttonReset.TabIndex = 3;
+            this.buttonReset.Text = "清除查詢";
+            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // labelHint
+            // 
+            this.labelHint.AutoSize = true;
+            this.labelHint.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labelHint.ForeColor = System.Drawing.Color.Red;
+            this.labelHint.Location = new System.Drawing.Point(415, 121);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(103, 17);
+            this.labelHint.TabIndex = 88;
+            this.labelHint.Text = "請確認查詢條件!";
+            this.labelHint.Visible = false;
+            // 
+            // buttonCreateOrder
+            // 
+            this.buttonCreateOrder.BackColor = System.Drawing.Color.White;
+            this.buttonCreateOrder.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonCreateOrder.Location = new System.Drawing.Point(15, 633);
+            this.buttonCreateOrder.Name = "buttonCreateOrder";
+            this.buttonCreateOrder.Size = new System.Drawing.Size(75, 23);
+            this.buttonCreateOrder.TabIndex = 89;
+            this.buttonCreateOrder.Text = "新增訂單";
+            this.buttonCreateOrder.UseVisualStyleBackColor = false;
+            this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);
+            // 
             // FormOrder
             // 
             this.AcceptButton = this.buttonSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1084, 681);
+            this.Controls.Add(this.buttonCreateOrder);
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonSearchAll);
@@ -296,5 +310,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 完成日期;
         private System.Windows.Forms.DataGridViewTextBoxColumn 付款方式;
         private System.Windows.Forms.DataGridViewTextBoxColumn 折扣內容;
+        private System.Windows.Forms.Button buttonCreateOrder;
     }
 }
