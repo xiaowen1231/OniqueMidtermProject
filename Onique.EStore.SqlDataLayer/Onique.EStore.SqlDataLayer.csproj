@@ -56,6 +56,7 @@
     <Compile Include="Dto\OrderDetailDto.cs" />
     <Compile Include="Dto\OrderDetailProductDto.cs" />
     <Compile Include="Dto\OrderDto.cs" />
+    <Compile Include="Dto\SelectMemberDto.cs" />
     <Compile Include="EFModels\AppDbContext.cs" />
     <Compile Include="EFModels\Area.cs" />
     <Compile Include="EFModels\Category.cs" />

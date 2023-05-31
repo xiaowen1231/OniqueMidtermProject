@@ -100,7 +100,9 @@ namespace prjBackgroundManagementSystem
 
         private void buttonCreateOrder_Click(object sender, EventArgs e)
         {
-
+            var frm = new FormCreateOrder();
+            frm.Owner = this;
+            frm.ShowDialog();
         }
     }
 }

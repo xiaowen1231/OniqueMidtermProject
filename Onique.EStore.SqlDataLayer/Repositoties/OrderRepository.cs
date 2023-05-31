@@ -61,13 +61,63 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
 
             return query.ToList();
         }
-        
-        //public int CreateOrder(string memberName)
-        //{
-        //    var db = new AppDbContext();
-        //    int memberId = db.Members.Where(m=>m.Name == memberName).Select(m=>m.MemberId).FirstOrDefault();
 
-        //    var order = new Order { MemberId = memberId };
-        //}
+        public void CreateOrder(int memberId, string methodName, string address, 
+            string payment , string discountName)
+        {
+            var db = new AppDbContext();
+
+            int methodId = db.ShippingMethods.AsNoTracking()
+                .Where(s => s.MethodName == methodName)
+                .Select(m => m.MethodId)
+                .FirstOrDefault();
+
+            int paymentId = db.PaymentMethods.AsNoTracking()
+                .Where(p => p.PaymentMethodName == payment)
+                .Select(p => p.PaymentMethodId)
+                .FirstOrDefault();
+
+            int discountId = db.Discounts.AsNoTracking()
+                .Where(d => d.DiscountName == discountName)
+                .Select(d => d.DiscountId)
+                .FirstOrDefault();
+
+            var order = new Order()
+            {
+                MemberId = memberId,
+                MethodId = methodId,
+                ShippingAddress = address,
+                OrderStatusId = 1,
+                OrderDate = DateTime.Now,
+                PaymentMethodId = paymentId,
+                DiscountId = discountId
+            };
+
+            db.Orders.Add(order);
+            db.SaveChanges();
+        }
+
+        public List<SelectMemberDto> GetMemberOfSelect(string name)
+        {
+            var db = new AppDbContext();
+            var query = from m in db.Members
+                        join a in db.Areas
+                        on m.Areas equals a.AreaId
+                        join c in db.Citys
+                        on m.Citys equals c.CityId
+                        select new SelectMemberDto
+                        {
+                            Id = m.MemberId,
+                            Name = m.Name,
+                            Phone = m.Phone,
+                            Address = c.CityName + a.AreaName + m.Address,
+                            Photo = m.PhotoPath
+                        };
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(d => d.Name.Contains(name));
+            }
+            return query.ToList();
+        }
     }
 }

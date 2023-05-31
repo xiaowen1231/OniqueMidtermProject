@@ -47,7 +47,7 @@ namespace prjBackgroundManagementSystem
             string loadImage = dto.PhotoPath;
 
             pictureBoxProductPhoto.Image =
-                Image.FromFile(Path.Combine(Application.StartupPath,loadImage));
+                Image.FromFile(Path.Combine(loadImage));
         }
 
 
