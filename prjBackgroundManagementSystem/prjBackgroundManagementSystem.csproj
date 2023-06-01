@@ -72,11 +72,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegate\SaveFunction.cs" />
     <Compile Include="FormAddToCheckoutList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAddToCheckoutList.Designer.cs">
       <DependentUpon>FormAddToCheckoutList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategory.Designer.cs">
+      <DependentUpon>FormCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCheckOutSystem.cs">
       <SubType>Form</SubType>
@@ -184,6 +191,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddToCheckoutList.resx">
       <DependentUpon>FormAddToCheckoutList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategory.resx">
+      <DependentUpon>FormCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCheckOutSystem.resx">
       <DependentUpon>FormCheckOutSystem.cs</DependentUpon>

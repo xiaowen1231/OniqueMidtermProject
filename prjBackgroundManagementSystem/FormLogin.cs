@@ -66,5 +66,11 @@ namespace prjBackgroundManagementSystem
         {
             Close();
         }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            txtEmail.Text = "tom@gmail.com";
+            txtPassword.Text = "123";
+        }
     }
 }

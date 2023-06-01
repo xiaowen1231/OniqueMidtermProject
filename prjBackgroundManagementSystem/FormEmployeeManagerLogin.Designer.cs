@@ -36,6 +36,7 @@
             this.txtMangerEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDemo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnForgetManager
@@ -125,11 +126,24 @@
             this.label1.Text = "管理員登入系統";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.White;
+            this.btnDemo.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDemo.Location = new System.Drawing.Point(256, 320);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(75, 23);
+            this.btnDemo.TabIndex = 16;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // FormEmployeeManagerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 481);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnForgetManager);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLoginManager);
@@ -156,5 +170,6 @@
         private System.Windows.Forms.TextBox txtMangerEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

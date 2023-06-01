@@ -38,6 +38,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnForget = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnDemo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,11 +133,25 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.White;
+            this.btnDemo.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDemo.Location = new System.Drawing.Point(256, 320);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(75, 23);
+            this.btnDemo.TabIndex = 8;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // FormLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 481);
+            this.Controls.Add(this.btnDemo);
             this.Controls.Add(this.btnForget);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
@@ -168,5 +183,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnForget;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

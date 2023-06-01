@@ -1,5 +1,6 @@
 ﻿using Onique.EStore.SqlDataLayer;
 using Onique.EStore.SqlDataLayer.EFModels;
+using prjBackgroundManagementSystem.Delegate;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,14 +8,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static prjBackgroundManagementSystem.FormHomePage;
 
 namespace prjBackgroundManagementSystem
 {
     public partial class FormEmployeeManagerLogin : Form
     {
+        public SaveFunction SaveFunction;
         public FormEmployeeManagerLogin()
         {
             InitializeComponent();
@@ -30,17 +34,15 @@ namespace prjBackgroundManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            var close = new FormHomePage();
-            close.Owner = this;
-            this.Hide();
-            close.Show();
-        }
+            this.Owner.Show();
+            this.Close();
+          }
 
         private void FormEmployeeManagerLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Owner.Show();
         }
-
+        
         private void btnLoginManager_Click(object sender, EventArgs e)
         {
             var db = new AppDbContext();
@@ -61,15 +63,22 @@ namespace prjBackgroundManagementSystem
             {
                 if(result.Password ==  txtMangerPassword.Text )
                 {
-                    var frmemployee = new FormEmployee();
+                    var frmEmployee = new FormEmployee();
+
+                   SaveFunction( frmEmployee );
                     this.Hide();
-                    frmemployee.Show();
                 }
                 else
                 {
                     MessageBox.Show("帳號密碼錯誤");
                 }
             }
+        }
+
+        private void btnDemo_Click(object sender, EventArgs e)
+        {
+            txtMangerEmail.Text = "hendy@gmail.com";
+            txtMangerPassword.Text = "123";
         }
     }
 }
