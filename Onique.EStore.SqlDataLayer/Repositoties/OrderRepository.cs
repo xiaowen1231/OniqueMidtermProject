@@ -46,9 +46,9 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
 
             if (orderId.HasValue)
             {
-                orders=orders.Where(x => x.Id == orderId);
+                orders = orders.Where(x => x.Id == orderId);
             }
-            if (!string.IsNullOrEmpty(orderStatus)) 
+            if (!string.IsNullOrEmpty(orderStatus))
             {
                 orders = orders.Where(s => s.OrderStatus == orderStatus);
             }
@@ -57,18 +57,21 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
         }
 
 
-        public void CreateOrder(int memberId, string methodName, string address, 
-            string payment , string discountName)
+        public void CreateOrder(string memberName, string methodName, string address,
+            string payment, string discountName)
         {
             var db = new AppDbContext();
 
-            int methodId = db.GetId<ShippingMethod>(s => s.MethodName == methodName,m => m.MethodId);
+            int memberId = db.GetId<Member>(m => m.Name == memberName, m => m.MemberId);
 
+            int methodId = db.GetId<ShippingMethod>(s => s.MethodName == methodName
+            , m => m.MethodId);
 
             int paymentId = db.GetId<PaymentMethod>(p => p.PaymentMethodName == payment
             , p => p.PaymentMethodId);
 
-            int discountId = db.GetId<Discount>(d => d.DiscountName == discountName, d => d.DiscountId);
+            int discountId = db.GetId<Discount>(d => d.DiscountName == discountName
+            , d => d.DiscountId);
 
             var order = new Order()
             {
@@ -108,15 +111,15 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             return query.ToList();
         }
 
-        public List<string> GetAllItems<T>(Expression<Func<T,string>> selector) where T : class
+        public List<string> GetAllItems<T>(Expression<Func<T, string>> selector) where T : class
         {
-            
+
             var db = new AppDbContext();
             var query = db.Set<T>().Select(selector);
             return query.ToList();
         }
 
-        public List<SelectProductDto> ProductList(string name , string category)
+        public List<SelectProductDto> ProductList(string name, string category)
         {
             var db = new AppDbContext();
             var query = from p in db.Products
@@ -129,16 +132,16 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                             Price = p.Price,
                             category = c.CategoryName
                         };
-            if(!string.IsNullOrEmpty(name))
+            if (!string.IsNullOrEmpty(name))
             {
                 query = query.Where(x => x.Name.Contains(name));
             }
-            if(!string.IsNullOrEmpty(category))
+            if (!string.IsNullOrEmpty(category))
             {
                 query = query.Where(x => x.category.Contains(category));
             }
 
-            return query.ToList();   
+            return query.ToList();
         }
 
         public string GetProductName(int id)
@@ -179,7 +182,7 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
 
         }
 
-        public OrderDetailProductDto GetProduct(int orderDetailId)
+        public OrderDetailProductDto GetOrderProductDetail(int orderDetailId)
         {
             var db = new AppDbContext();
             var query = from od in db.OrderDetails.AsNoTracking()
@@ -248,11 +251,15 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             return query.ToList();
         }
 
-        public OrderDetailProductDto GetProductStock(int id , string size , string color) 
+        public OrderDetailProductDto GetProductStock(int id, string size, string color)
         {
             var db = new AppDbContext();
-            int sizeId = db.GetId<ProductSize>(s => s.SizeName == size, s => s.SizeId);
-            int colorId = db.GetId<ProductColor>(c => c.ColorName == color, s => s.ColorId);
+            int sizeId = db.GetId<ProductSize>
+                (s => s.SizeName == size, s => s.SizeId);
+
+            int colorId = db.GetId<ProductColor>
+                (c => c.ColorName == color, s => s.ColorId);
+
             var query = from psd in db.ProductStockDetails
                         join pp in db.ProductPhotos
                         on psd.ProductPhotoId equals pp.ProductPhotoId
@@ -264,7 +271,39 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                             StockQuantity = psd.Quantity,
                             PhotoPath = pp.ProductPhotoPath
                         };
+
             return query.FirstOrDefault();
         }
+
+        public void CreateOrderDetail(int orderId, string product, int orderQuantity
+            , string size, string color)
+        {
+            try {
+                var db = new AppDbContext();
+
+                int productId = db.GetId<Product>(p => p.ProductName == product, p => p.ProductId);
+
+                int sizeId = db.GetId<ProductSize>(p => p.SizeName == size, p => p.SizeId);
+
+                int colorId = db.GetId<ProductColor>(p => p.ColorName == color, p => p.ColorId);
+
+                var orderDetail = new OrderDetail
+                {
+
+                    OrderId = orderId,
+                    ProductId = productId,
+                    OrderQuantity = orderQuantity,
+                    SizeId = sizeId,
+                    ColorId = colorId
+                };
+
+                db.OrderDetails.Add(orderDetail);
+                db.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            }
     }
 }

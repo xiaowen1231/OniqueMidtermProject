@@ -10,6 +10,7 @@ namespace Onique.EStore.SqlDataLayer.EFModels
     {
         [Key]
         [Column(Order = 0)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderDetailId { get; set; }
 
         [Key]
@@ -36,13 +37,5 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         [Column(Order = 5)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ColorId { get; set; }
-
-        public virtual Order Order { get; set; }
-
-        public virtual ProductColor ProductColor { get; set; }
-
-        public virtual Product Product { get; set; }
-
-        public virtual ProductSize ProductSize { get; set; }
     }
 }

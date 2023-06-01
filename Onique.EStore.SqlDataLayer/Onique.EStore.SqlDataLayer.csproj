@@ -76,6 +76,7 @@
     <Compile Include="EFModels\ProductStockDetail.cs" />
     <Compile Include="EFModels\ShippingMethod.cs" />
     <Compile Include="EFModels\Supplier.cs" />
+    <Compile Include="EFModels\sysdiagram.cs" />
     <Compile Include="ExtMethods\AppContextExMethod.cs" />
     <Compile Include="ExtMethods\SqlDataReaderExtMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,7 +87,7 @@
     <Compile Include="SqlParameterBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

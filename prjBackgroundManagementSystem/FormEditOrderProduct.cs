@@ -27,7 +27,7 @@ namespace prjBackgroundManagementSystem
         {
             List<string> sizeData;
             OrderRepository repo = new OrderRepository();
-            var dto = repo.GetProduct(_orderDetailId);
+            var dto = repo.GetOrderProductDetail(_orderDetailId);
             textBoxOrderId.Text = dto.OrderId.ToString();
             textBoxProductName.Text = dto.ProductName;
             textBoxSize.Text = dto.SizeName;

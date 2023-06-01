@@ -37,11 +37,11 @@
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelQuantity = new System.Windows.Forms.Label();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.labelHint = new System.Windows.Forms.Label();
-            this.buttonSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductPhoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -144,69 +144,73 @@
             this.label4.Text = "選擇數量:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // labelQuantity
+            // 
+            this.labelQuantity.AutoSize = true;
+            this.labelQuantity.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labelQuantity.ForeColor = System.Drawing.Color.Red;
+            this.labelQuantity.Location = new System.Drawing.Point(303, 333);
+            this.labelQuantity.Name = "labelQuantity";
+            this.labelQuantity.Size = new System.Drawing.Size(63, 17);
+            this.labelQuantity.TabIndex = 119;
+            this.labelQuantity.Text = "庫存數量:";
+            this.labelQuantity.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.BackColor = System.Drawing.Color.White;
+            this.buttonAdd.Enabled = false;
+            this.buttonAdd.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonAdd.Location = new System.Drawing.Point(418, 409);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 120;
+            this.buttonAdd.Text = "加入";
+            this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.White;
+            this.buttonClose.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonClose.Location = new System.Drawing.Point(306, 409);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 23);
+            this.buttonClose.TabIndex = 121;
+            this.buttonClose.Text = "返回";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            // 
+            // textBoxQuantity
+            // 
+            this.textBoxQuantity.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxQuantity.Location = new System.Drawing.Point(307, 294);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(100, 25);
+            this.textBoxQuantity.TabIndex = 122;
+            // 
             // labelHint
             // 
             this.labelHint.AutoSize = true;
             this.labelHint.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labelHint.ForeColor = System.Drawing.Color.Red;
-            this.labelHint.Location = new System.Drawing.Point(303, 333);
+            this.labelHint.Location = new System.Drawing.Point(413, 298);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(63, 17);
-            this.labelHint.TabIndex = 119;
-            this.labelHint.Text = "庫存數量:";
+            this.labelHint.Size = new System.Drawing.Size(38, 17);
+            this.labelHint.TabIndex = 123;
+            this.labelHint.Text = "提示!";
             this.labelHint.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // buttonSearch
-            // 
-            this.buttonSearch.BackColor = System.Drawing.Color.White;
-            this.buttonSearch.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonSearch.Location = new System.Drawing.Point(418, 409);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 120;
-            this.buttonSearch.Text = "加入";
-            this.buttonSearch.UseVisualStyleBackColor = false;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(306, 409);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 121;
-            this.button1.Text = "返回";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(307, 294);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 122;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(463, 333);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(187, 25);
-            this.comboBox1.TabIndex = 123;
+            this.labelHint.Visible = false;
             // 
             // FormAddOrderProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 515);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.labelHint);
+            this.Controls.Add(this.textBoxQuantity);
+            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.buttonAdd);
+            this.Controls.Add(this.labelQuantity);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxColor);
             this.Controls.Add(this.label2);
@@ -236,10 +240,10 @@
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelQuantity;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.Label labelHint;
-        private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using prjBackgroundManagementSystem.Delegate;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +17,11 @@ namespace prjBackgroundManagementSystem
     public partial class FormSelectProduct : Form
     {
         List<SelectProductDto> data;
-        public FormSelectProduct()
+        private readonly int _orderId;
+
+        public FormSelectProduct(int orderId)
         {
+            _orderId = orderId;
             InitializeComponent();
         }
 
@@ -56,6 +60,7 @@ namespace prjBackgroundManagementSystem
             int id = this.data[e.RowIndex].Id;
 
             var frm = new FormAddOrderProduct(id);
+            frm.OrderId = this._orderId;
             frm.Owner = this;
             frm.ShowDialog();
         }

@@ -28,10 +28,15 @@ namespace prjBackgroundManagementSystem
 
         private void FormOrderDetail_Load(object sender, EventArgs e)
         {
+            Display();
+        }
+
+        private void Display()
+        {
             var repo = new OrderRepository();
             OrderDto dto = repo.Search(_orderId, null).FirstOrDefault();
 
-            if (dto == null) 
+            if (dto == null)
             {
                 MessageBox.Show("找不到訂單紀錄!");
                 return;
@@ -53,15 +58,12 @@ namespace prjBackgroundManagementSystem
             labelDiscount.Text = dto.Discount;
             labelAddress.Text = dto.Address;
 
-            List<string> statusItems = repo.GetAllItems<OrderStatu>(o=>o.StatusName);
-            foreach (var statusItem in statusItems)
-            {
-                comboBoxStatus.Items.Add(statusItem);
-            }
+            List<string> statusItems = repo.GetAllItems<OrderStatu>(o => o.StatusName);
+            comboBoxStatus.Items.AddRange(statusItems.ToArray());
 
             OrderProductsDetail = new OrderRepository().GetOrderProductList(_orderId);
-            dataGridView1.DataSource= OrderProductsDetail;
-            decimal ProductsPrice = OrderProductsDetail.Sum(x => x.Price*x.OrderQuantity);
+            dataGridView1.DataSource = OrderProductsDetail;
+            decimal ProductsPrice = OrderProductsDetail.Sum(x => x.Price * x.OrderQuantity);
             labelPrice.Text = ProductsPrice.ToString("0");
 
             decimal totalPrice = new DiscountRepository().CalculateDiscount(labelDiscount.Text, ProductsPrice);
@@ -85,6 +87,19 @@ namespace prjBackgroundManagementSystem
             var frm = new FormEditOrderProduct(orderDetailId);
             frm.Owner = this;
             frm.ShowDialog();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+            var frm = new FormSelectProduct(_orderId);
+            frm.Owner = this;
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

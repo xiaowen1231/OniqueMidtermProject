@@ -11,7 +11,6 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProductSize()
         {
-            OrderDetails = new HashSet<OrderDetail>();
             ProductStockDetails = new HashSet<ProductStockDetail>();
         }
 
@@ -21,9 +20,6 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         [Required]
         [StringLength(50)]
         public string SizeName { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductStockDetail> ProductStockDetails { get; set; }

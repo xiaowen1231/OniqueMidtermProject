@@ -1,6 +1,7 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace prjBackgroundManagementSystem
 {
-    public partial class FormOrder : Form
+    public partial class FormOrder : Form,IGrid
     {
         List<OrderDto> data = new List<OrderDto>();
 
