@@ -25,8 +25,8 @@ namespace prjBackgroundManagementSystem
 
         private void FormEditOrderProduct_Load(object sender, EventArgs e)
         {
-            List<string> sizeData= new List<string>();
-            OrderDetailRepository repo = new OrderDetailRepository();
+            List<string> sizeData;
+            OrderRepository repo = new OrderRepository();
             var dto = repo.GetProduct(_orderDetailId);
             textBoxOrderId.Text = dto.OrderId.ToString();
             textBoxProductName.Text = dto.ProductName;
@@ -37,12 +37,9 @@ namespace prjBackgroundManagementSystem
             textBoxDescription.Text = dto.ProductDescription;
             textBoxColor.Text = dto.ColorName;
             
-            sizeData = (repo.GetProductSize(textBoxProductName.Text, textBoxColor.Text));
+            sizeData = (repo.GetProductSize(textBoxProductName.Text));
 
-            foreach(var item in sizeData)
-            {
-                comboBoxUpdateSize.Items.Add(item);
-            }
+            comboBoxUpdateSize.Items.AddRange(sizeData.ToArray());
 
             string loadImage = dto.PhotoPath;
 

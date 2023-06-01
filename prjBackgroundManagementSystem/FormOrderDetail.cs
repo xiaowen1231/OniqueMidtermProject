@@ -1,4 +1,5 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
+using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
 using System;
 using System.Collections.Generic;
@@ -52,13 +53,13 @@ namespace prjBackgroundManagementSystem
             labelDiscount.Text = dto.Discount;
             labelAddress.Text = dto.Address;
 
-            List<string> statusItems = repo.AllStatus();
+            List<string> statusItems = repo.GetAllItems<OrderStatu>(o=>o.StatusName);
             foreach (var statusItem in statusItems)
             {
                 comboBoxStatus.Items.Add(statusItem);
             }
 
-            OrderProductsDetail = new OrderDetailRepository().GetOrderProductList(_orderId);
+            OrderProductsDetail = new OrderRepository().GetOrderProductList(_orderId);
             dataGridView1.DataSource= OrderProductsDetail;
             decimal ProductsPrice = OrderProductsDetail.Sum(x => x.Price*x.OrderQuantity);
             labelPrice.Text = ProductsPrice.ToString("0");

@@ -49,12 +49,9 @@ namespace prjBackgroundManagementSystem
 
         public void AllStatus()
         {
-            List<string> statusData = new OrderRepository().AllStatus();
+            List<string> statusData = new OrderRepository().GetAllItems<OrderStatu>(o=>o.StatusName);
 
-            foreach (string status in statusData)
-            {
-                comboBoxOrderStatus.Items.Add(status);
-            }
+            comboBoxOrderStatus.Items.AddRange(statusData.ToArray());
 
         }
 

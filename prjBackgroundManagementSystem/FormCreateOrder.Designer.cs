@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,10 +41,12 @@
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.comboBoxPayment = new System.Windows.Forms.ComboBox();
             this.comboBoxDiscount = new System.Windows.Forms.ComboBox();
-            this.buttonCreate = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.buttonSelectMember = new System.Windows.Forms.Button();
+            this.buttonDeselect = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.buttonAddProduct = new System.Windows.Forms.Button();
             this.pictureBoxMemberPhoto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMemberPhoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,110 +59,16 @@
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(822, 104);
+            this.label1.Size = new System.Drawing.Size(1150, 104);
             this.label1.TabIndex = 75;
             this.label1.Text = "新增訂單";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(285, 190);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 17);
-            this.label2.TabIndex = 76;
-            this.label2.Text = "姓名:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(259, 248);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
-            this.label3.TabIndex = 77;
-            this.label3.Text = "運送方式:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(259, 419);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 17);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "運送地址:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(259, 305);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
-            this.label5.TabIndex = 79;
-            this.label5.Text = "付款方式:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(259, 362);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 17);
-            this.label6.TabIndex = 80;
-            this.label6.Text = "選擇優惠:";
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxName.Location = new System.Drawing.Point(328, 187);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(152, 25);
-            this.textBoxName.TabIndex = 81;
-            // 
-            // comboBoxShippingMethod
-            // 
-            this.comboBoxShippingMethod.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.comboBoxShippingMethod.FormattingEnabled = true;
-            this.comboBoxShippingMethod.Location = new System.Drawing.Point(328, 244);
-            this.comboBoxShippingMethod.Name = "comboBoxShippingMethod";
-            this.comboBoxShippingMethod.Size = new System.Drawing.Size(254, 25);
-            this.comboBoxShippingMethod.TabIndex = 82;
-            // 
-            // textBoxAddress
-            // 
-            this.textBoxAddress.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxAddress.Location = new System.Drawing.Point(328, 415);
-            this.textBoxAddress.Multiline = true;
-            this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(254, 116);
-            this.textBoxAddress.TabIndex = 83;
-            // 
-            // comboBoxPayment
-            // 
-            this.comboBoxPayment.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.comboBoxPayment.FormattingEnabled = true;
-            this.comboBoxPayment.Location = new System.Drawing.Point(328, 301);
-            this.comboBoxPayment.Name = "comboBoxPayment";
-            this.comboBoxPayment.Size = new System.Drawing.Size(254, 25);
-            this.comboBoxPayment.TabIndex = 84;
-            // 
-            // comboBoxDiscount
-            // 
-            this.comboBoxDiscount.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.comboBoxDiscount.FormattingEnabled = true;
-            this.comboBoxDiscount.Location = new System.Drawing.Point(328, 358);
-            this.comboBoxDiscount.Name = "comboBoxDiscount";
-            this.comboBoxDiscount.Size = new System.Drawing.Size(254, 25);
-            this.comboBoxDiscount.TabIndex = 85;
             // 
             // buttonCreate
             // 
             this.buttonCreate.BackColor = System.Drawing.Color.White;
             this.buttonCreate.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonCreate.Location = new System.Drawing.Point(753, 611);
+            this.buttonCreate.Location = new System.Drawing.Point(991, 663);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(75, 23);
             this.buttonCreate.TabIndex = 86;
@@ -169,18 +79,112 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.White;
             this.buttonClose.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonClose.Location = new System.Drawing.Point(663, 611);
+            this.buttonClose.Location = new System.Drawing.Point(901, 663);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
             this.buttonClose.TabIndex = 87;
             this.buttonClose.Text = "取消訂單";
             this.buttonClose.UseVisualStyleBackColor = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Location = new System.Drawing.Point(70, 396);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 17);
+            this.label2.TabIndex = 76;
+            this.label2.Text = "姓名:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(44, 441);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.TabIndex = 77;
+            this.label3.Text = "運送方式:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(44, 573);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 17);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "運送地址:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(44, 486);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.TabIndex = 79;
+            this.label5.Text = "付款方式:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(44, 531);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 17);
+            this.label6.TabIndex = 80;
+            this.label6.Text = "選擇優惠:";
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxName.Location = new System.Drawing.Point(113, 393);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(228, 25);
+            this.textBoxName.TabIndex = 81;
+            // 
+            // comboBoxShippingMethod
+            // 
+            this.comboBoxShippingMethod.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBoxShippingMethod.FormattingEnabled = true;
+            this.comboBoxShippingMethod.Location = new System.Drawing.Point(113, 438);
+            this.comboBoxShippingMethod.Name = "comboBoxShippingMethod";
+            this.comboBoxShippingMethod.Size = new System.Drawing.Size(228, 25);
+            this.comboBoxShippingMethod.TabIndex = 82;
+            // 
+            // textBoxAddress
+            // 
+            this.textBoxAddress.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxAddress.Location = new System.Drawing.Point(113, 573);
+            this.textBoxAddress.Multiline = true;
+            this.textBoxAddress.Name = "textBoxAddress";
+            this.textBoxAddress.Size = new System.Drawing.Size(228, 69);
+            this.textBoxAddress.TabIndex = 83;
+            // 
+            // comboBoxPayment
+            // 
+            this.comboBoxPayment.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBoxPayment.FormattingEnabled = true;
+            this.comboBoxPayment.Location = new System.Drawing.Point(113, 483);
+            this.comboBoxPayment.Name = "comboBoxPayment";
+            this.comboBoxPayment.Size = new System.Drawing.Size(228, 25);
+            this.comboBoxPayment.TabIndex = 84;
+            // 
+            // comboBoxDiscount
+            // 
+            this.comboBoxDiscount.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBoxDiscount.FormattingEnabled = true;
+            this.comboBoxDiscount.Location = new System.Drawing.Point(113, 528);
+            this.comboBoxDiscount.Name = "comboBoxDiscount";
+            this.comboBoxDiscount.Size = new System.Drawing.Size(228, 25);
+            this.comboBoxDiscount.TabIndex = 85;
+            // 
             // buttonSelectMember
             // 
             this.buttonSelectMember.BackColor = System.Drawing.Color.White;
             this.buttonSelectMember.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonSelectMember.Location = new System.Drawing.Point(507, 188);
+            this.buttonSelectMember.Location = new System.Drawing.Point(232, 663);
             this.buttonSelectMember.Name = "buttonSelectMember";
             this.buttonSelectMember.Size = new System.Drawing.Size(75, 23);
             this.buttonSelectMember.TabIndex = 89;
@@ -188,10 +192,43 @@
             this.buttonSelectMember.UseVisualStyleBackColor = false;
             this.buttonSelectMember.Click += new System.EventHandler(this.buttonSelectMember_Click);
             // 
+            // buttonDeselect
+            // 
+            this.buttonDeselect.BackColor = System.Drawing.Color.White;
+            this.buttonDeselect.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonDeselect.Location = new System.Drawing.Point(151, 663);
+            this.buttonDeselect.Name = "buttonDeselect";
+            this.buttonDeselect.Size = new System.Drawing.Size(75, 23);
+            this.buttonDeselect.TabIndex = 90;
+            this.buttonDeselect.Text = "取消選取";
+            this.buttonDeselect.UseVisualStyleBackColor = false;
+            this.buttonDeselect.Click += new System.EventHandler(this.buttonDeselect_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(456, 252);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(610, 390);
+            this.dataGridView1.TabIndex = 91;
+            // 
+            // buttonAddProduct
+            // 
+            this.buttonAddProduct.BackColor = System.Drawing.Color.White;
+            this.buttonAddProduct.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonAddProduct.Location = new System.Drawing.Point(1084, 252);
+            this.buttonAddProduct.Name = "buttonAddProduct";
+            this.buttonAddProduct.Size = new System.Drawing.Size(75, 23);
+            this.buttonAddProduct.TabIndex = 92;
+            this.buttonAddProduct.Text = "加入商品";
+            this.buttonAddProduct.UseVisualStyleBackColor = false;
+            this.buttonAddProduct.Click += new System.EventHandler(this.buttonAddProduct_Click);
+            // 
             // pictureBoxMemberPhoto
             // 
             this.pictureBoxMemberPhoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxMemberPhoto.Location = new System.Drawing.Point(34, 188);
+            this.pictureBoxMemberPhoto.Location = new System.Drawing.Point(131, 116);
             this.pictureBoxMemberPhoto.Name = "pictureBoxMemberPhoto";
             this.pictureBoxMemberPhoto.Size = new System.Drawing.Size(193, 256);
             this.pictureBoxMemberPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -202,7 +239,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 646);
+            this.ClientSize = new System.Drawing.Size(1168, 711);
+            this.Controls.Add(this.buttonAddProduct);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonDeselect);
             this.Controls.Add(this.buttonSelectMember);
             this.Controls.Add(this.pictureBoxMemberPhoto);
             this.Controls.Add(this.buttonClose);
@@ -220,9 +260,10 @@
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(856, 685);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(856, 685);
             this.Name = "FormCreateOrder";
             this.Text = "新增訂單";
+            this.Load += new System.EventHandler(this.FormCreateOrder_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMemberPhoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,6 +273,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.PictureBox pictureBoxMemberPhoto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -242,9 +286,9 @@
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.ComboBox comboBoxPayment;
         private System.Windows.Forms.ComboBox comboBoxDiscount;
-        private System.Windows.Forms.Button buttonCreate;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.PictureBox pictureBoxMemberPhoto;
         private System.Windows.Forms.Button buttonSelectMember;
+        private System.Windows.Forms.Button buttonDeselect;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button buttonAddProduct;
     }
 }

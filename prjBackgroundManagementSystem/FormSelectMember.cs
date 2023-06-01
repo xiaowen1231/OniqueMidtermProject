@@ -1,5 +1,6 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using prjBackgroundManagementSystem.Delegate;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace prjBackgroundManagementSystem
 {
     public partial class FormSelectMember : Form
     {
+        public ChangeInfo callChange;
         List<SelectMemberDto> data;
         public FormSelectMember()
         {
@@ -31,24 +33,24 @@ namespace prjBackgroundManagementSystem
             dataGridView1.DataSource = data;
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
             Display();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex < 0) { return; }
+            if (e.RowIndex < 0) { return; }
 
             string name = this.data[e.RowIndex].Name;
             string photoPath = this.data[e.RowIndex].Photo;
+            string address = this.data[e.RowIndex].Address;
 
-            var parent = this.Owner as IUpdateInfo;
-
-            if (parent != null)
+            if (callChange != null)
             {
-                parent.changeInfo(name, photoPath);
+                callChange(name, photoPath, address);
             }
+
             this.Close();
         }
     }

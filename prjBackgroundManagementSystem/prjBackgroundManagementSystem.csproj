@@ -72,6 +72,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddOrderProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddOrderProduct.Designer.cs">
+      <DependentUpon>FormAddOrderProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddToCheckoutList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,9 +198,18 @@
     <Compile Include="FormSelectMember.Designer.cs">
       <DependentUpon>FormSelectMember.cs</DependentUpon>
     </Compile>
-    <Compile Include="IUpdateInfo.cs" />
+    <Compile Include="Delegate\ChangeInfo.cs" />
+    <Compile Include="FormSelectProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectProduct.Designer.cs">
+      <DependentUpon>FormSelectProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddOrderProduct.resx">
+      <DependentUpon>FormAddOrderProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddToCheckoutList.resx">
       <DependentUpon>FormAddToCheckoutList.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +270,9 @@
     <EmbeddedResource Include="FormSelectMember.resx">
       <DependentUpon>FormSelectMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectProduct.resx">
+      <DependentUpon>FormSelectProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -308,6 +326,9 @@
       <Project>{81127e52-4356-42d9-9a0a-aad1ac0b5691}</Project>
       <Name>Onique.EStore.SqlDataLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ProjectPicture\default.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
