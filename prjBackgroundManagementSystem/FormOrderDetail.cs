@@ -1,6 +1,7 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace prjBackgroundManagementSystem
 {
-    public partial class FormOrderDetail : Form
+    public partial class FormOrderDetail : Form,IGrid
     {
 
         List<OrderDetailDto> OrderProductsDetail = new List<OrderDetailDto>();
@@ -31,8 +32,9 @@ namespace prjBackgroundManagementSystem
             Display();
         }
 
-        private void Display()
+        public void Display()
         {
+            
             var repo = new OrderRepository();
             OrderDto dto = repo.Search(_orderId, null).FirstOrDefault();
 
@@ -53,6 +55,10 @@ namespace prjBackgroundManagementSystem
                 dto.CompletionDate.Value.ToShortDateString() : "訂單尚未完成";
 
             labelStatus.Text = dto.OrderStatus;
+            if (labelStatus.Text == "待出貨")
+            {
+                buttonAddProduct.Enabled = true;
+            }
             label1ShippingMethod.Text = dto.ShippingMethod;
             labelPayment.Text = dto.PaymentMethod;
             labelDiscount.Text = dto.Discount;
@@ -82,6 +88,7 @@ namespace prjBackgroundManagementSystem
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) { return; }
+            if ()
             int orderDetailId = this.OrderProductsDetail[e.RowIndex].OrderDetailId;
 
             var frm = new FormEditOrderProduct(orderDetailId);
@@ -96,10 +103,16 @@ namespace prjBackgroundManagementSystem
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            var frm = new FormSelectProduct(_orderId);
+            if(!int.TryParse(textBoxId.Text,out int orderId))
+            {
+                MessageBox.Show("無法取得訂單編號");
+                return;
+            }
+
+            var frm = new FormAddOrderProduct(orderId);
             frm.Owner = this;
             frm.ShowDialog();
-            this.Close();
+
         }
     }
 }

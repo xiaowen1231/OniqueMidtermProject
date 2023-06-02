@@ -18,6 +18,7 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         public virtual DbSet<Discount> Discounts { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Member> Members { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderStatu> OrderStatus { get; set; }
         public virtual DbSet<PaymentMethod> PaymentMethods { get; set; }
@@ -25,11 +26,9 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         public virtual DbSet<ProductPhoto> ProductPhotos { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductSize> ProductSizes { get; set; }
+        public virtual DbSet<ProductStockDetail> ProductStockDetails { get; set; }
         public virtual DbSet<ShippingMethod> ShippingMethods { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
-        public virtual DbSet<ProductStockDetail> ProductStockDetails { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -77,6 +76,11 @@ namespace Onique.EStore.SqlDataLayer.EFModels
                 .WithRequired(e => e.Member)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Order>()
+                .HasMany(e => e.OrderDetails)
+                .WithRequired(e => e.Order)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<OrderStatu>()
                 .HasMany(e => e.Orders)
                 .WithRequired(e => e.OrderStatu)
@@ -89,6 +93,11 @@ namespace Onique.EStore.SqlDataLayer.EFModels
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ProductColor>()
+                .HasMany(e => e.OrderDetails)
+                .WithRequired(e => e.ProductColor)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ProductColor>()
                 .HasMany(e => e.ProductStockDetails)
                 .WithRequired(e => e.ProductColor)
                 .WillCascadeOnDelete(false);
@@ -98,8 +107,18 @@ namespace Onique.EStore.SqlDataLayer.EFModels
                 .HasPrecision(19, 4);
 
             modelBuilder.Entity<Product>()
+                .HasMany(e => e.OrderDetails)
+                .WithRequired(e => e.Product)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Product>()
                 .HasMany(e => e.ProductStockDetails)
                 .WithRequired(e => e.Product)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<ProductSize>()
+                .HasMany(e => e.OrderDetails)
+                .WithRequired(e => e.ProductSize)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ProductSize>()

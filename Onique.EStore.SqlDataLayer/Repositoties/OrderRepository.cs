@@ -196,6 +196,7 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                         select new OrderDetailProductDto
                         {
                             OrderDetailId = od.OrderDetailId,
+                            ProductId = p.ProductId,
                             OrderId = od.OrderId,
                             ProductName = p.ProductName,
                             ColorName = pc.ColorName,
@@ -278,7 +279,8 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
         public void CreateOrderDetail(int orderId, string product, int orderQuantity
             , string size, string color)
         {
-            try {
+            try
+            {
                 var db = new AppDbContext();
 
                 int productId = db.GetId<Product>(p => p.ProductName == product, p => p.ProductId);
@@ -300,10 +302,26 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                 db.OrderDetails.Add(orderDetail);
                 db.SaveChanges();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-            }
+        }
+
+        public void UpdateOrderProduct(int orderDetailId,int orderQuantity,string size,string color) 
+        {
+            var db = new AppDbContext();
+
+            int sizeId = db.GetId<ProductSize>(s=>s.SizeName == size, s => s.SizeId);
+            int colorId = db.GetId<ProductColor>(c=>c.ColorName == color,c=> c.ColorId);
+
+            var orderDetail = db.OrderDetails.Where(od=>od.OrderDetailId==orderDetailId).FirstOrDefault();
+
+            orderDetail.OrderQuantity = orderQuantity;
+            orderDetail.SizeId = sizeId;
+            orderDetail.ColorId = colorId;
+
+            db.SaveChanges();
+        }
     }
 }

@@ -93,16 +93,6 @@ namespace prjBackgroundManagementSystem.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap notUploaded {
-            get {
-                object obj = ResourceManager.GetObject("notUploaded", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
-        /// </summary>
         internal static System.Drawing.Bitmap 衣服圖1 {
             get {
                 object obj = ResourceManager.GetObject("衣服圖1", resourceCulture);

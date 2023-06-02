@@ -121,6 +121,7 @@
             // 
             // comboBoxShippingMethod
             // 
+            this.comboBoxShippingMethod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxShippingMethod.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxShippingMethod.FormattingEnabled = true;
             this.comboBoxShippingMethod.Location = new System.Drawing.Point(346, 206);
@@ -139,6 +140,7 @@
             // 
             // comboBoxPayment
             // 
+            this.comboBoxPayment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPayment.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxPayment.FormattingEnabled = true;
             this.comboBoxPayment.Location = new System.Drawing.Point(346, 251);
@@ -148,6 +150,7 @@
             // 
             // comboBoxDiscount
             // 
+            this.comboBoxDiscount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDiscount.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxDiscount.FormattingEnabled = true;
             this.comboBoxDiscount.Location = new System.Drawing.Point(346, 296);
@@ -169,7 +172,6 @@
             // 
             // pictureBoxMemberPhoto
             // 
-            this.pictureBoxMemberPhoto.Image = global::prjBackgroundManagementSystem.Properties.Resources.notUploaded;
             this.pictureBoxMemberPhoto.Location = new System.Drawing.Point(43, 161);
             this.pictureBoxMemberPhoto.Name = "pictureBoxMemberPhoto";
             this.pictureBoxMemberPhoto.Size = new System.Drawing.Size(193, 256);

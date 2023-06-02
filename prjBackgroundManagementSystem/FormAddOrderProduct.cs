@@ -3,6 +3,7 @@ using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
 using Onique.EStore.SqlDataLayer.Services;
 using prjBackgroundManagementSystem.Delegate;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,33 +17,35 @@ using System.Windows.Forms;
 
 namespace prjBackgroundManagementSystem
 {
-    public partial class FormAddOrderProduct : Form
+    public partial class FormAddOrderProduct : Form,IGrid
     {
-        private readonly int _id;
-
-
-        private int _orderId;
-        public int OrderId
-        {
-            get { return _orderId; }
-            set { _orderId = value; }
-        }
-
-
+        
+        private readonly int _orderId;
         private int _stockQuantity;
-        public FormAddOrderProduct(int id)
+        private int _id;
+        public int id 
+        { 
+            get { return _id; } 
+            set { _id = value;}
+        }  
+        public FormAddOrderProduct(int orderId)
         {
             InitializeComponent();
-            this._id = id;
+            this._orderId = orderId;
         }
 
-        private void FormAddOrderProduct_Load(object sender, EventArgs e)
+        public void Display()
         {
+            comboBoxSize.Items.Clear();
+            comboBoxColor.Items.Clear();
+            if (_id == 0)
+            {
+                return;
+            }
             var repo = new OrderRepository();
             textBoxProductName.Text = repo.GetProductName(_id);
             comboBoxSize.Items.AddRange(repo.GetProductSize(textBoxProductName.Text).ToArray());
             comboBoxColor.Items.AddRange(repo.GetProductColor(textBoxProductName.Text).ToArray());
-
         }
 
         public void DisplayStockQuantity()
@@ -106,7 +109,31 @@ namespace prjBackgroundManagementSystem
             {
                 MessageBox.Show("無法新增商品於訂單中!原因:" + ex.Message);
             }
-            
+            var parent = this.Owner as IGrid;
+            if (parent != null)
+            {
+                parent.Display();
+            }
+            this.Close();
+
+        }
+
+        private void buttonSelectProduct_Click(object sender, EventArgs e)
+        {
+            pictureBoxProductPhoto.Image = null;
+            var frm = new FormSelectProduct(_orderId);
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
+
+        private void FormAddOrderProduct_Load(object sender, EventArgs e)
+        {
+            Display();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

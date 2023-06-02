@@ -42,6 +42,7 @@
             this.buttonClose = new System.Windows.Forms.Button();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.labelHint = new System.Windows.Forms.Label();
+            this.buttonSelectProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductPhoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -179,6 +180,7 @@
             this.buttonClose.TabIndex = 121;
             this.buttonClose.Text = "返回";
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // textBoxQuantity
             // 
@@ -201,11 +203,24 @@
             this.labelHint.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.labelHint.Visible = false;
             // 
+            // buttonSelectProduct
+            // 
+            this.buttonSelectProduct.BackColor = System.Drawing.Color.White;
+            this.buttonSelectProduct.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonSelectProduct.Location = new System.Drawing.Point(74, 409);
+            this.buttonSelectProduct.Name = "buttonSelectProduct";
+            this.buttonSelectProduct.Size = new System.Drawing.Size(75, 23);
+            this.buttonSelectProduct.TabIndex = 124;
+            this.buttonSelectProduct.Text = "選擇商品";
+            this.buttonSelectProduct.UseVisualStyleBackColor = false;
+            this.buttonSelectProduct.Click += new System.EventHandler(this.buttonSelectProduct_Click);
+            // 
             // FormAddOrderProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 515);
+            this.Controls.Add(this.buttonSelectProduct);
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.buttonClose);
@@ -245,5 +260,6 @@
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.Label labelHint;
+        private System.Windows.Forms.Button buttonSelectProduct;
     }
 }

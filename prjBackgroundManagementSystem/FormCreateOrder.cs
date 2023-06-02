@@ -113,6 +113,7 @@ namespace prjBackgroundManagementSystem
             catch (Exception ex)
             {
                 MessageBox.Show("新增失敗!原因:"+ex.Message);
+                return;
             }
 
             var parent = this.Owner as IGrid;
@@ -125,5 +126,7 @@ namespace prjBackgroundManagementSystem
 
             this.Close();
         }
+
+        
     }
 }

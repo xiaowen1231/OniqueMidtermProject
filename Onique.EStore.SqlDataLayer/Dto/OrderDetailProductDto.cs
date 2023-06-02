@@ -10,6 +10,7 @@ namespace Onique.EStore.SqlDataLayer.Dto
     {
         public int OrderDetailId { get; set; }
         public int OrderId { get; set; }
+        public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string ColorName { get; set; }
         public string SizeName { get; set; }

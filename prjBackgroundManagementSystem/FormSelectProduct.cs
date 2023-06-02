@@ -2,6 +2,7 @@
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
 using prjBackgroundManagementSystem.Delegate;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,11 +19,10 @@ namespace prjBackgroundManagementSystem
     {
         List<SelectProductDto> data;
         private readonly int _orderId;
-
         public FormSelectProduct(int orderId)
         {
-            _orderId = orderId;
             InitializeComponent();
+            _orderId = orderId;
         }
 
         private void FormSelectProduct_Load(object sender, EventArgs e)
@@ -37,9 +37,12 @@ namespace prjBackgroundManagementSystem
             string category = comboBoxCategory.Text;
 
             var repo = new OrderRepository();
+
             data = repo.ProductList(name, category);
-            List<string> items = repo.GetAllItems<Category>(x => x.CategoryName);
+
             dataGridView1.DataSource = data;
+
+            List<string> items = repo.GetAllItems<Category>(x => x.CategoryName);
             comboBoxCategory.Items.AddRange(items.ToArray());
         }
 
@@ -55,14 +58,19 @@ namespace prjBackgroundManagementSystem
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex < 0) { return; }
+            if (e.RowIndex < 0) return;
 
-            int id = this.data[e.RowIndex].Id;
+            int productId = this.data[e.RowIndex].Id;
+            
+            ((FormAddOrderProduct)Owner).id = productId;
 
-            var frm = new FormAddOrderProduct(id);
-            frm.OrderId = this._orderId;
-            frm.Owner = this;
-            frm.ShowDialog();
+            var parent = this.Owner as IGrid;
+            if (parent != null)
+            {
+                parent.Display();
+            }
+            this.Close();
+          
         }
     }
 }

@@ -32,11 +32,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1ShippingMethod = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.labelAddress = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.labelAddress = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
             this.labelTotal = new System.Windows.Forms.Label();
             this.labelDiscount = new System.Windows.Forms.Label();
             this.labelFreight = new System.Windows.Forms.Label();
@@ -49,9 +48,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品價格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.下單數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品尺寸 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品顏色 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonAddProduct = new System.Windows.Forms.Button();
@@ -63,12 +69,6 @@
             this.textBoxOrderDate = new System.Windows.Forms.TextBox();
             this.textBoxShippingDate = new System.Windows.Forms.TextBox();
             this.textBoxCompletionDate = new System.Windows.Forms.TextBox();
-            this.編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品價格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.下單數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品尺寸 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品顏色 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -136,17 +136,6 @@
             this.label20.TabIndex = 104;
             this.label20.Text = "運送方式:";
             // 
-            // labelAddress
-            // 
-            this.labelAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelAddress.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.labelAddress.Location = new System.Drawing.Point(73, 144);
-            this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(227, 90);
-            this.labelAddress.TabIndex = 103;
-            this.labelAddress.Text = "未選擇";
-            this.labelAddress.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -168,6 +157,17 @@
             this.buttonDelete.Text = "刪除訂單";
             this.buttonDelete.UseVisualStyleBackColor = false;
             // 
+            // labelAddress
+            // 
+            this.labelAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAddress.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.labelAddress.Location = new System.Drawing.Point(73, 144);
+            this.labelAddress.Name = "labelAddress";
+            this.labelAddress.Size = new System.Drawing.Size(227, 90);
+            this.labelAddress.TabIndex = 103;
+            this.labelAddress.Text = "未選擇";
+            this.labelAddress.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.White;
@@ -179,16 +179,6 @@
             this.buttonClose.Text = "關閉";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.BackColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(306, 575);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdate.TabIndex = 97;
-            this.buttonUpdate.Text = "確認更改";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
             // 
             // labelTotal
             // 
@@ -316,6 +306,16 @@
             this.label2.TabIndex = 84;
             this.label2.Text = "訂單狀態:";
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.BackColor = System.Drawing.Color.White;
+            this.buttonUpdate.Location = new System.Drawing.Point(306, 575);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.TabIndex = 97;
+            this.buttonUpdate.Text = "確認更改";
+            this.buttonUpdate.UseVisualStyleBackColor = false;
+            // 
             // comboBoxStatus
             // 
             this.comboBoxStatus.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -355,6 +355,49 @@
             this.dataGridView1.TabIndex = 75;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // 編號
+            // 
+            this.編號.DataPropertyName = "OrderDetailId";
+            this.編號.HeaderText = "編號";
+            this.編號.Name = "編號";
+            this.編號.ReadOnly = true;
+            // 
+            // 商品名稱
+            // 
+            this.商品名稱.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.商品名稱.DataPropertyName = "ProductName";
+            this.商品名稱.HeaderText = "商品名稱";
+            this.商品名稱.Name = "商品名稱";
+            this.商品名稱.ReadOnly = true;
+            // 
+            // 商品價格
+            // 
+            this.商品價格.DataPropertyName = "Price";
+            this.商品價格.HeaderText = "商品價格";
+            this.商品價格.Name = "商品價格";
+            this.商品價格.ReadOnly = true;
+            // 
+            // 下單數量
+            // 
+            this.下單數量.DataPropertyName = "OrderQuantity";
+            this.下單數量.HeaderText = "下單數量";
+            this.下單數量.Name = "下單數量";
+            this.下單數量.ReadOnly = true;
+            // 
+            // 商品尺寸
+            // 
+            this.商品尺寸.DataPropertyName = "SizeName";
+            this.商品尺寸.HeaderText = "商品尺寸";
+            this.商品尺寸.Name = "商品尺寸";
+            this.商品尺寸.ReadOnly = true;
+            // 
+            // 商品顏色
+            // 
+            this.商品顏色.DataPropertyName = "ColorName";
+            this.商品顏色.HeaderText = "商品顏色";
+            this.商品顏色.Name = "商品顏色";
+            this.商品顏色.ReadOnly = true;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -377,6 +420,7 @@
             // buttonAddProduct
             // 
             this.buttonAddProduct.BackColor = System.Drawing.Color.White;
+            this.buttonAddProduct.Enabled = false;
             this.buttonAddProduct.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.buttonAddProduct.Location = new System.Drawing.Point(635, 117);
             this.buttonAddProduct.Name = "buttonAddProduct";
@@ -464,49 +508,6 @@
             this.textBoxCompletionDate.ReadOnly = true;
             this.textBoxCompletionDate.Size = new System.Drawing.Size(141, 25);
             this.textBoxCompletionDate.TabIndex = 113;
-            // 
-            // 編號
-            // 
-            this.編號.DataPropertyName = "OrderDetailId";
-            this.編號.HeaderText = "編號";
-            this.編號.Name = "編號";
-            this.編號.ReadOnly = true;
-            // 
-            // 商品名稱
-            // 
-            this.商品名稱.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.商品名稱.DataPropertyName = "ProductName";
-            this.商品名稱.HeaderText = "商品名稱";
-            this.商品名稱.Name = "商品名稱";
-            this.商品名稱.ReadOnly = true;
-            // 
-            // 商品價格
-            // 
-            this.商品價格.DataPropertyName = "Price";
-            this.商品價格.HeaderText = "商品價格";
-            this.商品價格.Name = "商品價格";
-            this.商品價格.ReadOnly = true;
-            // 
-            // 下單數量
-            // 
-            this.下單數量.DataPropertyName = "OrderQuantity";
-            this.下單數量.HeaderText = "下單數量";
-            this.下單數量.Name = "下單數量";
-            this.下單數量.ReadOnly = true;
-            // 
-            // 商品尺寸
-            // 
-            this.商品尺寸.DataPropertyName = "SizeName";
-            this.商品尺寸.HeaderText = "商品尺寸";
-            this.商品尺寸.Name = "商品尺寸";
-            this.商品尺寸.ReadOnly = true;
-            // 
-            // 商品顏色
-            // 
-            this.商品顏色.DataPropertyName = "ColorName";
-            this.商品顏色.HeaderText = "商品顏色";
-            this.商品顏色.Name = "商品顏色";
-            this.商品顏色.ReadOnly = true;
             // 
             // FormOrderDetail
             // 
