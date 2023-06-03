@@ -323,5 +323,22 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
 
             db.SaveChanges();
         }
+
+        public void UpdateStockQuantity(string productName,string sizeName,string colorId,int quantity)
+        {
+            var db = new AppDbContext();
+
+            int productId = db.GetId<Product>(p => p.ProductName == productName, p => p.ProductId);
+            int sizeId = db.GetId<ProductSize>(p => p.SizeName == sizeName, p => p.SizeId); sizeName
+
+        }
+
+        public void UpdateOrderStatus(int orderId,string changeStatus,DateTime changeTime) 
+        {
+            if(changeStatus == "待出貨")
+            {
+
+            }
+        }
     }
 }

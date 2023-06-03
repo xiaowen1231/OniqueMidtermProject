@@ -55,10 +55,6 @@ namespace prjBackgroundManagementSystem
                 dto.CompletionDate.Value.ToShortDateString() : "訂單尚未完成";
 
             labelStatus.Text = dto.OrderStatus;
-            if (labelStatus.Text == "待出貨")
-            {
-                buttonAddProduct.Enabled = true;
-            }
             label1ShippingMethod.Text = dto.ShippingMethod;
             labelPayment.Text = dto.PaymentMethod;
             labelDiscount.Text = dto.Discount;
@@ -87,8 +83,15 @@ namespace prjBackgroundManagementSystem
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (labelStatus.Text != "待出貨")
+            {
+                labelHint.Text = "訂單狀態不可編輯商品!";
+                labelStatus.ForeColor = Color.LightSeaGreen;
+                labelHint.Visible = true;
+                return;
+            }
             if (e.RowIndex < 0) { return; }
-            if ()
+            
             int orderDetailId = this.OrderProductsDetail[e.RowIndex].OrderDetailId;
 
             var frm = new FormEditOrderProduct(orderDetailId);
@@ -103,7 +106,14 @@ namespace prjBackgroundManagementSystem
 
         private void buttonAddProduct_Click(object sender, EventArgs e)
         {
-            if(!int.TryParse(textBoxId.Text,out int orderId))
+            if (labelStatus.Text != "待出貨")
+            {
+                labelHint.Text = "訂單狀態不可新增商品!";
+                labelStatus.ForeColor = Color.LightSeaGreen;
+                labelHint.Visible = true;
+                return;
+            }
+            if (!int.TryParse(textBoxId.Text,out int orderId))
             {
                 MessageBox.Show("無法取得訂單編號");
                 return;
@@ -113,6 +123,14 @@ namespace prjBackgroundManagementSystem
             frm.Owner = this;
             frm.ShowDialog();
 
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            foreach(var productDetail in this.OrderProductsDetail)
+            {
+                MessageBox.Show($"Name:{productDetail.ProductName},size:{productDetail.SizeName},color:{productDetail.ColorName},quantity:{productDetail.OrderQuantity}\r\n");
+            }
         }
     }
 }

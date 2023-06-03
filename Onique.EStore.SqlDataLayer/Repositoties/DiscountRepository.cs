@@ -19,7 +19,8 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                     DiscountId = x.DiscountId,
                     DiscountName = x.DiscountName,
                     DiscountMethod = x.DiscountMethod,
-                }).FirstOrDefault();
+                })
+                .FirstOrDefault();
 
             if (dto == null)
             {
@@ -39,7 +40,7 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                 case "夏季特賣":
                     discountAmount = (price * dto.DiscountMethod) + 60; break;
                 case "未使用折扣":
-                    discountAmount = price; break;
+                    discountAmount = price + 60; break;
                 default:
                     break;
             }
