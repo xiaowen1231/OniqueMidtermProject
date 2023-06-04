@@ -41,7 +41,7 @@
             this.textBoxOrderQuantity = new System.Windows.Forms.TextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxSize = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,6 +57,8 @@
             this.labelQuantity = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxProductId = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxStockQuantity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductPhoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +110,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(211, 210);
+            this.label3.Location = new System.Drawing.Point(211, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 80;
@@ -118,7 +120,7 @@
             // textBoxProductName
             // 
             this.textBoxProductName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxProductName.Location = new System.Drawing.Point(280, 206);
+            this.textBoxProductName.Location = new System.Drawing.Point(280, 198);
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.ReadOnly = true;
             this.textBoxProductName.Size = new System.Drawing.Size(187, 25);
@@ -128,7 +130,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(211, 290);
+            this.label5.Location = new System.Drawing.Point(211, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 17);
             this.label5.TabIndex = 84;
@@ -138,7 +140,7 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxPrice.Location = new System.Drawing.Point(280, 287);
+            this.textBoxPrice.Location = new System.Drawing.Point(280, 284);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.ReadOnly = true;
             this.textBoxPrice.Size = new System.Drawing.Size(187, 25);
@@ -148,7 +150,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(211, 330);
+            this.label6.Location = new System.Drawing.Point(211, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 17);
             this.label6.TabIndex = 86;
@@ -200,17 +202,18 @@
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // button5
+            // buttonDelete
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.ForeColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(12, 611);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(108, 23);
-            this.button5.TabIndex = 105;
-            this.button5.Text = "刪除此筆";
-            this.button5.UseVisualStyleBackColor = false;
+            this.buttonDelete.BackColor = System.Drawing.Color.White;
+            this.buttonDelete.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.Red;
+            this.buttonDelete.Location = new System.Drawing.Point(12, 611);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(108, 23);
+            this.buttonDelete.TabIndex = 105;
+            this.buttonDelete.Text = "刪除此筆";
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // label4
             // 
@@ -226,7 +229,7 @@
             // textBoxSize
             // 
             this.textBoxSize.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxSize.Location = new System.Drawing.Point(280, 246);
+            this.textBoxSize.Location = new System.Drawing.Point(280, 241);
             this.textBoxSize.Name = "textBoxSize";
             this.textBoxSize.ReadOnly = true;
             this.textBoxSize.Size = new System.Drawing.Size(187, 25);
@@ -236,7 +239,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(211, 250);
+            this.label8.Location = new System.Drawing.Point(211, 245);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 17);
             this.label8.TabIndex = 108;
@@ -247,7 +250,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(211, 412);
+            this.label9.Location = new System.Drawing.Point(211, 460);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 17);
             this.label9.TabIndex = 110;
@@ -257,7 +260,7 @@
             // textBoxDescription
             // 
             this.textBoxDescription.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxDescription.Location = new System.Drawing.Point(280, 409);
+            this.textBoxDescription.Location = new System.Drawing.Point(280, 456);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.ReadOnly = true;
@@ -286,7 +289,7 @@
             // textBoxColor
             // 
             this.textBoxColor.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxColor.Location = new System.Drawing.Point(280, 367);
+            this.textBoxColor.Location = new System.Drawing.Point(280, 413);
             this.textBoxColor.Name = "textBoxColor";
             this.textBoxColor.ReadOnly = true;
             this.textBoxColor.Size = new System.Drawing.Size(187, 25);
@@ -296,7 +299,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.Location = new System.Drawing.Point(211, 370);
+            this.label10.Location = new System.Drawing.Point(211, 417);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 17);
             this.label10.TabIndex = 114;
@@ -354,7 +357,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label12.Location = new System.Drawing.Point(211, 160);
+            this.label12.Location = new System.Drawing.Point(211, 159);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 17);
             this.label12.TabIndex = 78;
@@ -364,11 +367,31 @@
             // textBoxProductId
             // 
             this.textBoxProductId.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxProductId.Location = new System.Drawing.Point(280, 156);
+            this.textBoxProductId.Location = new System.Drawing.Point(280, 155);
             this.textBoxProductId.Name = "textBoxProductId";
             this.textBoxProductId.ReadOnly = true;
             this.textBoxProductId.Size = new System.Drawing.Size(187, 25);
             this.textBoxProductId.TabIndex = 79;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label13.Location = new System.Drawing.Point(211, 374);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 17);
+            this.label13.TabIndex = 86;
+            this.label13.Text = "庫存數量:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // textBoxStockQuantity
+            // 
+            this.textBoxStockQuantity.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBoxStockQuantity.Location = new System.Drawing.Point(280, 370);
+            this.textBoxStockQuantity.Name = "textBoxStockQuantity";
+            this.textBoxStockQuantity.ReadOnly = true;
+            this.textBoxStockQuantity.Size = new System.Drawing.Size(187, 25);
+            this.textBoxStockQuantity.TabIndex = 88;
             // 
             // FormEditOrderProduct
             // 
@@ -388,11 +411,13 @@
             this.Controls.Add(this.textBoxSize);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.textBoxStockQuantity);
             this.Controls.Add(this.textBoxOrderQuantity);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxPrice);
@@ -432,7 +457,7 @@
         private System.Windows.Forms.TextBox textBoxOrderQuantity;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxSize;
         private System.Windows.Forms.Label label8;
@@ -448,5 +473,7 @@
         private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxProductId;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBoxStockQuantity;
     }
 }

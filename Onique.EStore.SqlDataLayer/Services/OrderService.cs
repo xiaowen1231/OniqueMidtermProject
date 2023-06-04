@@ -62,5 +62,106 @@ namespace Onique.EStore.SqlDataLayer.Services
                 repo.UpdateOrderProduct(orderDetialId,orderQuantity,size,color);
             }
         }
+
+        public void UpdateStockQuantity(string productName, string sizeName, string colorName
+            , int quantity, string changeStatus,string nowStatus)
+        {
+            if (changeStatus == nowStatus)
+            {
+                return;
+            }
+            var repo = new OrderRepository();
+            if (changeStatus == "已出貨")
+            {
+                repo.UpdateStockQuantity(productName, sizeName, colorName, quantity);
+            }
+            else if (changeStatus == "已取消"||changeStatus=="待出貨"||
+                changeStatus=="退款中"&&nowStatus=="已完成") 
+            {
+                quantity = -quantity;
+                repo.UpdateStockQuantity(productName , sizeName, colorName, quantity);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        
+        public void UpdateOrderStatus(int orderDetailId, string changeStatus,string nowStatus,
+            string payment)
+        {
+            var repo = new OrderRepository();
+
+            if(changeStatus == "待出貨")
+            {
+                if (nowStatus != "已出貨")
+                {
+                    throw new Exception("只有訂單狀態為:[已出貨],訂單可變更為:[待出貨}!");
+                }
+            }
+
+            else if(changeStatus == "已出貨")
+            {
+                if(nowStatus != "待出貨")
+                {
+                    throw new Exception("只有訂單狀態為:[待出貨],訂單可變更為:[已出貨]!");
+                }
+            }
+
+            else if(changeStatus == "已完成")
+            {
+                if(nowStatus != "已出貨")
+                {
+                    throw new Exception("只有訂單狀態為:[已出貨],訂單可變更為:[已完成}!");
+                }
+            }
+
+            else if(changeStatus == "已取消")
+            {
+                if(nowStatus != "待出貨")
+                {
+                    throw new Exception("只有訂單狀態為:[待出貨],訂單可變更為:[已取消}!");
+                }
+            }
+
+            else if(changeStatus == "退款中")
+            {
+                if (nowStatus != "已完成" && nowStatus!="已取消")
+                {
+                    throw new Exception("只有訂單狀態為:[已完成]或[已取消],訂單可變更為:[退款中]!");
+                }
+                if(nowStatus == "已取消" && payment == "貨到付款")
+                {
+                    throw new Exception("訂單狀態為:[貨到付款],無法將訂單改為[退款中]!");
+                }
+            }
+
+            else if(changeStatus == "已退款")
+            {
+                if(nowStatus!= "退款中")
+                {
+                    throw new Exception("只有訂單狀態為:[退款中],訂單可變更為:[已退款}!");
+                }
+            }
+            else 
+            { 
+                throw new Exception("請輸入更改訂單狀態"); 
+            }
+            repo.UpdateOrderStatus(orderDetailId, changeStatus);
+
+        }
+
+        public void DeleteOrder(int orderItems,int orderId)
+        {
+            if (orderItems <= 0)
+            {
+                new OrderRepository().DeleteOrder(orderId);
+            }
+            else
+            {
+                throw new Exception("請先清空訂單商品內容!");
+            }
+        }
     }
 }

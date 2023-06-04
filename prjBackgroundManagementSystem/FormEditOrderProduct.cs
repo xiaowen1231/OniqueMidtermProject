@@ -42,6 +42,7 @@ namespace prjBackgroundManagementSystem
             textBoxSize.Text = dto.SizeName;
             textBoxPrice.Text = dto.Price.ToString("0");
             textBoxOrderQuantity.Text = dto.OrderQuantity.ToString();
+            textBoxStockQuantity.Text = dto.StockQuantity.ToString();
             textBoxDescription.Text = dto.ProductDescription;
             textBoxColor.Text = dto.ColorName;
 
@@ -153,6 +154,33 @@ namespace prjBackgroundManagementSystem
         private void comboBoxUpdateSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             DisplayStockQuantity();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult result = MessageBox.Show("確定刪除此項商品?", "刪除商品", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    new OrderRepository().DeleteOrderDetail(_orderDetailId);
+                    var parent = this.Owner as IGrid;
+                    if(parent != null)
+                    {
+                        parent.Display();
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("刪除失敗! 原因: " + ex.Message);
+            }
+            
         }
     }
 }

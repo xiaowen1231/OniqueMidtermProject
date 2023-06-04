@@ -52,6 +52,12 @@
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品價格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.下單數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品尺寸 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品顏色 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonAddProduct = new System.Windows.Forms.Button();
@@ -64,12 +70,6 @@
             this.textBoxShippingDate = new System.Windows.Forms.TextBox();
             this.textBoxCompletionDate = new System.Windows.Forms.TextBox();
             this.labelHint = new System.Windows.Forms.Label();
-            this.編號 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品名稱 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品價格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.下單數量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品尺寸 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.商品顏色 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +157,7 @@
             this.buttonDelete.TabIndex = 100;
             this.buttonDelete.Text = "刪除訂單";
             this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // labelAddress
             // 
@@ -357,6 +358,49 @@
             this.dataGridView1.TabIndex = 75;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // 編號
+            // 
+            this.編號.DataPropertyName = "OrderDetailId";
+            this.編號.HeaderText = "編號";
+            this.編號.Name = "編號";
+            this.編號.ReadOnly = true;
+            // 
+            // 商品名稱
+            // 
+            this.商品名稱.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.商品名稱.DataPropertyName = "ProductName";
+            this.商品名稱.HeaderText = "商品名稱";
+            this.商品名稱.Name = "商品名稱";
+            this.商品名稱.ReadOnly = true;
+            // 
+            // 商品價格
+            // 
+            this.商品價格.DataPropertyName = "Price";
+            this.商品價格.HeaderText = "商品價格";
+            this.商品價格.Name = "商品價格";
+            this.商品價格.ReadOnly = true;
+            // 
+            // 下單數量
+            // 
+            this.下單數量.DataPropertyName = "OrderQuantity";
+            this.下單數量.HeaderText = "下單數量";
+            this.下單數量.Name = "下單數量";
+            this.下單數量.ReadOnly = true;
+            // 
+            // 商品尺寸
+            // 
+            this.商品尺寸.DataPropertyName = "SizeName";
+            this.商品尺寸.HeaderText = "商品尺寸";
+            this.商品尺寸.Name = "商品尺寸";
+            this.商品尺寸.ReadOnly = true;
+            // 
+            // 商品顏色
+            // 
+            this.商品顏色.DataPropertyName = "ColorName";
+            this.商品顏色.HeaderText = "商品顏色";
+            this.商品顏色.Name = "商品顏色";
+            this.商品顏色.ReadOnly = true;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -480,49 +524,6 @@
             this.labelHint.Text = "提示文字!";
             this.labelHint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelHint.Visible = false;
-            // 
-            // 編號
-            // 
-            this.編號.DataPropertyName = "OrderDetailId";
-            this.編號.HeaderText = "編號";
-            this.編號.Name = "編號";
-            this.編號.ReadOnly = true;
-            // 
-            // 商品名稱
-            // 
-            this.商品名稱.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.商品名稱.DataPropertyName = "ProductName";
-            this.商品名稱.HeaderText = "商品名稱";
-            this.商品名稱.Name = "商品名稱";
-            this.商品名稱.ReadOnly = true;
-            // 
-            // 商品價格
-            // 
-            this.商品價格.DataPropertyName = "Price";
-            this.商品價格.HeaderText = "商品價格";
-            this.商品價格.Name = "商品價格";
-            this.商品價格.ReadOnly = true;
-            // 
-            // 下單數量
-            // 
-            this.下單數量.DataPropertyName = "OrderQuantity";
-            this.下單數量.HeaderText = "下單數量";
-            this.下單數量.Name = "下單數量";
-            this.下單數量.ReadOnly = true;
-            // 
-            // 商品尺寸
-            // 
-            this.商品尺寸.DataPropertyName = "SizeName";
-            this.商品尺寸.HeaderText = "商品尺寸";
-            this.商品尺寸.Name = "商品尺寸";
-            this.商品尺寸.ReadOnly = true;
-            // 
-            // 商品顏色
-            // 
-            this.商品顏色.DataPropertyName = "ColorName";
-            this.商品顏色.HeaderText = "商品顏色";
-            this.商品顏色.Name = "商品顏色";
-            this.商品顏色.ReadOnly = true;
             // 
             // FormOrderDetail
             // 

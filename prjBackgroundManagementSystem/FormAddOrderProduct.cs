@@ -120,6 +120,13 @@ namespace prjBackgroundManagementSystem
 
         private void buttonSelectProduct_Click(object sender, EventArgs e)
         {
+            comboBoxColor.Items.Clear();
+            comboBoxSize.Items.Clear();
+            textBoxProductName.Text = string.Empty;
+            textBoxQuantity.Text = string.Empty;
+            labelQuantity.Text = "庫存數量:";
+            _stockQuantity = 0;
+            labelHint.Visible= false;
             pictureBoxProductPhoto.Image = null;
             var frm = new FormSelectProduct(_orderId);
             frm.Owner = this;

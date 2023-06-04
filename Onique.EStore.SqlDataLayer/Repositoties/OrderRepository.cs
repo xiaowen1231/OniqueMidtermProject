@@ -53,6 +53,8 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                 orders = orders.Where(s => s.OrderStatus == orderStatus);
             }
 
+            orders=orders.OrderByDescending(o => o.OrderDate).ThenByDescending(x=>x.OrderStatus);
+
             return orders.ToList();
         }
 
@@ -308,7 +310,8 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             }
         }
 
-        public void UpdateOrderProduct(int orderDetailId,int orderQuantity,string size,string color) 
+        public void UpdateOrderProduct(int orderDetailId,int orderQuantity
+            ,string size,string color) 
         {
             var db = new AppDbContext();
 
@@ -324,21 +327,75 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             db.SaveChanges();
         }
 
-        public void UpdateStockQuantity(string productName,string sizeName,string colorId,int quantity)
+        public void UpdateStockQuantity(string productName,string sizeName,string colorName
+            ,int quantity)
         {
             var db = new AppDbContext();
 
             int productId = db.GetId<Product>(p => p.ProductName == productName, p => p.ProductId);
-            int sizeId = db.GetId<ProductSize>(p => p.SizeName == sizeName, p => p.SizeId); sizeName
+            int sizeId = db.GetId<ProductSize>(p => p.SizeName == sizeName, p => p.SizeId); 
+            int colorId = db.GetId<ProductColor>(p => p.ColorName == colorName, p => p.ColorId);
+
+            var productStockDetail = db.ProductStockDetails
+                .Where(psd => psd.ProductId == productId
+                && psd.SizeId == sizeId
+                && psd.ColorId == colorId)
+                .FirstOrDefault();
+
+            int originalStock = productStockDetail.Quantity;
+            
+            productStockDetail.Quantity = originalStock-quantity;
+
+            db.SaveChanges();
 
         }
 
-        public void UpdateOrderStatus(int orderId,string changeStatus,DateTime changeTime) 
+        public void UpdateOrderStatus(int orderDetailId,string changeStatus) 
         {
-            if(changeStatus == "待出貨")
-            {
+            var db = new AppDbContext();
+            int statusId = db.GetId<OrderStatu>(os => os.StatusName == changeStatus, os => os.StatusId);
+            DateTime changeTime = DateTime.Now;
 
+            var orders = db.Orders.Find(orderDetailId);
+
+            switch (changeStatus)
+            {
+                case "待出貨":
+                    orders.ShippingDate = null; break;
+                case "已出貨":
+                    orders.ShippingDate = changeTime; break;
+                case "已完成":
+                    orders.CompletionDate = changeTime; break;
+                default: break;
             }
+
+            orders.OrderStatusId = statusId;
+
+            db.SaveChanges();
+        }
+        
+        public void DeleteOrderDetail(int orderDetailId)
+        {
+            var db = new AppDbContext();
+            var orderDetail = db.OrderDetails.Find(orderDetailId);
+
+            if(orderDetail == null)
+            {
+                throw new Exception("找不到要刪除的訂單商品!");
+            }
+
+            db.OrderDetails.Remove(orderDetail);
+
+            db.SaveChanges();
+
+        }
+
+        public void DeleteOrder(int orderId)
+        {
+            var db = new AppDbContext();
+            var order = db.Orders.Find(orderId);
+            db.Orders.Remove(order);
+            db.SaveChanges();
         }
     }
 }

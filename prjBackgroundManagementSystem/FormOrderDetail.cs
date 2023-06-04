@@ -1,6 +1,7 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using Onique.EStore.SqlDataLayer.Services;
 using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ using System.Windows.Forms;
 
 namespace prjBackgroundManagementSystem
 {
-    public partial class FormOrderDetail : Form,IGrid
+    public partial class FormOrderDetail : Form, IGrid
     {
 
         List<OrderDetailDto> OrderProductsDetail = new List<OrderDetailDto>();
@@ -35,6 +36,10 @@ namespace prjBackgroundManagementSystem
         public void Display()
         {
             
+            labelHint.Visible = false;
+            labelStatus.ForeColor = Color.DarkMagenta;
+            comboBoxStatus.Items.Clear();
+            comboBoxStatus.Text = string.Empty;
             var repo = new OrderRepository();
             OrderDto dto = repo.Search(_orderId, null).FirstOrDefault();
 
@@ -90,8 +95,11 @@ namespace prjBackgroundManagementSystem
                 labelHint.Visible = true;
                 return;
             }
-            if (e.RowIndex < 0) { return; }
-            
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+
             int orderDetailId = this.OrderProductsDetail[e.RowIndex].OrderDetailId;
 
             var frm = new FormEditOrderProduct(orderDetailId);
@@ -113,7 +121,7 @@ namespace prjBackgroundManagementSystem
                 labelHint.Visible = true;
                 return;
             }
-            if (!int.TryParse(textBoxId.Text,out int orderId))
+            if (!int.TryParse(textBoxId.Text, out int orderId))
             {
                 MessageBox.Show("無法取得訂單編號");
                 return;
@@ -127,9 +135,90 @@ namespace prjBackgroundManagementSystem
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            foreach(var productDetail in this.OrderProductsDetail)
+            if (OrderProductsDetail.Count == 0)
             {
-                MessageBox.Show($"Name:{productDetail.ProductName},size:{productDetail.SizeName},color:{productDetail.ColorName},quantity:{productDetail.OrderQuantity}\r\n");
+                MessageBox.Show("訂單尚未選擇任何商品!");
+                return;
+            }
+            try
+            {
+                var service = new OrderService();
+                service.UpdateOrderStatus(_orderId, comboBoxStatus.Text
+                    , labelStatus.Text, labelPayment.Text);
+
+                foreach (var productDetail in this.OrderProductsDetail)
+                {
+                    service.UpdateStockQuantity(productDetail.ProductName,
+                        productDetail.SizeName,
+                        productDetail.ColorName,
+                        productDetail.OrderQuantity,
+                        comboBoxStatus.Text,
+                        labelStatus.Text);
+
+                }
+
+                MessageBox.Show("訂單狀態修改成功");
+
+                Display();
+
+                var parent = this.Owner as IGrid;
+
+                if (parent != null)
+                {
+                    parent.Display();
+                }
+                else
+                {
+                    MessageBox.Show("刪除成功! 請重新開啟表單確認資訊!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("無法更新訂單狀態!原因:" + ex.Message);
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            int orderItems = OrderProductsDetail.Count;
+            if (!int.TryParse(textBoxId.Text, out int orderId))
+            {
+                MessageBox.Show("無法正確取的訂單編號!");
+                return;
+            }
+            else if (labelStatus.Text != "已取消" && labelStatus.Text != "待出貨")
+            {
+                MessageBox.Show("訂單狀態為無法刪除的訂單!");
+                return;
+            }
+            try
+            {
+                var result = MessageBox.Show("確定刪除此訂單嗎?", "刪除訊息", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    new OrderService().DeleteOrder(orderItems, orderId);
+                }
+                else
+                {
+                    return;
+                }
+                var parent = this.Owner as IGrid;
+
+                if (parent != null)
+                {
+                    parent.Display();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("刪除成功! 請重新開啟表單確認資訊!");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("刪除訂單失敗! 原因: " + ex.Message);
             }
         }
     }
