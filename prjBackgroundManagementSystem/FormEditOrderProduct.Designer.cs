@@ -339,7 +339,6 @@
             this.labelHint.TabIndex = 124;
             this.labelHint.Text = "提示!";
             this.labelHint.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.labelHint.Visible = false;
             // 
             // labelQuantity
             // 

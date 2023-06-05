@@ -75,7 +75,7 @@ namespace Onique.EStore.SqlDataLayer.Services
             {
                 repo.UpdateStockQuantity(productName, sizeName, colorName, quantity);
             }
-            else if (changeStatus == "已取消"||changeStatus=="待出貨"||
+            else if (changeStatus == "未取貨" || changeStatus=="待出貨"||
                 changeStatus=="退款中"&&nowStatus=="已完成") 
             {
                 quantity = -quantity;
@@ -127,13 +127,21 @@ namespace Onique.EStore.SqlDataLayer.Services
 
             else if(changeStatus == "退款中")
             {
-                if (nowStatus != "已完成" && nowStatus!="已取消")
+                if (nowStatus != "已完成" && nowStatus!="已取消" && nowStatus != "未取貨")
                 {
                     throw new Exception("只有訂單狀態為:[已完成]或[已取消],訂單可變更為:[退款中]!");
                 }
-                if(nowStatus == "已取消" && payment == "貨到付款")
+                if(nowStatus == "已取消" && payment == "貨到付款"|| nowStatus == "未取貨" && payment == "貨到付款")
                 {
                     throw new Exception("訂單狀態為:[貨到付款],無法將訂單改為[退款中]!");
+                }
+            }
+
+            else if (changeStatus == "未取貨")
+            {
+                if (nowStatus != "已出貨")
+                {
+                    throw new Exception("只有訂單狀態為:[已出貨],訂單可變更為[未取貨]");
                 }
             }
 

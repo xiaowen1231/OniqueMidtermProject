@@ -32,6 +32,7 @@ namespace prjBackgroundManagementSystem
 
         private void FormEditOrderProduct_Load(object sender, EventArgs e)
         {
+            labelHint.Visible = false;
             OrderRepository repo = new OrderRepository();
 
             var dto = repo.GetOrderProductDetail(_orderDetailId);
