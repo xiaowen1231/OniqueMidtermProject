@@ -28,56 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnForgetManager = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnLoginManager = new System.Windows.Forms.Button();
+            this.txtMangerPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMangerEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDemo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button3
+            // btnForgetManager
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(372, 421);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "忘記密碼";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnForgetManager.BackColor = System.Drawing.Color.White;
+            this.btnForgetManager.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnForgetManager.Location = new System.Drawing.Point(372, 421);
+            this.btnForgetManager.Name = "btnForgetManager";
+            this.btnForgetManager.Size = new System.Drawing.Size(75, 23);
+            this.btnForgetManager.TabIndex = 15;
+            this.btnForgetManager.Text = "忘記密碼";
+            this.btnForgetManager.UseVisualStyleBackColor = false;
+            this.btnForgetManager.Click += new System.EventHandler(this.btnForgetManager_Click);
             // 
-            // button2
+            // btnClose
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(163, 291);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "關閉";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClose.Location = new System.Drawing.Point(163, 291);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "關閉";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // button1
+            // btnLoginManager
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(256, 291);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "登入";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLoginManager.BackColor = System.Drawing.Color.White;
+            this.btnLoginManager.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLoginManager.Location = new System.Drawing.Point(256, 291);
+            this.btnLoginManager.Name = "btnLoginManager";
+            this.btnLoginManager.Size = new System.Drawing.Size(75, 23);
+            this.btnLoginManager.TabIndex = 13;
+            this.btnLoginManager.Text = "登入";
+            this.btnLoginManager.UseVisualStyleBackColor = false;
+            this.btnLoginManager.Click += new System.EventHandler(this.btnLoginManager_Click);
             // 
-            // textBox2
+            // txtMangerPassword
             // 
-            this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox2.Location = new System.Drawing.Point(240, 227);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 12;
+            this.txtMangerPassword.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtMangerPassword.Location = new System.Drawing.Point(240, 227);
+            this.txtMangerPassword.Name = "txtMangerPassword";
+            this.txtMangerPassword.Size = new System.Drawing.Size(100, 25);
+            this.txtMangerPassword.TabIndex = 12;
             // 
             // label3
             // 
@@ -89,13 +93,13 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "請輸入密碼:";
             // 
-            // textBox1
+            // txtMangerEmail
             // 
-            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(240, 186);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 10;
+            this.txtMangerEmail.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtMangerEmail.Location = new System.Drawing.Point(240, 186);
+            this.txtMangerEmail.Name = "txtMangerEmail";
+            this.txtMangerEmail.Size = new System.Drawing.Size(100, 25);
+            this.txtMangerEmail.TabIndex = 10;
             // 
             // label2
             // 
@@ -122,21 +126,35 @@
             this.label1.Text = "管理員登入系統";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.White;
+            this.btnDemo.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDemo.Location = new System.Drawing.Point(256, 320);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(75, 23);
+            this.btnDemo.TabIndex = 16;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
+            // 
             // FormEmployeeManagerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 481);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnDemo);
+            this.Controls.Add(this.btnForgetManager);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLoginManager);
+            this.Controls.Add(this.txtMangerPassword);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMangerEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormEmployeeManagerLogin";
             this.Text = "管理員登入";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEmployeeManagerLogin_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,13 +162,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnForgetManager;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnLoginManager;
+        private System.Windows.Forms.TextBox txtMangerPassword;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMangerEmail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDemo;
     }
 }
