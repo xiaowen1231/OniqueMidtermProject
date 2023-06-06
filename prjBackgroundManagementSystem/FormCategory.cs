@@ -76,6 +76,7 @@ namespace prjBackgroundManagementSystem
         private void btnAddCategories_Click(object sender, EventArgs e)
         {
             var createCategory = new FormCreateCategory();
+            createCategory.Owner = this;
             createCategory.ShowDialog();
         }
 
@@ -84,6 +85,7 @@ namespace prjBackgroundManagementSystem
             if (e.RowIndex < 0) return;
             int categoryId = categories[e.RowIndex].CategoryId;
             var updateOrDelete = new FormEditCategory(categoryId);
+            updateOrDelete.Owner = this;
             updateOrDelete.ShowDialog();
         }
     }

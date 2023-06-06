@@ -24,7 +24,7 @@ namespace Onique.EStore.SqlDataLayer
         }
         public CategoryDto GetByName(string name)
         {
-            string sql = $"select * from Categories where Name =@Name";
+            string sql = $"select * from Categories where CategoryName =@Name";
 
             Func<SqlDataReader, CategoryDto> func = Assembler.CategoryDtoAssembler;
             SqlParameter parameter = new SqlParameter("@Name", SqlDbType.NVarChar, 30) { Value = name };
@@ -34,11 +34,11 @@ namespace Onique.EStore.SqlDataLayer
         }
         public int Update(CategoryDto dto)
         {
-            string sql = "update Categories set Name=@Name, DisplayOrder= @DisplayOrder where Id=@Id";
+            string sql = "update Categories set CategoryName=@Name, DisplayOrder= @DisplayOrder where CategoryId=@Id";
 
             var parameter = new SqlParameterBuilder()
                             .AddInt("@id", dto.CategoryId)
-                            .AddNVarchar("@Name", 30, dto.CategoryName)
+                            .AddNVarchar("@Name", 50, dto.CategoryName)
                             .AddInt("@DisplayOrder", dto.DisplayOrder)
                             .Build();
             Func<SqlConnection> connGetter = SqlDb.GetConnection;
@@ -46,7 +46,7 @@ namespace Onique.EStore.SqlDataLayer
         }
         public int Delete(int categoryId)
         {
-            string sql = "delete from Categories where Id=@Id";
+            string sql = "delete from Categories where CategoryId=@Id";
             SqlParameter parameter = new SqlParameter("@Id", SqlDbType.Int) { Value = categoryId };
             Func<SqlConnection> connGetter = SqlDb.GetConnection;
 

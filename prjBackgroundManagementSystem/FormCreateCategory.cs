@@ -1,4 +1,5 @@
-﻿using Onique.EStore.SqlDataLayer.EFModels;
+﻿using Onique.EStore.SqlDataLayer;
+using Onique.EStore.SqlDataLayer.EFModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,18 +21,35 @@ namespace prjBackgroundManagementSystem
 
         private void btnComfirmAdd_Click(object sender, EventArgs e)
         {
-            string name = txtCategoryName.Text;
-            bool isInt = int.TryParse(txtDisplayOrder.Text, out int DisplatOrder);
-
-            var db = new AppDbContext();
-            var category = new Category()
+            try
             {
-                CategoryName = name,
-                DisplayOrder = DisplatOrder
-            };
-            db.Categories.Add(category);
-            db.SaveChanges();
+                string name = txtCategoryName.Text;
+                bool isInt = int.TryParse(txtDisplayOrder.Text, out int DisplatOrder);
 
+                var db = new AppDbContext();
+                var category = new Category()
+                {
+                    CategoryName = name,
+                    DisplayOrder = DisplatOrder
+                };
+                db.Categories.Add(category);
+                db.SaveChanges();
+                MessageBox.Show("新增成功");
+
+                var parent = this.Owner as IGrid;
+                if(parent != null)
+                {
+                    parent.Display();
+                }
+                else
+                {
+                    MessageBox.Show("請重新刷新表單確認!");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("新增失敗!");
+            }
         }
 
         private void btnCancelAdd_Click(object sender, EventArgs e)
