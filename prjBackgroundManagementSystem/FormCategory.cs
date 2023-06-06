@@ -1,4 +1,5 @@
-﻿using Onique.EStore.SqlDataLayer.EFModels;
+﻿using Onique.EStore.SqlDataLayer;
+using Onique.EStore.SqlDataLayer.EFModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
