@@ -31,16 +31,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnClearSearch = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cboxCategoryName = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCategoryId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +65,6 @@
             this.btnClearSearch.TabIndex = 96;
             this.btnClearSearch.Text = "清除查詢";
             this.btnClearSearch.UseVisualStyleBackColor = false;
-            this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
             // 
             // dataGridView1
             // 
@@ -81,7 +78,26 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1006, 470);
             this.dataGridView1.TabIndex = 94;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CategoryId";
+            this.Column1.HeaderText = "CategoryId";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "CategoryName";
+            this.Column2.HeaderText = "CategoryName";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "ProductName";
+            this.Column3.HeaderText = "ProductName";
+            this.Column3.Name = "Column3";
             // 
             // label2
             // 
@@ -103,7 +119,6 @@
             this.btnSearch.TabIndex = 91;
             this.btnSearch.Text = "查詢";
             this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label1
             // 
@@ -140,57 +155,15 @@
             this.btnAdd.TabIndex = 96;
             this.btnAdd.Text = "新增分類";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAddCategories_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "CategoryId";
-            this.Column1.HeaderText = "CategoryId";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "CategoryName";
-            this.Column2.HeaderText = "CategoryName";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "DisplayOrder";
-            this.Column3.HeaderText = "DisplayOrder";
-            this.Column3.Name = "Column3";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(537, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 17);
-            this.label3.TabIndex = 92;
-            this.label3.Text = "ID:";
-            // 
-            // txtCategoryId
-            // 
-            this.txtCategoryId.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCategoryId.Location = new System.Drawing.Point(568, 123);
-            this.txtCategoryId.Multiline = true;
-            this.txtCategoryId.Name = "txtCategoryId";
-            this.txtCategoryId.Size = new System.Drawing.Size(121, 20);
-            this.txtCategoryId.TabIndex = 98;
             // 
             // FormCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 658);
-            this.Controls.Add(this.txtCategoryId);
             this.Controls.Add(this.cboxCategoryName);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnClearSearch);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSearch);
@@ -215,11 +188,9 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboxCategoryName;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCategoryId;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
