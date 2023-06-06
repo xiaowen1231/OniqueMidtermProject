@@ -17,7 +17,6 @@ namespace prjBackgroundManagementSystem
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
 
 
         Form SaveForm = null;
@@ -81,7 +80,5 @@ namespace prjBackgroundManagementSystem
         }
 
         
-=======
->>>>>>> parent of c06d541 (jimmy)
     }
 }
