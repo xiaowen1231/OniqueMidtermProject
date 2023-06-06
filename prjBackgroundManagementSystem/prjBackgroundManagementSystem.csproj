@@ -91,6 +91,12 @@
     <Compile Include="FormCheckOutSystem.Designer.cs">
       <DependentUpon>FormCheckOutSystem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCreateCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateCategory.Designer.cs">
+      <DependentUpon>FormCreateCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     </Compile>
     <Compile Include="FormCreateProduct.Designer.cs">
       <DependentUpon>FormCreateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditCategory.Designer.cs">
+      <DependentUpon>FormEditCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditEmployee.cs">
       <SubType>Form</SubType>
@@ -198,11 +210,17 @@
     <EmbeddedResource Include="FormCheckOutSystem.resx">
       <DependentUpon>FormCheckOutSystem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateCategory.resx">
+      <DependentUpon>FormCreateCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCreateEmployee.resx">
       <DependentUpon>FormCreateEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateProduct.resx">
       <DependentUpon>FormCreateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditCategory.resx">
+      <DependentUpon>FormEditCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditEmployee.resx">
       <DependentUpon>FormEditEmployee.cs</DependentUpon>
@@ -299,6 +317,11 @@
       <Project>{81127e52-4356-42d9-9a0a-aad1ac0b5691}</Project>
       <Name>Onique.EStore.SqlDataLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="HTML\box model.html" />
+    <Content Include="Resources\logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
