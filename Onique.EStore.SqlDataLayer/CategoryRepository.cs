@@ -14,7 +14,7 @@ namespace Onique.EStore.SqlDataLayer
     {
         public CategoryDto Get(int categoryId)
         {
-            string sql = $"select * from Categories where Id = {categoryId}";
+            string sql = $"select * from Categories where CategoryId = {categoryId}";
 
             Func<SqlDataReader, CategoryDto> func = Assembler.CategoryDtoAssembler;
             SqlParameter[] parameters = new SqlParameter[0];

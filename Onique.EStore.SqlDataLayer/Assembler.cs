@@ -15,9 +15,9 @@ namespace Onique.EStore.SqlDataLayer
             {
                 Func<SqlDataReader, CategoryDto> func = (reader) =>
                 {
-                    int id = int.Parse(reader["id"].ToString());
-                    string name = reader["name"].ToString();
-                    int displayOrder = int.Parse(reader["displayOrder"].ToString());
+                    int id = int.Parse(reader["CategoryId"].ToString());
+                    string name = reader["CategoryName"].ToString();
+                    int displayOrder = int.Parse(reader["DisplayOrder"].ToString());
 
                     return new CategoryDto
                     {
