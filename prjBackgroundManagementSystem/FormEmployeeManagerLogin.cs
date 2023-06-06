@@ -29,7 +29,7 @@ namespace prjBackgroundManagementSystem
             var forgetManagerPassword = new FormEmployeeManagerForgetThePassword();
             forgetManagerPassword.Owner = this;
             this.Hide();
-            forgetManagerPassword.Show();
+            forgetManagerPassword.ShowDialog();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

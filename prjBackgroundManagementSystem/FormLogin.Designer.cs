@@ -127,6 +127,7 @@
             this.btnForget.TabIndex = 7;
             this.btnForget.Text = "忘記密碼";
             this.btnForget.UseVisualStyleBackColor = false;
+            this.btnForget.Visible = false;
             this.btnForget.Click += new System.EventHandler(this.btnForget_Click);
             // 
             // errorProvider1

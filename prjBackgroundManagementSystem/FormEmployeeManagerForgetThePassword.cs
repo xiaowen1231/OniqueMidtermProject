@@ -19,10 +19,8 @@ namespace prjBackgroundManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            var loginManager = new FormEmployeeManagerLogin();
-            loginManager.Owner = this;
-            this.Hide();
-            loginManager.Show();
+            this.Owner.Show();
+            this.Close();
         }
 
         private void btnUpdateManagerPassword_Click(object sender, EventArgs e)
@@ -30,9 +28,5 @@ namespace prjBackgroundManagementSystem
 
         }
 
-        private void FormEmployeeManagerForgetThePassword_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Owner.Show();
-        }
     }
 }

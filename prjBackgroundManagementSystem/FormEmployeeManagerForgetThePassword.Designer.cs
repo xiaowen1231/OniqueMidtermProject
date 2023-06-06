@@ -160,7 +160,6 @@
             this.Controls.Add(this.label5);
             this.Name = "FormEmployeeManagerForgetThePassword";
             this.Text = "管理員忘記密碼";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEmployeeManagerForgetThePassword_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
