@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -111,41 +110,11 @@
             this.button2.Text = "關閉";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
-            this.btnForget.BackColor = System.Drawing.Color.White;
-            this.btnForget.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnForget.Location = new System.Drawing.Point(372, 421);
-            this.btnForget.Name = "btnForget";
-            this.btnForget.Size = new System.Drawing.Size(75, 23);
-            this.btnForget.TabIndex = 7;
-            this.btnForget.Text = "忘記密碼";
-            this.btnForget.UseVisualStyleBackColor = false;
-            this.btnForget.Visible = false;
-            this.btnForget.Click += new System.EventHandler(this.btnForget_Click);
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // btnDemo
-            // 
-            this.btnDemo.BackColor = System.Drawing.Color.White;
-            this.btnDemo.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnDemo.Location = new System.Drawing.Point(256, 320);
-            this.btnDemo.Name = "btnDemo";
-            this.btnDemo.Size = new System.Drawing.Size(75, 23);
-            this.btnDemo.TabIndex = 8;
-            this.btnDemo.Text = "Demo";
-            this.btnDemo.UseVisualStyleBackColor = false;
-            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
-            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 481);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -173,6 +142,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
     }
 }
