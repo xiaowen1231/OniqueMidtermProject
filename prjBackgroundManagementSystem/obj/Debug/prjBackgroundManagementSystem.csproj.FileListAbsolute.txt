@@ -169,3 +169,4 @@ C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prj
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCategory.resources
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateCategory.resources
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormEditCategory.resources
+C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateMember.resources

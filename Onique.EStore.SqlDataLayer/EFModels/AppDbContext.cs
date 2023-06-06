@@ -16,7 +16,9 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<City> Citys { get; set; }
         public virtual DbSet<Discount> Discounts { get; set; }
+        public virtual DbSet<EmployeeLevel> EmployeeLevels { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<MemberLevel> MemberLevels { get; set; }
         public virtual DbSet<Member> Members { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
@@ -70,6 +72,18 @@ namespace Onique.EStore.SqlDataLayer.EFModels
             modelBuilder.Entity<Discount>()
                 .Property(e => e.DiscountMethod)
                 .HasPrecision(19, 4);
+
+            modelBuilder.Entity<EmployeeLevel>()
+                .HasMany(e => e.Employees)
+                .WithRequired(e => e.EmployeeLevel)
+                .HasForeignKey(e => e.Position)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MemberLevel>()
+                .HasMany(e => e.Members)
+                .WithRequired(e => e.MemberLevel1)
+                .HasForeignKey(e => e.MemberLevel)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Member>()
                 .HasMany(e => e.Orders)

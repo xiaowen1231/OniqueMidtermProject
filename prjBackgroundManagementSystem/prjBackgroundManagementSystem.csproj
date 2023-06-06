@@ -109,6 +109,12 @@
     <Compile Include="FormCreateEmployee.Designer.cs">
       <DependentUpon>FormCreateEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCreateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateMember.Designer.cs">
+      <DependentUpon>FormCreateMember.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreateOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateEmployee.resx">
       <DependentUpon>FormCreateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateMember.resx">
+      <DependentUpon>FormCreateMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateOrder.resx">
       <DependentUpon>FormCreateOrder.cs</DependentUpon>
