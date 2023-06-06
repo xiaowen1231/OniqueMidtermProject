@@ -77,6 +77,8 @@
     <Compile Include="EFModels\ShippingMethod.cs" />
     <Compile Include="EFModels\Supplier.cs" />
     <Compile Include="ExtMethods\AppContextExMethod.cs" />
+    <Compile Include="EmployeeLoginDto.cs" />
+    <Compile Include="EmployeeManagerLoginDto.cs" />
     <Compile Include="ExtMethods\SqlDataReaderExtMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositoties\DiscountRepository.cs" />
@@ -90,5 +92,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
