@@ -113,14 +113,32 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(372, 421);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "忘記密碼";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnForget.BackColor = System.Drawing.Color.White;
+            this.btnForget.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnForget.Location = new System.Drawing.Point(372, 421);
+            this.btnForget.Name = "btnForget";
+            this.btnForget.Size = new System.Drawing.Size(75, 23);
+            this.btnForget.TabIndex = 7;
+            this.btnForget.Text = "忘記密碼";
+            this.btnForget.UseVisualStyleBackColor = false;
+            this.btnForget.Visible = false;
+            this.btnForget.Click += new System.EventHandler(this.btnForget_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.Color.White;
+            this.btnDemo.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDemo.Location = new System.Drawing.Point(256, 320);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(75, 23);
+            this.btnDemo.TabIndex = 8;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
             // 
             // FormLogin
             // 

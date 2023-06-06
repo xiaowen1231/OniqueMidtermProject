@@ -39,5 +39,31 @@ namespace prjBackgroundManagementSystem
         {
             Display();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Display();           
+        }
+
+        private void btnClearSearch_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = new List<CategoryDto>();
+        }
+
+        private void btnAddCategories_Click(object sender, EventArgs e)
+        {
+            var createCategory = new FormCreateCategory();
+            createCategory.Owner = this;
+            createCategory.ShowDialog();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            int categoryId = categories[e.RowIndex].CategoryId;
+            var updateOrDelete = new FormEditCategory(categoryId);
+            updateOrDelete.Owner = this;
+            updateOrDelete.ShowDialog();
+        }
     }
 }
