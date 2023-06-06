@@ -32,9 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,10 +52,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\DiscountDto.cs" />
+    <Compile Include="Dto\OrderDetailDto.cs" />
+    <Compile Include="Dto\OrderDetailProductDto.cs" />
+    <Compile Include="Dto\OrderDto.cs" />
+    <Compile Include="Dto\SelectMemberDto.cs" />
+    <Compile Include="Dto\SelectProductDto.cs" />
+    <Compile Include="EFModels\AppDbContext.cs" />
+    <Compile Include="EFModels\Area.cs" />
+    <Compile Include="EFModels\Category.cs" />
+    <Compile Include="EFModels\City.cs" />
+    <Compile Include="EFModels\Discount.cs" />
+    <Compile Include="EFModels\Employee.cs" />
+    <Compile Include="EFModels\Member.cs" />
+    <Compile Include="EFModels\Order.cs" />
+    <Compile Include="EFModels\OrderDetail.cs" />
+    <Compile Include="EFModels\OrderStatu.cs" />
+    <Compile Include="EFModels\PaymentMethod.cs" />
+    <Compile Include="EFModels\Product.cs" />
+    <Compile Include="EFModels\ProductColor.cs" />
+    <Compile Include="EFModels\ProductPhoto.cs" />
+    <Compile Include="EFModels\ProductSize.cs" />
+    <Compile Include="EFModels\ProductStockDetail.cs" />
+    <Compile Include="EFModels\ShippingMethod.cs" />
+    <Compile Include="EFModels\Supplier.cs" />
+    <Compile Include="ExtMethods\AppContextExMethod.cs" />
     <Compile Include="ExtMethods\SqlDataReaderExtMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositoties\DiscountRepository.cs" />
+    <Compile Include="Repositoties\OrderRepository.cs" />
+    <Compile Include="Services\OrderService.cs" />
     <Compile Include="SqlDb.cs" />
     <Compile Include="SqlParameterBuilder.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
