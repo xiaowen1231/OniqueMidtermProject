@@ -26,3 +26,17 @@ C:\Users\User\Desktop\新增資料夾\Onique.EStore.SqlDataLayer\obj\Debug\Oniqu
 C:\Users\User\Desktop\新增資料夾\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.CopyComplete
 C:\Users\User\Desktop\新增資料夾\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.dll
 C:\Users\User\Desktop\新增資料夾\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.pdb
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.dll.config
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.pdb
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.xml
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.AssemblyReference.cache
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.CoreCompileInputs.cache
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.CopyComplete
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.pdb
