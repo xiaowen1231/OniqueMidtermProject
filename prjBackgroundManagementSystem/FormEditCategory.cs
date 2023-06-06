@@ -1,5 +1,6 @@
 ﻿using Onique.EStore.SqlDataLayer;
 using Onique.EStore.SqlDataLayer.EFModels;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +32,7 @@ namespace prjBackgroundManagementSystem
                 MessageBox.Show("找不到符合紀錄");
                 return;
             }
-            
+
             txtCategoryName.Text = dto.CategoryName.ToString();
             txtDisplayOrder.Text = dto.DisplayOrder.ToString();
         }
@@ -43,7 +44,7 @@ namespace prjBackgroundManagementSystem
 
             CategoryDto dto = new CategoryDto { CategoryId = this._categoryId, CategoryName = txtCategoryName.Text, DisplayOrder = displayOrder };
 
-           
+
             try
             {
                 var service = new CategoryService();
@@ -91,14 +92,14 @@ namespace prjBackgroundManagementSystem
                     MessageBox.Show("刪除失敗");
                 }
 
-                IGrid parent = this.Owner as IGrid; 
+                IGrid parent = this.Owner as IGrid;
                 if (parent == null)
                 {
                     MessageBox.Show("開啟我的表單，他忘記實作IGrid，所以無法通知他");
                 }
                 else
                 {
-                    parent.Display(); 
+                    parent.Display();
                 }
                 this.Close();
             }

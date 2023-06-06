@@ -1,5 +1,6 @@
 ﻿using Onique.EStore.SqlDataLayer;
 using Onique.EStore.SqlDataLayer.EFModels;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,14 +33,22 @@ namespace prjBackgroundManagementSystem
                     CategoryName = name,
                     DisplayOrder = DisplatOrder
                 };
+                var repo = new CategoryRepository();
+                CategoryDto dto = repo.GetByName(name);
+                if(dto != null && dto.CategoryName== name) 
+                {
+                    MessageBox.Show("此分類已存在! 請確認新增的分類名稱!");
+                    return;
+                }
                 db.Categories.Add(category);
                 db.SaveChanges();
                 MessageBox.Show("新增成功");
 
                 var parent = this.Owner as IGrid;
-                if(parent != null)
+                if (parent != null)
                 {
                     parent.Display();
+                    this.Close();
                 }
                 else
                 {
