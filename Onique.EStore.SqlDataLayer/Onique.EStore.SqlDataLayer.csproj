@@ -52,7 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dto\Assembler.cs" />
+    <Compile Include="Dto\CategoryDto.cs" />
     <Compile Include="Dto\DiscountDto.cs" />
+    <Compile Include="Dto\EmployeeLoginDto.cs" />
+    <Compile Include="Dto\EmployeeManagerLoginDto.cs" />
     <Compile Include="Dto\OrderDetailDto.cs" />
     <Compile Include="Dto\OrderDetailProductDto.cs" />
     <Compile Include="Dto\OrderDto.cs" />
@@ -79,8 +83,10 @@
     <Compile Include="ExtMethods\AppContextExMethod.cs" />
     <Compile Include="ExtMethods\SqlDataReaderExtMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositoties\CategoryRepository.cs" />
     <Compile Include="Repositoties\DiscountRepository.cs" />
     <Compile Include="Repositoties\OrderRepository.cs" />
+    <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="SqlDb.cs" />
     <Compile Include="SqlParameterBuilder.cs" />

@@ -8,6 +8,4 @@ using System.Windows.Forms;
 namespace prjBackgroundManagementSystem.Delegate
 {
     public delegate void SaveFunction(Form addform);
-    
-   
 }
