@@ -30,7 +30,7 @@ namespace prjBackgroundManagementSystem
         {
             this.Owner.Show();
             this.Close();
-          }
+        }
 
         private void FormEmployeeManagerLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -55,11 +55,11 @@ namespace prjBackgroundManagementSystem
             }
             if (result != null)
             {
-                //if(result.Password ==  txtMangerPassword.Text )
+                if (result.Password == txtMangerPassword.Text)
                 {
                     var frmEmployee = new FormEmployee();
 
-                    //SaveFunction( frmEmployee );
+                    SaveFunction(frmEmployee);
                     this.Hide();
                 }
                 else
