@@ -24,10 +24,8 @@ namespace prjBackgroundManagementSystem
         private void btnClose_Click(object sender, EventArgs e)
         {
             var login = new FormLogin();
-            login.Owner = this;
             this.Hide();
-            login.Show();
-            
+            login.ShowDialog();
         }
         private void FormForgetThePassword_FormClosing(object sender, FormClosingEventArgs e)
         {

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+<<<<<<< HEAD
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnCheckOutSystem = new System.Windows.Forms.Button();
@@ -38,7 +39,16 @@
             this.btnLoginEmployeeManager = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+=======
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+>>>>>>> parent of c06d541 (jimmy)
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,6 +68,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightSlateGray;
+<<<<<<< HEAD
             this.splitContainer1.Panel1.Controls.Add(this.btnCategory);
             this.splitContainer1.Panel1.Controls.Add(this.btnClose);
             this.splitContainer1.Panel1.Controls.Add(this.btnCheckOutSystem);
@@ -65,6 +76,14 @@
             this.splitContainer1.Panel1.Controls.Add(this.btnProduct);
             this.splitContainer1.Panel1.Controls.Add(this.btnMember);
             this.splitContainer1.Panel1.Controls.Add(this.btnLoginEmployeeManager);
+=======
+            this.splitContainer1.Panel1.Controls.Add(this.button6);
+            this.splitContainer1.Panel1.Controls.Add(this.button5);
+            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
+            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+>>>>>>> parent of c06d541 (jimmy)
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitContainer1.Panel2
@@ -74,6 +93,7 @@
             this.splitContainer1.SplitterDistance = 286;
             this.splitContainer1.TabIndex = 0;
             // 
+<<<<<<< HEAD
             // btnCategory
             // 
             this.btnCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -89,9 +109,13 @@
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnClose
+=======
+            // button6
+>>>>>>> parent of c06d541 (jimmy)
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+<<<<<<< HEAD
             this.btnClose.BackColor = System.Drawing.Color.White;
             this.btnClose.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnClose.Location = new System.Drawing.Point(3, 604);
@@ -101,6 +125,16 @@
             this.btnClose.Text = "登出系統";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+=======
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button6.Location = new System.Drawing.Point(3, 604);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(281, 46);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "關閉系統";
+            this.button6.UseVisualStyleBackColor = false;
+>>>>>>> parent of c06d541 (jimmy)
             // 
             // btnCheckOutSystem
             // 
@@ -159,6 +193,7 @@
             this.btnMember.UseVisualStyleBackColor = false;
             this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
             // 
+<<<<<<< HEAD
             // btnLoginEmployeeManager
             // 
             this.btnLoginEmployeeManager.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -183,6 +218,20 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+=======
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Location = new System.Drawing.Point(3, 191);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(281, 46);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "員工管理";
+            this.button1.UseVisualStyleBackColor = false;
+>>>>>>> parent of c06d541 (jimmy)
             // 
             // splitContainer2
             // 
@@ -215,6 +264,17 @@
             this.label1.Text = "後台管理系統";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = global::prjBackgroundManagementSystem.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 136);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -224,8 +284,11 @@
             this.Name = "FormHomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "後台管理系統首頁";
+<<<<<<< HEAD
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHomePage_FormClosing);
+=======
+>>>>>>> parent of c06d541 (jimmy)
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -242,6 +305,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btnLoginEmployeeManager;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnOrder;
@@ -251,5 +315,14 @@
         private System.Windows.Forms.Button btnCheckOutSystem;
         private System.Windows.Forms.Button btnCategory;
         private System.Windows.Forms.SplitContainer splitContainer2;
+=======
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+>>>>>>> parent of c06d541 (jimmy)
     }
 }

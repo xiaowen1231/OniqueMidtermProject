@@ -1,14 +1,21 @@
+<<<<<<< HEAD
 ﻿using Onique.EStore.SqlDataLayer;
 using Onique.EStore.SqlDataLayer.EFModels;
 using prjBackgroundManagementSystem.Delegate;
 using System;
+=======
+﻿using System;
+>>>>>>> parent of c06d541 (jimmy)
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+<<<<<<< HEAD
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+=======
+>>>>>>> parent of c06d541 (jimmy)
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +30,7 @@ namespace prjBackgroundManagementSystem
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private void btnForgetManager_Click(object sender, EventArgs e)
         {
@@ -80,5 +88,7 @@ namespace prjBackgroundManagementSystem
             txtMangerEmail.Text = "hendy@gmail.com";
             txtMangerPassword.Text = "123";
         }
+=======
+>>>>>>> parent of c06d541 (jimmy)
     }
 }
