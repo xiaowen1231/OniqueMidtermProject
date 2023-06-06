@@ -1,0 +1,6 @@
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.pdb
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.AssemblyReference.cache
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.CoreCompileInputs.cache
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.dll
+C:\ISpan\專題\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.pdb
