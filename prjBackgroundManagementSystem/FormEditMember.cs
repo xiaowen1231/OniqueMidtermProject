@@ -198,7 +198,7 @@ namespace prjBackgroundManagementSystem
             member.RegisterDate = dateTimePickerRegisterDate.Value;
             member.DateOfBirth = dateTimePickerDateOfBirth.Value;
 
-
+            
 
             //vm
             var vm = new MemberCreateVM()
@@ -226,6 +226,21 @@ namespace prjBackgroundManagementSystem
                 return;
             }
 
+            var query = db.Members.Where(x=>x.Phone==textBoxPhone.Text||x.Email==textBoxEmail.Text)
+                .Select(x=>new MemberDto { Phone = x.Phone, Email = x.Email,MemberId=x.MemberId }).FirstOrDefault();
+            if (query != null)
+            {
+                if (query.Email == textBoxEmail.Text && query.MemberId != _MemberId)
+                {
+                    MessageBox.Show("信箱已被註冊");
+                    return;
+                }
+                if (query.Phone == textBoxPhone.Text && query.MemberId != _MemberId)
+                {
+                    MessageBox.Show("電話已被註冊");
+                    return;
+                }
+            }
 
             //MemberDto memberDto = new MemberDto()
             //{

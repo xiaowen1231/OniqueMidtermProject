@@ -103,7 +103,7 @@ namespace prjBackgroundManagementSystem
             }
             if (labelAlarm.Text != "信箱可使用!")
             {
-                MessageBox.Show("信箱已被使用!無法註冊");
+                MessageBox.Show("信箱無法使用");
                 return;
             }
 
@@ -191,7 +191,8 @@ namespace prjBackgroundManagementSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("註冊失敗: "+ex.Message);
+                return;
             }
 
             IGrid parent = this.Owner as IGrid; // 將開啟我的那個視窗, 轉型成 IGrid, 如果轉型失敗,不會丟出例外, 而是傳回null
