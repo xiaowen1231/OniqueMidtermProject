@@ -387,6 +387,7 @@
             this.MaximumSize = new System.Drawing.Size(870, 662);
             this.MinimumSize = new System.Drawing.Size(870, 662);
             this.Name = "FormEditEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "編輯員工資料";
             this.Load += new System.EventHandler(this.FormEditEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

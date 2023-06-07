@@ -36,6 +36,11 @@ namespace prjBackgroundManagementSystem
         }
         private void btnLoginEmployeeManager_Click(object sender, EventArgs e)
         {
+            if (SaveForm != null)
+            {
+                SaveForm.Close();
+                SaveForm = null;
+            }
             var loginManager = new FormEmployeeManagerLogin();
             loginManager.SaveFunction = this.AddAndCheckForm;
             loginManager.Owner = this;
@@ -63,20 +68,22 @@ namespace prjBackgroundManagementSystem
             FormCategory category = new FormCategory();
             AddAndCheckForm(category);
         }
-        private void btnCheckOutSystem_Click(object sender, EventArgs e)
-        {
-            FormCheckOutSystem checkOutSystem = new FormCheckOutSystem();
-            AddAndCheckForm(checkOutSystem);
-        }
+        
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Owner.Show();
-            this.Close();
+
+                this.Close();
+            
         }
         private void FormHomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Owner.Show();
+            var result = MessageBox.Show("確定關閉系統嗎?","提示訊息!",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Owner.Show();
+            }
+            
         }
 
 

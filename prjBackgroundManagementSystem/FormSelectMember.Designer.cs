@@ -152,7 +152,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(816, 598);
+            this.MinimumSize = new System.Drawing.Size(816, 598);
             this.Name = "FormSelectMember";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "選擇會員";
             this.Load += new System.EventHandler(this.FormSelectMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

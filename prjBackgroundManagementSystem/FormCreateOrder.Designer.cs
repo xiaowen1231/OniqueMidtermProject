@@ -225,7 +225,10 @@
             this.Controls.Add(this.label1);
             this.Location = new System.Drawing.Point(856, 685);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(629, 516);
+            this.MinimumSize = new System.Drawing.Size(629, 516);
             this.Name = "FormCreateOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "新增訂單";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMemberPhoto)).EndInit();
             this.ResumeLayout(false);

@@ -359,6 +359,7 @@
             this.MaximumSize = new System.Drawing.Size(870, 662);
             this.MinimumSize = new System.Drawing.Size(870, 662);
             this.Name = "FormCreateEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "新增員工";
             this.Load += new System.EventHandler(this.FormCreateEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

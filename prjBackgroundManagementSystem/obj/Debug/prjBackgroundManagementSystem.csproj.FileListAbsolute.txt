@@ -139,8 +139,6 @@ C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\bin\Debug\Ent
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.csproj.AssemblyReference.cache
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.csproj.SuggestedBindingRedirects.cache
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormAddOrderProduct.resources
-C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormAddToCheckoutList.resources
-C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCheckOutSystem.resources
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateEmployee.resources
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateOrder.resources
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateProduct.resources

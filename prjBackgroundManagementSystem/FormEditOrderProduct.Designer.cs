@@ -430,7 +430,9 @@
             this.Controls.Add(this.pictureBoxProductPhoto);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(856, 685);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(856, 685);
             this.Name = "FormEditOrderProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "編輯訂單商品明細";

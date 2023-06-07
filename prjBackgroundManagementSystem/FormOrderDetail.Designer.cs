@@ -552,6 +552,7 @@
             this.MaximumSize = new System.Drawing.Size(1049, 697);
             this.MinimumSize = new System.Drawing.Size(1049, 697);
             this.Name = "FormOrderDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "訂單明細檢視";
             this.Load += new System.EventHandler(this.FormOrderDetail_Load);
             this.panel1.ResumeLayout(false);

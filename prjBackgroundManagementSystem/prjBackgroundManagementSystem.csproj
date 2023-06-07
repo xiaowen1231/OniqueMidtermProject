@@ -79,23 +79,11 @@
     <Compile Include="FormAddOrderProduct.Designer.cs">
       <DependentUpon>FormAddOrderProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddToCheckoutList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAddToCheckoutList.Designer.cs">
-      <DependentUpon>FormAddToCheckoutList.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCategory.Designer.cs">
       <DependentUpon>FormCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCheckOutSystem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCheckOutSystem.Designer.cs">
-      <DependentUpon>FormCheckOutSystem.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCreateCategory.cs">
       <SubType>Form</SubType>
@@ -236,14 +224,8 @@
     <EmbeddedResource Include="FormAddOrderProduct.resx">
       <DependentUpon>FormAddOrderProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddToCheckoutList.resx">
-      <DependentUpon>FormAddToCheckoutList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCategory.resx">
       <DependentUpon>FormCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCheckOutSystem.resx">
-      <DependentUpon>FormCheckOutSystem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateCategory.resx">
       <DependentUpon>FormCreateCategory.cs</DependentUpon>

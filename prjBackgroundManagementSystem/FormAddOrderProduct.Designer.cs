@@ -235,7 +235,11 @@
             this.Controls.Add(this.textBoxProductName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(698, 554);
+            this.MinimumSize = new System.Drawing.Size(698, 554);
             this.Name = "FormAddOrderProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "加入訂單商品";
             this.Load += new System.EventHandler(this.FormAddOrderProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductPhoto)).EndInit();

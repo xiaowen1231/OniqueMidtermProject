@@ -156,7 +156,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 520);
+            this.MinimumSize = new System.Drawing.Size(500, 520);
             this.Name = "FormEmployeeManagerForgetThePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理員忘記密碼";
             this.ResumeLayout(false);
             this.PerformLayout();

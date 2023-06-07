@@ -411,6 +411,7 @@
             this.MaximumSize = new System.Drawing.Size(885, 646);
             this.MinimumSize = new System.Drawing.Size(885, 646);
             this.Name = "FormCreateMember";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCreateMember";
             this.Load += new System.EventHandler(this.FormCreateMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

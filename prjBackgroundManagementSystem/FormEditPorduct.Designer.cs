@@ -352,6 +352,7 @@
             this.MaximumSize = new System.Drawing.Size(870, 662);
             this.MinimumSize = new System.Drawing.Size(870, 662);
             this.Name = "FormEditPorduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "編輯商品";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

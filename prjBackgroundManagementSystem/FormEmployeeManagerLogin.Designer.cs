@@ -153,7 +153,11 @@
             this.Controls.Add(this.txtMangerEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 520);
+            this.MinimumSize = new System.Drawing.Size(500, 520);
             this.Name = "FormEmployeeManagerLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理員登入";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEmployeeManagerLogin_FormClosing);
             this.ResumeLayout(false);

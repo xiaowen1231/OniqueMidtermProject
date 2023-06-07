@@ -141,6 +141,7 @@
             this.MaximumSize = new System.Drawing.Size(495, 394);
             this.MinimumSize = new System.Drawing.Size(495, 394);
             this.Name = "FormEditCategory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditCategory";
             this.Load += new System.EventHandler(this.FormEditCategory_Load);
             this.ResumeLayout(false);
