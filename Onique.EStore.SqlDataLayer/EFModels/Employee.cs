@@ -37,9 +37,7 @@ namespace Onique.EStore.SqlDataLayer.EFModels
 
         public DateTime? DateOfBirth { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Position { get; set; }
+        public int Position { get; set; }
 
         [StringLength(250)]
         public string PhotoPath { get; set; }
@@ -49,5 +47,7 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         public virtual Area Area { get; set; }
 
         public virtual City City { get; set; }
+
+        public virtual EmployeeLevel EmployeeLevel { get; set; }
     }
 }

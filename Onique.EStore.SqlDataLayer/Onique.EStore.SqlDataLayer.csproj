@@ -55,8 +55,10 @@
     <Compile Include="Dto\Assembler.cs" />
     <Compile Include="Dto\CategoryDto.cs" />
     <Compile Include="Dto\DiscountDto.cs" />
+    <Compile Include="Dto\EmployeeDto.cs" />
     <Compile Include="Dto\EmployeeLoginDto.cs" />
     <Compile Include="Dto\EmployeeManagerLoginDto.cs" />
+    <Compile Include="Dto\MemberDto.cs" />
     <Compile Include="Dto\OrderDetailDto.cs" />
     <Compile Include="Dto\OrderDetailProductDto.cs" />
     <Compile Include="Dto\OrderDto.cs" />
@@ -68,7 +70,9 @@
     <Compile Include="EFModels\City.cs" />
     <Compile Include="EFModels\Discount.cs" />
     <Compile Include="EFModels\Employee.cs" />
+    <Compile Include="EFModels\EmployeeLevel.cs" />
     <Compile Include="EFModels\Member.cs" />
+    <Compile Include="EFModels\MemberLevel.cs" />
     <Compile Include="EFModels\Order.cs" />
     <Compile Include="EFModels\OrderDetail.cs" />
     <Compile Include="EFModels\OrderStatu.cs" />
@@ -85,11 +89,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositoties\CategoryRepository.cs" />
     <Compile Include="Repositoties\DiscountRepository.cs" />
+    <Compile Include="Repositoties\EmployeeRepository.cs" />
+    <Compile Include="Repositoties\MemberRepository.cs" />
     <Compile Include="Repositoties\OrderRepository.cs" />
     <Compile Include="Services\CategoryService.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
+    <Compile Include="Services\MemberService.cs" />
     <Compile Include="Services\OrderService.cs" />
     <Compile Include="SqlDb.cs" />
     <Compile Include="SqlParameterBuilder.cs" />
+    <Compile Include="ViewModels\MemberCreateVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

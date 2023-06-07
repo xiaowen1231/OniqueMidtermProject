@@ -46,19 +46,25 @@ namespace prjBackgroundManagementSystem
         private void btnLoginManager_Click(object sender, EventArgs e)
         {
             var db = new AppDbContext();
-            var query = db.Employees.Where(x => x.Email == txtMangerEmail.Text && x.Position == "經理")
-                .Select(x => new EmployeeManagerLoginDto
-                {
-                    Email = x.Email,
-                    Password = x.Password,
-                    Position = x.Position
-                });
+            var query = from x in db.Employees
+                        join el in db.EmployeeLevels
+                        on x.Position equals el.EmployeeLevelId
+                        where x.Email == txtMangerEmail.Text && x.Position == 2
+                        select new EmployeeManagerLoginDto
+                        {
+                            Email = x.Email,
+                            Password = x.Password,
+                            Position = el.EmployeeLevelName
+                        };
+                       
             var result = query.FirstOrDefault();
+
             if (result == null)
             {
                 MessageBox.Show("帳號密碼錯誤");
                 return;
             }
+
             if (result != null)
             {
                 if (result.Password == txtMangerPassword.Text)
@@ -66,11 +72,13 @@ namespace prjBackgroundManagementSystem
                     var frmEmployee = new FormEmployee();
 
                     SaveFunction(frmEmployee);
+
                     this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("帳號密碼錯誤");
+                    return;
                 }
             }
         }

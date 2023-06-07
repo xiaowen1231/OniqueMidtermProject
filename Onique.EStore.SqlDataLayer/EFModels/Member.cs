@@ -43,9 +43,7 @@ namespace Onique.EStore.SqlDataLayer.EFModels
 
         public DateTime? DateOfBirth { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string MemberLevel { get; set; }
+        public int MemberLevel { get; set; }
 
         [StringLength(250)]
         public string PhotoPath { get; set; }
@@ -55,6 +53,8 @@ namespace Onique.EStore.SqlDataLayer.EFModels
         public virtual Area Area { get; set; }
 
         public virtual City City { get; set; }
+
+        public virtual MemberLevel MemberLevel1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
