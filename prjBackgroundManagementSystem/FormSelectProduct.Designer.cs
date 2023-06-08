@@ -63,7 +63,7 @@
             this.buttonSearch.Location = new System.Drawing.Point(517, 125);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 92;
+            this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "搜尋";
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
@@ -74,7 +74,7 @@
             this.textBoxName.Location = new System.Drawing.Point(163, 124);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(152, 25);
-            this.textBoxName.TabIndex = 91;
+            this.textBoxName.TabIndex = 0;
             // 
             // label2
             // 
@@ -153,11 +153,12 @@
             this.comboBoxCategory.Location = new System.Drawing.Point(390, 124);
             this.comboBoxCategory.Name = "comboBoxCategory";
             this.comboBoxCategory.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxCategory.TabIndex = 94;
+            this.comboBoxCategory.TabIndex = 1;
             this.comboBoxCategory.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategory_SelectedIndexChanged);
             // 
             // FormSelectProduct
             // 
+            this.AcceptButton = this.buttonSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 558);

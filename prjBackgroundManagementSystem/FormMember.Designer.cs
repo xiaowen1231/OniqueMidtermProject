@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.buttonAddNewMember = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@
             this.buttonClean.Location = new System.Drawing.Point(430, 118);
             this.buttonClean.Name = "buttonClean";
             this.buttonClean.Size = new System.Drawing.Size(75, 23);
-            this.buttonClean.TabIndex = 24;
+            this.buttonClean.TabIndex = 3;
             this.buttonClean.Text = "清空查詢";
             this.buttonClean.UseVisualStyleBackColor = false;
             this.buttonClean.Click += new System.EventHandler(this.buttonClean_Click);
@@ -72,7 +72,7 @@
             this.buttonSearch.Location = new System.Drawing.Point(349, 118);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 25;
+            this.buttonSearch.TabIndex = 2;
             this.buttonSearch.Text = "查詢";
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
@@ -83,7 +83,7 @@
             this.textBoxPhone.Location = new System.Drawing.Point(239, 118);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(100, 25);
-            this.textBoxPhone.TabIndex = 23;
+            this.textBoxPhone.TabIndex = 1;
             // 
             // label3
             // 
@@ -101,7 +101,7 @@
             this.textBoxName.Location = new System.Drawing.Point(69, 118);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 25);
-            this.textBoxName.TabIndex = 21;
+            this.textBoxName.TabIndex = 0;
             // 
             // label2
             // 
@@ -120,7 +120,7 @@
             this.buttonAddNewMember.Location = new System.Drawing.Point(1097, 118);
             this.buttonAddNewMember.Name = "buttonAddNewMember";
             this.buttonAddNewMember.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddNewMember.TabIndex = 26;
+            this.buttonAddNewMember.TabIndex = 4;
             this.buttonAddNewMember.Text = "新增會員";
             this.buttonAddNewMember.UseVisualStyleBackColor = false;
             this.buttonAddNewMember.Click += new System.EventHandler(this.buttonAddNewMember_Click);
@@ -154,20 +154,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1157, 530);
             this.dataGridView1.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.BurlyWood;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(9, 10);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1166, 89);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "會員管理";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Column1
             // 
@@ -284,8 +270,23 @@
             this.Column13.ReadOnly = true;
             this.Column13.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.BurlyWood;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(9, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1166, 89);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "會員管理";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormMember
             // 
+            this.AcceptButton = this.buttonSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 697);

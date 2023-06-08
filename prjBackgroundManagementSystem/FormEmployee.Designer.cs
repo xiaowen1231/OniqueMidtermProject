@@ -57,7 +57,7 @@
             this.btnEmployeeAdd.Location = new System.Drawing.Point(1036, 118);
             this.btnEmployeeAdd.Name = "btnEmployeeAdd";
             this.btnEmployeeAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnEmployeeAdd.TabIndex = 32;
+            this.btnEmployeeAdd.TabIndex = 2;
             this.btnEmployeeAdd.Text = "新增員工";
             this.btnEmployeeAdd.UseVisualStyleBackColor = false;
             this.btnEmployeeAdd.Click += new System.EventHandler(this.btnEmployeeAdd_Click);
@@ -171,7 +171,7 @@
             this.txtEmployeeName.Location = new System.Drawing.Point(75, 118);
             this.txtEmployeeName.Name = "txtEmployeeName";
             this.txtEmployeeName.Size = new System.Drawing.Size(100, 25);
-            this.txtEmployeeName.TabIndex = 30;
+            this.txtEmployeeName.TabIndex = 0;
             // 
             // label3
             // 
@@ -227,13 +227,14 @@
             this.btnEmployeeSearch.Location = new System.Drawing.Point(191, 118);
             this.btnEmployeeSearch.Name = "btnEmployeeSearch";
             this.btnEmployeeSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnEmployeeSearch.TabIndex = 31;
+            this.btnEmployeeSearch.TabIndex = 1;
             this.btnEmployeeSearch.Text = "查詢";
             this.btnEmployeeSearch.UseVisualStyleBackColor = false;
             this.btnEmployeeSearch.Click += new System.EventHandler(this.btnEmployeeSearch_Click);
             // 
             // FormEmployee
             // 
+            this.AcceptButton = this.btnEmployeeSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 715);

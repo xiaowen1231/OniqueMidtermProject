@@ -154,7 +154,7 @@
             this.buttonDelete.Location = new System.Drawing.Point(225, 506);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 23);
-            this.buttonDelete.TabIndex = 100;
+            this.buttonDelete.TabIndex = 1;
             this.buttonDelete.Text = "刪除訂單";
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
@@ -177,7 +177,7 @@
             this.buttonClose.Location = new System.Drawing.Point(7, 506);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
-            this.buttonClose.TabIndex = 99;
+            this.buttonClose.TabIndex = 0;
             this.buttonClose.Text = "關閉";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -314,7 +314,7 @@
             this.buttonUpdate.Location = new System.Drawing.Point(306, 575);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdate.TabIndex = 97;
+            this.buttonUpdate.TabIndex = 2;
             this.buttonUpdate.Text = "確認更改";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
@@ -326,7 +326,7 @@
             this.comboBoxStatus.Location = new System.Drawing.Point(107, 574);
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(182, 25);
-            this.comboBoxStatus.TabIndex = 101;
+            this.comboBoxStatus.TabIndex = 1;
             // 
             // label14
             // 
@@ -427,7 +427,7 @@
             this.buttonAddProduct.Location = new System.Drawing.Point(635, 117);
             this.buttonAddProduct.Name = "buttonAddProduct";
             this.buttonAddProduct.Size = new System.Drawing.Size(75, 23);
-            this.buttonAddProduct.TabIndex = 102;
+            this.buttonAddProduct.TabIndex = 0;
             this.buttonAddProduct.Text = "加入商品";
             this.buttonAddProduct.UseVisualStyleBackColor = false;
             this.buttonAddProduct.Click += new System.EventHandler(this.buttonAddProduct_Click);
@@ -527,6 +527,7 @@
             // 
             // FormOrderDetail
             // 
+            this.AcceptButton = this.buttonAddProduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1033, 658);

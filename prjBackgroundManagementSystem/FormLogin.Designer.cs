@@ -44,8 +44,8 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.BurlyWood;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -73,7 +73,7 @@
             this.txtEmail.Location = new System.Drawing.Point(240, 186);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 25);
-            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TabIndex = 0;
             // 
             // txtPassword
             // 
@@ -81,7 +81,7 @@
             this.txtPassword.Location = new System.Drawing.Point(240, 227);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 25);
-            this.txtPassword.TabIndex = 4;
+            this.txtPassword.TabIndex = 1;
             // 
             // label3
             // 
@@ -100,7 +100,7 @@
             this.btnLogin.Location = new System.Drawing.Point(256, 291);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 5;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "登入";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -112,7 +112,7 @@
             this.btnClose.Location = new System.Drawing.Point(163, 291);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 6;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "關閉";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -124,7 +124,7 @@
             this.btnForget.Location = new System.Drawing.Point(372, 421);
             this.btnForget.Name = "btnForget";
             this.btnForget.Size = new System.Drawing.Size(75, 23);
-            this.btnForget.TabIndex = 7;
+            this.btnForget.TabIndex = 4;
             this.btnForget.Text = "忘記密碼";
             this.btnForget.UseVisualStyleBackColor = false;
             this.btnForget.Visible = false;
@@ -141,7 +141,7 @@
             this.btnDemo.Location = new System.Drawing.Point(256, 320);
             this.btnDemo.Name = "btnDemo";
             this.btnDemo.Size = new System.Drawing.Size(75, 23);
-            this.btnDemo.TabIndex = 8;
+            this.btnDemo.TabIndex = 5;
             this.btnDemo.Text = "Demo";
             this.btnDemo.UseVisualStyleBackColor = false;
             this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);

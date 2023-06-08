@@ -254,7 +254,7 @@
             this.buttonCreateOrder.Location = new System.Drawing.Point(15, 633);
             this.buttonCreateOrder.Name = "buttonCreateOrder";
             this.buttonCreateOrder.Size = new System.Drawing.Size(75, 23);
-            this.buttonCreateOrder.TabIndex = 89;
+            this.buttonCreateOrder.TabIndex = 5;
             this.buttonCreateOrder.Text = "新增訂單";
             this.buttonCreateOrder.UseVisualStyleBackColor = false;
             this.buttonCreateOrder.Click += new System.EventHandler(this.buttonCreateOrder_Click);

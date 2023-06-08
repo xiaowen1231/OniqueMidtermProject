@@ -335,7 +335,7 @@
             this.buttonCancelEdit.Location = new System.Drawing.Point(671, 576);
             this.buttonCancelEdit.Name = "buttonCancelEdit";
             this.buttonCancelEdit.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelEdit.TabIndex = 13;
+            this.buttonCancelEdit.TabIndex = 12;
             this.buttonCancelEdit.Text = "取消編輯";
             this.buttonCancelEdit.UseVisualStyleBackColor = false;
             this.buttonCancelEdit.Click += new System.EventHandler(this.buttonCancelEdit_Click);
@@ -348,7 +348,7 @@
             this.buttonConfirmEdit.Location = new System.Drawing.Point(752, 576);
             this.buttonConfirmEdit.Name = "buttonConfirmEdit";
             this.buttonConfirmEdit.Size = new System.Drawing.Size(75, 23);
-            this.buttonConfirmEdit.TabIndex = 12;
+            this.buttonConfirmEdit.TabIndex = 11;
             this.buttonConfirmEdit.Text = "確認編輯";
             this.buttonConfirmEdit.UseVisualStyleBackColor = false;
             this.buttonConfirmEdit.Click += new System.EventHandler(this.buttonConfirmEdit_Click);
@@ -362,7 +362,7 @@
             this.buttonDeleteMember.Location = new System.Drawing.Point(12, 576);
             this.buttonDeleteMember.Name = "buttonDeleteMember";
             this.buttonDeleteMember.Size = new System.Drawing.Size(75, 23);
-            this.buttonDeleteMember.TabIndex = 47;
+            this.buttonDeleteMember.TabIndex = 14;
             this.buttonDeleteMember.Text = "刪除會員";
             this.buttonDeleteMember.UseVisualStyleBackColor = false;
             this.buttonDeleteMember.Click += new System.EventHandler(this.buttonDeleteMember_Click);
@@ -374,7 +374,7 @@
             this.btnEditPhoto.Location = new System.Drawing.Point(78, 404);
             this.btnEditPhoto.Name = "btnEditPhoto";
             this.btnEditPhoto.Size = new System.Drawing.Size(75, 23);
-            this.btnEditPhoto.TabIndex = 46;
+            this.btnEditPhoto.TabIndex = 13;
             this.btnEditPhoto.Text = "編輯頭像";
             this.btnEditPhoto.UseVisualStyleBackColor = false;
             this.btnEditPhoto.Click += new System.EventHandler(this.btnEditPhoto_Click);

@@ -46,7 +46,7 @@
             this.btnDemo.Location = new System.Drawing.Point(256, 320);
             this.btnDemo.Name = "btnDemo";
             this.btnDemo.Size = new System.Drawing.Size(75, 23);
-            this.btnDemo.TabIndex = 16;
+            this.btnDemo.TabIndex = 5;
             this.btnDemo.Text = "Demo";
             this.btnDemo.UseVisualStyleBackColor = false;
             this.btnDemo.Click += new System.EventHandler(this.btnDemo_Click);
@@ -82,7 +82,7 @@
             this.txtMangerEmail.Location = new System.Drawing.Point(240, 186);
             this.txtMangerEmail.Name = "txtMangerEmail";
             this.txtMangerEmail.Size = new System.Drawing.Size(100, 25);
-            this.txtMangerEmail.TabIndex = 10;
+            this.txtMangerEmail.TabIndex = 0;
             // 
             // label3
             // 
@@ -100,7 +100,7 @@
             this.txtMangerPassword.Location = new System.Drawing.Point(240, 227);
             this.txtMangerPassword.Name = "txtMangerPassword";
             this.txtMangerPassword.Size = new System.Drawing.Size(100, 25);
-            this.txtMangerPassword.TabIndex = 12;
+            this.txtMangerPassword.TabIndex = 1;
             // 
             // btnLoginManager
             // 
@@ -109,7 +109,7 @@
             this.btnLoginManager.Location = new System.Drawing.Point(256, 291);
             this.btnLoginManager.Name = "btnLoginManager";
             this.btnLoginManager.Size = new System.Drawing.Size(75, 23);
-            this.btnLoginManager.TabIndex = 13;
+            this.btnLoginManager.TabIndex = 2;
             this.btnLoginManager.Text = "登入";
             this.btnLoginManager.UseVisualStyleBackColor = false;
             this.btnLoginManager.Click += new System.EventHandler(this.btnLoginManager_Click);
@@ -121,7 +121,7 @@
             this.btnClose.Location = new System.Drawing.Point(163, 291);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 14;
+            this.btnClose.TabIndex = 3;
             this.btnClose.Text = "關閉";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -133,7 +133,7 @@
             this.btnForgetManager.Location = new System.Drawing.Point(372, 421);
             this.btnForgetManager.Name = "btnForgetManager";
             this.btnForgetManager.Size = new System.Drawing.Size(75, 23);
-            this.btnForgetManager.TabIndex = 15;
+            this.btnForgetManager.TabIndex = 4;
             this.btnForgetManager.Text = "忘記密碼";
             this.btnForgetManager.UseVisualStyleBackColor = false;
             this.btnForgetManager.Visible = false;
@@ -141,6 +141,7 @@
             // 
             // FormEmployeeManagerLogin
             // 
+            this.AcceptButton = this.btnLoginManager;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 481);

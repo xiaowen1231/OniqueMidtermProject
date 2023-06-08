@@ -81,7 +81,7 @@
             this.btnCategory.Location = new System.Drawing.Point(3, 399);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(280, 46);
-            this.btnCategory.TabIndex = 20;
+            this.btnCategory.TabIndex = 4;
             this.btnCategory.Text = "分類管理";
             this.btnCategory.UseVisualStyleBackColor = false;
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
@@ -95,7 +95,7 @@
             this.btnClose.Location = new System.Drawing.Point(3, 604);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(280, 46);
-            this.btnClose.TabIndex = 19;
+            this.btnClose.TabIndex = 5;
             this.btnClose.Text = "登出系統";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -109,7 +109,7 @@
             this.btnOrder.Location = new System.Drawing.Point(3, 347);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(280, 46);
-            this.btnOrder.TabIndex = 17;
+            this.btnOrder.TabIndex = 3;
             this.btnOrder.Text = "訂單管理";
             this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
@@ -123,7 +123,7 @@
             this.btnProduct.Location = new System.Drawing.Point(3, 295);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(280, 46);
-            this.btnProduct.TabIndex = 16;
+            this.btnProduct.TabIndex = 2;
             this.btnProduct.Text = "商品管理";
             this.btnProduct.UseVisualStyleBackColor = false;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
@@ -137,7 +137,7 @@
             this.btnMember.Location = new System.Drawing.Point(3, 243);
             this.btnMember.Name = "btnMember";
             this.btnMember.Size = new System.Drawing.Size(280, 46);
-            this.btnMember.TabIndex = 15;
+            this.btnMember.TabIndex = 1;
             this.btnMember.Text = "會員管理";
             this.btnMember.UseVisualStyleBackColor = false;
             this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
@@ -151,7 +151,7 @@
             this.btnLoginEmployeeManager.Location = new System.Drawing.Point(3, 191);
             this.btnLoginEmployeeManager.Name = "btnLoginEmployeeManager";
             this.btnLoginEmployeeManager.Size = new System.Drawing.Size(280, 46);
-            this.btnLoginEmployeeManager.TabIndex = 14;
+            this.btnLoginEmployeeManager.TabIndex = 0;
             this.btnLoginEmployeeManager.Text = "員工管理";
             this.btnLoginEmployeeManager.UseVisualStyleBackColor = false;
             this.btnLoginEmployeeManager.Click += new System.EventHandler(this.btnLoginEmployeeManager_Click);

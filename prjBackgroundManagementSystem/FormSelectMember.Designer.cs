@@ -118,7 +118,7 @@
             this.textBoxName.Location = new System.Drawing.Point(305, 124);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(152, 25);
-            this.textBoxName.TabIndex = 83;
+            this.textBoxName.TabIndex = 0;
             // 
             // label2
             // 
@@ -137,13 +137,14 @@
             this.buttonSearch.Location = new System.Drawing.Point(463, 124);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch.TabIndex = 88;
+            this.buttonSearch.TabIndex = 1;
             this.buttonSearch.Text = "搜尋";
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // FormSelectMember
             // 
+            this.AcceptButton = this.buttonSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 559);

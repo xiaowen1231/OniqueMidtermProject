@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Dto\Assembler.cs" />
     <Compile Include="Dto\CategoryDto.cs" />
+    <Compile Include="Dto\ColorDto.cs" />
     <Compile Include="Dto\DiscountDto.cs" />
     <Compile Include="Dto\EmployeeDto.cs" />
     <Compile Include="Dto\EmployeeLoginDto.cs" />
@@ -62,8 +63,10 @@
     <Compile Include="Dto\OrderDetailDto.cs" />
     <Compile Include="Dto\OrderDetailProductDto.cs" />
     <Compile Include="Dto\OrderDto.cs" />
+    <Compile Include="Dto\ProductDto.cs" />
     <Compile Include="Dto\SelectMemberDto.cs" />
     <Compile Include="Dto\SelectProductDto.cs" />
+    <Compile Include="Dto\SizeDto.cs" />
     <Compile Include="EFModels\AppDbContext.cs" />
     <Compile Include="EFModels\Area.cs" />
     <Compile Include="EFModels\Category.cs" />
@@ -92,6 +95,7 @@
     <Compile Include="Repositoties\EmployeeRepository.cs" />
     <Compile Include="Repositoties\MemberRepository.cs" />
     <Compile Include="Repositoties\OrderRepository.cs" />
+    <Compile Include="Repositoties\ProductRepository.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\MemberService.cs" />

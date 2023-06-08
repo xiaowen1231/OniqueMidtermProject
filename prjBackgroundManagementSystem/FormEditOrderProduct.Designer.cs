@@ -185,7 +185,7 @@
             this.buttonUpdate.Location = new System.Drawing.Point(720, 611);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(108, 23);
-            this.buttonUpdate.TabIndex = 103;
+            this.buttonUpdate.TabIndex = 3;
             this.buttonUpdate.Text = "更改訂單內容";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
@@ -197,7 +197,7 @@
             this.buttonClose.Location = new System.Drawing.Point(606, 611);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(108, 23);
-            this.buttonClose.TabIndex = 104;
+            this.buttonClose.TabIndex = 4;
             this.buttonClose.Text = "取消更改內容";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -210,7 +210,7 @@
             this.buttonDelete.Location = new System.Drawing.Point(12, 611);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(108, 23);
-            this.buttonDelete.TabIndex = 105;
+            this.buttonDelete.TabIndex = 5;
             this.buttonDelete.Text = "刪除此筆";
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
@@ -275,7 +275,7 @@
             this.comboBoxUpdateSize.Location = new System.Drawing.Point(577, 112);
             this.comboBoxUpdateSize.Name = "comboBoxUpdateSize";
             this.comboBoxUpdateSize.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxUpdateSize.TabIndex = 112;
+            this.comboBoxUpdateSize.TabIndex = 0;
             this.comboBoxUpdateSize.SelectedIndexChanged += new System.EventHandler(this.comboBoxUpdateSize_SelectedIndexChanged);
             // 
             // textBoxUpdateOrderQuantity
@@ -284,7 +284,7 @@
             this.textBoxUpdateOrderQuantity.Location = new System.Drawing.Point(577, 196);
             this.textBoxUpdateOrderQuantity.Name = "textBoxUpdateOrderQuantity";
             this.textBoxUpdateOrderQuantity.Size = new System.Drawing.Size(100, 25);
-            this.textBoxUpdateOrderQuantity.TabIndex = 113;
+            this.textBoxUpdateOrderQuantity.TabIndex = 2;
             // 
             // textBoxColor
             // 
@@ -325,7 +325,7 @@
             this.comboBoxUpdateColor.Location = new System.Drawing.Point(577, 154);
             this.comboBoxUpdateColor.Name = "comboBoxUpdateColor";
             this.comboBoxUpdateColor.Size = new System.Drawing.Size(121, 25);
-            this.comboBoxUpdateColor.TabIndex = 112;
+            this.comboBoxUpdateColor.TabIndex = 1;
             this.comboBoxUpdateColor.SelectedIndexChanged += new System.EventHandler(this.comboBoxUpdateColor_SelectedIndexChanged);
             // 
             // labelHint
@@ -394,6 +394,7 @@
             // 
             // FormEditOrderProduct
             // 
+            this.AcceptButton = this.buttonUpdate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 646);

@@ -91,6 +91,12 @@
     <Compile Include="FormCreateCategory.Designer.cs">
       <DependentUpon>FormCreateCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCreateColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateColor.Designer.cs">
+      <DependentUpon>FormCreateColor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,12 @@
     </Compile>
     <Compile Include="FormCreateProduct.Designer.cs">
       <DependentUpon>FormCreateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateSize.Designer.cs">
+      <DependentUpon>FormCreateSize.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEditCategory.cs">
       <SubType>Form</SubType>
@@ -205,6 +217,18 @@
     <Compile Include="FormProduct.Designer.cs">
       <DependentUpon>FormProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProductSizeColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductSizeColor.Designer.cs">
+      <DependentUpon>FormProductSizeColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductStockDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductStockDetails.Designer.cs">
+      <DependentUpon>FormProductStockDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSelectMember.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +254,9 @@
     <EmbeddedResource Include="FormCreateCategory.resx">
       <DependentUpon>FormCreateCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateColor.resx">
+      <DependentUpon>FormCreateColor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCreateEmployee.resx">
       <DependentUpon>FormCreateEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCreateProduct.resx">
       <DependentUpon>FormCreateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateSize.resx">
+      <DependentUpon>FormCreateSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditCategory.resx">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
@@ -286,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProduct.resx">
       <DependentUpon>FormProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductSizeColor.resx">
+      <DependentUpon>FormProductSizeColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductStockDetails.resx">
+      <DependentUpon>FormProductStockDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSelectMember.resx">
       <DependentUpon>FormSelectMember.cs</DependentUpon>
