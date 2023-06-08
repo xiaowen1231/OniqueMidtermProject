@@ -59,6 +59,10 @@ namespace prjBackgroundManagementSystem
                     .Select(psd => psd.Quantity).FirstOrDefault();
                 labelHint.Text = "庫存數量:" + Quantity;
             }
+            else
+            {
+                labelHint.Text = "庫存數量:";
+            }
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -69,16 +73,96 @@ namespace prjBackgroundManagementSystem
         private void comboBoxColor_SelectedValueChanged(object sender, EventArgs e)
         {
 
+            DisplayQuantity();
+            if (!string.IsNullOrEmpty(comboBoxColor.Text) && !string.IsNullOrEmpty(comboBoxSize.Text))
+            {
+                try
+                {
+                    string photoPath = DisplayProductPhoto();
+                    FileStream fs = File.OpenRead(photoPath);
+                    pictureBoxProductPhoto.Image = Image.FromStream(fs);
+                    fs.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("異常狀況:" + ex.Message);
+                    return;
+                }
+
+            }
         }
 
         private void comboBoxSize_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            DisplayQuantity();
+            if (!string.IsNullOrEmpty(comboBoxColor.Text) && !string.IsNullOrEmpty(comboBoxSize.Text))
+            {
+                try
+                {
+                    string photoPath = DisplayProductPhoto();
+                    FileStream fs = File.OpenRead(photoPath);
+                    pictureBoxProductPhoto.Image = Image.FromStream(fs);
+                    fs.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("異常狀況:" + ex.Message);
+                    return;
+                }
+            }
         }
 
         private void buttonUpdateStock_Click(object sender, EventArgs e)
         {
+            if(!int.TryParse(txtStock.Text,out int Quantity))
+            {
+                MessageBox.Show("請輸入正確商品變更數量!");
+                return;
+            }
+            string size = comboBoxSize.Text;
+            string color = comboBoxColor.Text;
+            if (string.IsNullOrEmpty(size) || string.IsNullOrEmpty(color))
+            {
+                MessageBox.Show("請選擇正確的尺寸、顏色!");
+                return;
+            }
 
+            var db = new AppDbContext();
+            var sizeId = db.ProductSizes.Where(s=>s.SizeName == size).Select(s=>s.SizeId).FirstOrDefault();
+            var colorId = db.ProductColors.Where(s=>s.ColorName == color).Select(s=>s.ColorId).FirstOrDefault();
+
+            var Stock = db.ProductStockDetails.Where(psd=>psd.ProductId == _id
+            &&psd.ColorId==colorId
+            &&psd.SizeId==sizeId).FirstOrDefault();
+            if (Stock != null)
+            {
+                Stock.Quantity = Quantity;
+                db.SaveChanges();
+                MessageBox.Show("庫存數量修改成功!");
+                DisplayQuantity();
+                if (!string.IsNullOrEmpty(comboBoxColor.Text) && !string.IsNullOrEmpty(comboBoxSize.Text))
+                {
+                    try
+                    {
+                        string photoPath = DisplayProductPhoto();
+                        FileStream fs = File.OpenRead(photoPath);
+                        pictureBoxProductPhoto.Image = Image.FromStream(fs);
+                        fs.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("異常狀況:" + ex.Message);
+                        return;
+                    }
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("新增失敗!請確認商品顏色及尺寸設定");
+                return;
+            }
         }
 
         public string DisplayProductPhoto()
@@ -125,7 +209,123 @@ namespace prjBackgroundManagementSystem
 
         private void buttonEditProductPhoto_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(comboBoxColor.Text) && string.IsNullOrEmpty(comboBoxSize.Text))
+            {
+                MessageBox.Show("請先選擇好需要新增照片的商品尺寸，顏色");
+                return;
+            }
+            var db = new AppDbContext();
 
+            int productId = db.Products.Where(p => p.ProductName == txtProductName.Text)
+               .Select(p => p.ProductId)
+               .FirstOrDefault();
+
+            int colorId = db.ProductColors.Where(p => p.ColorName == comboBoxColor.Text)
+                .Select(p => p.ColorId)
+                .FirstOrDefault();
+
+            int sizeId = db.ProductSizes.Where(p => p.SizeName == comboBoxSize.Text)
+                .Select(p => p.SizeId)
+                .FirstOrDefault();
+
+            var stockInDb = db.ProductStockDetails
+                .Where(psd => psd.ProductId == productId
+                && psd.ColorId == colorId
+                && psd.SizeId == sizeId).FirstOrDefault();
+
+            if (stockInDb == null)
+            {
+                throw new Exception("查無此庫存設定");
+
+            }
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string destinationFolder = AppDomain.CurrentDomain.BaseDirectory;//存入至DEbug資料夾的路徑
+
+                    string fileName = Path.GetFileName(openFileDialog.FileName);
+
+
+                    string fileExtension = Path.GetExtension(openFileDialog.FileName);
+
+
+                    string productName = txtProductName.Text;
+
+                    string newFileName = "ProductId_" + productId + "_" + productName + "_" + comboBoxColor.Text + fileExtension; //改成新檔名
+
+
+
+                    string newDestinationPath = Path.Combine(destinationFolder + "商品照片\\", newFileName);
+
+                    try
+                    {
+                        if (File.Exists(newDestinationPath))
+                        {
+                            DialogResult result = MessageBox.Show("文件已存在，是否覆蓋？", "覆蓋確認", MessageBoxButtons.YesNo);
+                            if (result == DialogResult.Yes)
+                            {
+                                // 刪除現存文件
+                                File.Delete(newDestinationPath);
+                            }
+                            else
+                            {
+                                MessageBox.Show("上傳已取消。");
+                                return;
+                            }
+                        }
+
+                        File.Copy(openFileDialog.FileName, newDestinationPath);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("上傳照片失敗" + ex.Message);
+                    }
+
+
+
+                    var productPhotos = new ProductPhoto
+                    {
+                        ProductPhotoName = productName + "_" + comboBoxColor.Text,
+                        ProductPhotoPath = "商品照片\\" + newFileName
+                    };
+                    db.ProductPhotos.Add(productPhotos);
+                    //member.PhotoPath = "商品照片\\" + newFileName;
+                    db.SaveChanges();
+
+                    var query = db.ProductPhotos.Where(pp => pp.ProductPhotoName == productName + "_" + comboBoxColor.Text
+                    && pp.ProductPhotoPath == "商品照片\\" + newFileName).FirstOrDefault();
+                    if (query != null)
+                    {
+                        int productPhotoId = query.ProductPhotoId;
+
+                        var qureyPsd = db.ProductStockDetails
+                                        .Where(psd => psd.ProductId == productId
+                                                    && psd.ColorId == colorId
+                                                    && psd.SizeId == sizeId).FirstOrDefault();
+
+                        qureyPsd.ProductPhotoId = productPhotoId;
+                        db.SaveChanges();
+                        DisplayQuantity();
+                        if (!string.IsNullOrEmpty(comboBoxColor.Text) && !string.IsNullOrEmpty(comboBoxSize.Text))
+                        {
+                            try
+                            {
+                                string photoPath = DisplayProductPhoto();
+                                FileStream fs = File.OpenRead(photoPath);
+                                pictureBoxProductPhoto.Image = Image.FromStream(fs);
+                                fs.Close();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("異常狀況:" + ex.Message);
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

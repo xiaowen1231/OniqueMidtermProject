@@ -37,10 +37,6 @@ namespace prjBackgroundManagementSystem
         {
             int? productId = null;
 
-            if (int.TryParse(this.textBoxID.Text, out int number))
-            {
-                productId = number;
-            }
 
             string Name = this.textBoxName.Text;
             string category = this.comboBox.Text;
@@ -61,7 +57,6 @@ namespace prjBackgroundManagementSystem
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxID.Clear();
             textBoxName.Clear();
             comboBox.Text = string.Empty;
             Display();

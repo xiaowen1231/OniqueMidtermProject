@@ -168,3 +168,7 @@ C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prj
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateCategory.resources
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormEditCategory.resources
 C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateMember.resources
+C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateColor.resources
+C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormCreateSize.resources
+C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormProductSizeColor.resources
+C:\ISpan\專題\OniqueMidtermProject\prjBackgroundManagementSystem\obj\Debug\prjBackgroundManagementSystem.FormProductStockDetails.resources

@@ -87,6 +87,7 @@
             // 
             // comboBoxSupplier
             // 
+            this.comboBoxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSupplier.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxSupplier.FormattingEnabled = true;
             this.comboBoxSupplier.Location = new System.Drawing.Point(283, 240);
@@ -112,7 +113,7 @@
             this.dateTimePickerAdded.Name = "dateTimePickerAdded";
             this.dateTimePickerAdded.Size = new System.Drawing.Size(200, 25);
             this.dateTimePickerAdded.TabIndex = 71;
-            this.dateTimePickerAdded.ValueChanged += new System.EventHandler(this.buttonAdd_Click);
+            this.dateTimePickerAdded.ValueChanged += new System.EventHandler(this.dateTimePickerAdded_ValueChanged);
             // 
             // label7
             // 
@@ -177,6 +178,7 @@
             // 
             // comboBoxCategory
             // 
+            this.comboBoxCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategory.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxCategory.FormattingEnabled = true;
             this.comboBoxCategory.Location = new System.Drawing.Point(283, 198);

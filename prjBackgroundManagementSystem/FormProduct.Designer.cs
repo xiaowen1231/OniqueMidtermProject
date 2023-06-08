@@ -48,8 +48,6 @@
             this.buttonSearch = new System.Windows.Forms.Button();
             this.comboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
@@ -230,45 +228,27 @@
             this.comboBox.DisplayMember = "CategoryId";
             this.comboBox.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(516, 118);
+            this.comboBox.Location = new System.Drawing.Point(416, 118);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(142, 24);
             this.comboBox.TabIndex = 85;
             this.comboBox.ValueMember = "CategoryId";
-            this.comboBox.Click += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(447, 121);
+            this.label4.Location = new System.Drawing.Point(347, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 17);
             this.label4.TabIndex = 92;
             this.label4.Text = "產品分類:";
             // 
-            // textBoxID
-            // 
-            this.textBoxID.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxID.Location = new System.Drawing.Point(341, 118);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(100, 25);
-            this.textBoxID.TabIndex = 84;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(272, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
-            this.label3.TabIndex = 91;
-            this.label3.Text = "產品編號:";
-            // 
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBoxName.Location = new System.Drawing.Point(166, 118);
+            this.textBoxName.Location = new System.Drawing.Point(229, 117);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 25);
             this.textBoxName.TabIndex = 83;
@@ -277,7 +257,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(97, 121);
+            this.label2.Location = new System.Drawing.Point(160, 120);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 90;
@@ -319,8 +299,6 @@
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.comboBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxID);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonAdd);
@@ -359,8 +337,6 @@
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.ComboBox comboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonAdd;

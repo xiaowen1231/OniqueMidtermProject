@@ -1,6 +1,7 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,7 +104,18 @@ namespace prjBackgroundManagementSystem
                     db.Products.Remove(delete);
                     db.SaveChanges();
                     MessageBox.Show("刪除商品成功!");
-                    this.Close();
+                    var parent = this.Owner as IGrid;
+                    if(parent != null) 
+                    {
+                        parent.Display();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("請重新刷新表單確認");
+                        return;
+                    }
+                    
                 }
             }
             catch

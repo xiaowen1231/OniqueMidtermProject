@@ -26,13 +26,12 @@ namespace prjBackgroundManagementSystem
             try
             {
                 string Name = textBoxName.Text;
-                if (textBoxName.Text == string.Empty)
+                if (string.IsNullOrEmpty(Name))
                 {
                     MessageBox.Show("請輸入商品名稱!");
                     return;
                 }
-                decimal price = decimal.Parse(textBoxPrice.Text);
-                if (price <= 0)
+                if(!decimal.TryParse(textBoxPrice.Text,out decimal price))
                 {
                     MessageBox.Show("請重新輸入商品價格!");
                     return;
@@ -68,11 +67,13 @@ namespace prjBackgroundManagementSystem
                 else
                 {
                     MessageBox.Show("新增成功，請重新刷新頁面。");
+                    return;
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("請輸入商品價格!");
+                MessageBox.Show("請正確填寫資料!");
+                return;
             }
         }
 
@@ -83,21 +84,10 @@ namespace prjBackgroundManagementSystem
 
         private void FormCreateProduct_Load(object sender, EventArgs e)
         {
-            ProductDto Add = new ProductRepository().AddCategry();
+            var db = new AppDbContext();
 
-            comboBoxCategory.Text = Add.ProductCategoryName;
-            List<string> cateData = new ProductRepository().AllMothed();
-            foreach (string cate in cateData)
-            {
-                comboBoxCategory.Items.Add(cate);
-            }
-
-            comboBoxSupplier.Text = Add.SupplierId.ToString();
-            List<string> supplierData = new ProductRepository().Allsupplier();
-            foreach (string supplier in supplierData)
-            {
-                comboBoxSupplier.Items.Add(supplier);
-            }
+            comboBoxCategory.Items.AddRange(db.Categories.Select(c => c.CategoryName).ToArray());
+            comboBoxSupplier.Items.AddRange(db.Suppliers.Select(s => s.SupplierName).ToArray());
 
         }
 
