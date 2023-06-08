@@ -53,7 +53,7 @@
             this.txtDisplayOrder.Location = new System.Drawing.Point(175, 211);
             this.txtDisplayOrder.Name = "txtDisplayOrder";
             this.txtDisplayOrder.Size = new System.Drawing.Size(196, 25);
-            this.txtDisplayOrder.TabIndex = 63;
+            this.txtDisplayOrder.TabIndex = 1;
             // 
             // txtCategoryName
             // 
@@ -61,7 +61,7 @@
             this.txtCategoryName.Location = new System.Drawing.Point(175, 167);
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(196, 25);
-            this.txtCategoryName.TabIndex = 64;
+            this.txtCategoryName.TabIndex = 0;
             // 
             // label4
             // 
@@ -80,7 +80,7 @@
             this.btnCancelAdd.Location = new System.Drawing.Point(306, 319);
             this.btnCancelAdd.Name = "btnCancelAdd";
             this.btnCancelAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelAdd.TabIndex = 61;
+            this.btnCancelAdd.TabIndex = 3;
             this.btnCancelAdd.Text = "取消新增";
             this.btnCancelAdd.UseVisualStyleBackColor = false;
             this.btnCancelAdd.Click += new System.EventHandler(this.btnCancelAdd_Click);
@@ -92,7 +92,7 @@
             this.btnComfirmAdd.Location = new System.Drawing.Point(387, 319);
             this.btnComfirmAdd.Name = "btnComfirmAdd";
             this.btnComfirmAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnComfirmAdd.TabIndex = 60;
+            this.btnComfirmAdd.TabIndex = 2;
             this.btnComfirmAdd.Text = "確認新增";
             this.btnComfirmAdd.UseVisualStyleBackColor = false;
             this.btnComfirmAdd.Click += new System.EventHandler(this.btnComfirmAdd_Click);
@@ -113,6 +113,7 @@
             // 
             // FormCreateCategory
             // 
+            this.AcceptButton = this.btnComfirmAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 355);

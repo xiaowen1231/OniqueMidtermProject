@@ -98,7 +98,7 @@
             this.dateTimePickerRegisterDate.Location = new System.Drawing.Point(331, 506);
             this.dateTimePickerRegisterDate.Name = "dateTimePickerRegisterDate";
             this.dateTimePickerRegisterDate.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerRegisterDate.TabIndex = 74;
+            this.dateTimePickerRegisterDate.TabIndex = 11;
             // 
             // label12
             // 
@@ -127,14 +127,14 @@
             this.comboBoxMemberLevel.Location = new System.Drawing.Point(331, 467);
             this.comboBoxMemberLevel.Name = "comboBoxMemberLevel";
             this.comboBoxMemberLevel.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxMemberLevel.TabIndex = 71;
+            this.comboBoxMemberLevel.TabIndex = 10;
             // 
             // dateTimePickerDateOfBirth
             // 
             this.dateTimePickerDateOfBirth.Location = new System.Drawing.Point(331, 426);
             this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
             this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerDateOfBirth.TabIndex = 70;
+            this.dateTimePickerDateOfBirth.TabIndex = 9;
             this.dateTimePickerDateOfBirth.ValueChanged += new System.EventHandler(this.dateTimePickerDateOfBirth_ValueChanged);
             // 
             // label10
@@ -173,7 +173,7 @@
             this.comboBoxArea.Location = new System.Drawing.Point(541, 343);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxArea.TabIndex = 66;
+            this.comboBoxArea.TabIndex = 7;
             // 
             // comboBoxCity
             // 
@@ -181,7 +181,7 @@
             this.comboBoxCity.Location = new System.Drawing.Point(371, 343);
             this.comboBoxCity.Name = "comboBoxCity";
             this.comboBoxCity.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxCity.TabIndex = 65;
+            this.comboBoxCity.TabIndex = 6;
             this.comboBoxCity.SelectedIndexChanged += new System.EventHandler(this.comboBoxCity_SelectedIndexChanged);
             // 
             // textBoxAddress
@@ -190,7 +190,7 @@
             this.textBoxAddress.Location = new System.Drawing.Point(331, 382);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(410, 25);
-            this.textBoxAddress.TabIndex = 64;
+            this.textBoxAddress.TabIndex = 8;
             // 
             // label7
             // 
@@ -209,7 +209,7 @@
             this.radioButtonFemale.Location = new System.Drawing.Point(394, 307);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(37, 20);
-            this.radioButtonFemale.TabIndex = 62;
+            this.radioButtonFemale.TabIndex = 5;
             this.radioButtonFemale.TabStop = true;
             this.radioButtonFemale.Text = "女";
             this.radioButtonFemale.UseVisualStyleBackColor = true;
@@ -221,7 +221,7 @@
             this.radioButtonMale.Location = new System.Drawing.Point(341, 307);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(37, 20);
-            this.radioButtonMale.TabIndex = 61;
+            this.radioButtonMale.TabIndex = 4;
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.Text = "男";
             this.radioButtonMale.UseVisualStyleBackColor = true;
@@ -242,7 +242,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(331, 263);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(331, 25);
-            this.textBoxEmail.TabIndex = 59;
+            this.textBoxEmail.TabIndex = 3;
             // 
             // label5
             // 
@@ -260,7 +260,7 @@
             this.textBoxPhone.Location = new System.Drawing.Point(332, 219);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(100, 25);
-            this.textBoxPhone.TabIndex = 57;
+            this.textBoxPhone.TabIndex = 2;
             // 
             // label4
             // 
@@ -278,7 +278,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(331, 175);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(100, 25);
-            this.textBoxPassword.TabIndex = 55;
+            this.textBoxPassword.TabIndex = 1;
             // 
             // label3
             // 
@@ -297,7 +297,7 @@
             this.textBoxMemberId.Location = new System.Drawing.Point(552, 131);
             this.textBoxMemberId.Name = "textBoxMemberId";
             this.textBoxMemberId.Size = new System.Drawing.Size(100, 25);
-            this.textBoxMemberId.TabIndex = 53;
+            this.textBoxMemberId.TabIndex = 1;
             // 
             // textBoxName
             // 
@@ -305,7 +305,7 @@
             this.textBoxName.Location = new System.Drawing.Point(331, 131);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 25);
-            this.textBoxName.TabIndex = 52;
+            this.textBoxName.TabIndex = 0;
             // 
             // labelMemberId
             // 
@@ -335,7 +335,7 @@
             this.buttonCancelEdit.Location = new System.Drawing.Point(671, 576);
             this.buttonCancelEdit.Name = "buttonCancelEdit";
             this.buttonCancelEdit.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelEdit.TabIndex = 49;
+            this.buttonCancelEdit.TabIndex = 13;
             this.buttonCancelEdit.Text = "取消編輯";
             this.buttonCancelEdit.UseVisualStyleBackColor = false;
             this.buttonCancelEdit.Click += new System.EventHandler(this.buttonCancelEdit_Click);
@@ -348,7 +348,7 @@
             this.buttonConfirmEdit.Location = new System.Drawing.Point(752, 576);
             this.buttonConfirmEdit.Name = "buttonConfirmEdit";
             this.buttonConfirmEdit.Size = new System.Drawing.Size(75, 23);
-            this.buttonConfirmEdit.TabIndex = 48;
+            this.buttonConfirmEdit.TabIndex = 12;
             this.buttonConfirmEdit.Text = "確認編輯";
             this.buttonConfirmEdit.UseVisualStyleBackColor = false;
             this.buttonConfirmEdit.Click += new System.EventHandler(this.buttonConfirmEdit_Click);

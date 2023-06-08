@@ -49,7 +49,7 @@
             this.btnClearSearch.Location = new System.Drawing.Point(425, 107);
             this.btnClearSearch.Name = "btnClearSearch";
             this.btnClearSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnClearSearch.TabIndex = 114;
+            this.btnClearSearch.TabIndex = 2;
             this.btnClearSearch.Text = "清除查詢";
             this.btnClearSearch.UseVisualStyleBackColor = false;
             this.btnClearSearch.Click += new System.EventHandler(this.btnClearSearch_Click);
@@ -99,7 +99,7 @@
             this.cboxCategoryName.Location = new System.Drawing.Point(205, 108);
             this.cboxCategoryName.Name = "cboxCategoryName";
             this.cboxCategoryName.Size = new System.Drawing.Size(121, 20);
-            this.cboxCategoryName.TabIndex = 116;
+            this.cboxCategoryName.TabIndex = 0;
             // 
             // btnAdd
             // 
@@ -109,7 +109,7 @@
             this.btnAdd.Location = new System.Drawing.Point(433, 394);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 22);
-            this.btnAdd.TabIndex = 115;
+            this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "新增分類";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAddCategories_Click);
@@ -133,7 +133,7 @@
             this.btnSearch.Location = new System.Drawing.Point(338, 107);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 110;
+            this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "查詢";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -154,6 +154,7 @@
             // 
             // FormCategory
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 431);

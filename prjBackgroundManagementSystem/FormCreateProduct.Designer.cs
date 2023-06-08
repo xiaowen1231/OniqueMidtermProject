@@ -72,7 +72,7 @@
             this.textBox1.Location = new System.Drawing.Point(283, 113);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 51;
+            this.textBox1.TabIndex = 0;
             // 
             // label2
             // 
@@ -136,7 +136,7 @@
             this.comboBox1.Location = new System.Drawing.Point(283, 197);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(198, 25);
-            this.comboBox1.TabIndex = 57;
+            this.comboBox1.TabIndex = 2;
             // 
             // textBox2
             // 
@@ -144,7 +144,7 @@
             this.textBox2.Location = new System.Drawing.Point(283, 155);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 25);
-            this.textBox2.TabIndex = 59;
+            this.textBox2.TabIndex = 1;
             // 
             // label4
             // 
@@ -176,7 +176,7 @@
             this.listBox1.Location = new System.Drawing.Point(283, 365);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(334, 191);
-            this.listBox1.TabIndex = 61;
+            this.listBox1.TabIndex = 6;
             // 
             // label6
             // 
@@ -195,7 +195,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(283, 323);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 63;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // dateTimePicker2
             // 
@@ -203,7 +203,7 @@
             this.dateTimePicker2.Location = new System.Drawing.Point(283, 281);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker2.TabIndex = 65;
+            this.dateTimePicker2.TabIndex = 4;
             // 
             // label7
             // 
@@ -223,7 +223,7 @@
             this.comboBox2.Location = new System.Drawing.Point(283, 239);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(198, 25);
-            this.comboBox2.TabIndex = 67;
+            this.comboBox2.TabIndex = 3;
             // 
             // label8
             // 
@@ -243,7 +243,7 @@
             this.button4.Location = new System.Drawing.Point(725, 588);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 23);
-            this.button4.TabIndex = 68;
+            this.button4.TabIndex = 7;
             this.button4.Text = "加入商品";
             this.button4.UseVisualStyleBackColor = false;
             // 
@@ -264,7 +264,7 @@
             this.button5.Location = new System.Drawing.Point(602, 588);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(117, 23);
-            this.button5.TabIndex = 69;
+            this.button5.TabIndex = 8;
             this.button5.Text = "取消新增";
             this.button5.UseVisualStyleBackColor = false;
             // 

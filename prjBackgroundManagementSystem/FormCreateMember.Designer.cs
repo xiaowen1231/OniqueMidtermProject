@@ -66,10 +66,10 @@
             // 
             // buttonValidateEmail
             // 
-            this.buttonValidateEmail.Location = new System.Drawing.Point(665, 256);
+            this.buttonValidateEmail.Location = new System.Drawing.Point(647, 254);
             this.buttonValidateEmail.Name = "buttonValidateEmail";
             this.buttonValidateEmail.Size = new System.Drawing.Size(75, 23);
-            this.buttonValidateEmail.TabIndex = 130;
+            this.buttonValidateEmail.TabIndex = 4;
             this.buttonValidateEmail.Text = "驗證信箱";
             this.buttonValidateEmail.UseVisualStyleBackColor = true;
             this.buttonValidateEmail.Click += new System.EventHandler(this.buttonValidateEmail_Click);
@@ -95,7 +95,7 @@
             this.dateTimePickerRegisterDate.MaxDate = new System.DateTime(2109, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerRegisterDate.Name = "dateTimePickerRegisterDate";
             this.dateTimePickerRegisterDate.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerRegisterDate.TabIndex = 128;
+            this.dateTimePickerRegisterDate.TabIndex = 12;
             this.dateTimePickerRegisterDate.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // label12
@@ -125,7 +125,7 @@
             this.comboBoxMemberLevel.Location = new System.Drawing.Point(310, 458);
             this.comboBoxMemberLevel.Name = "comboBoxMemberLevel";
             this.comboBoxMemberLevel.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxMemberLevel.TabIndex = 125;
+            this.comboBoxMemberLevel.TabIndex = 11;
             // 
             // dateTimePickerDateOfBirth
             // 
@@ -133,7 +133,7 @@
             this.dateTimePickerDateOfBirth.MaxDate = new System.DateTime(2222, 12, 12, 0, 0, 0, 0);
             this.dateTimePickerDateOfBirth.Name = "dateTimePickerDateOfBirth";
             this.dateTimePickerDateOfBirth.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerDateOfBirth.TabIndex = 124;
+            this.dateTimePickerDateOfBirth.TabIndex = 10;
             this.dateTimePickerDateOfBirth.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // label10
@@ -173,7 +173,7 @@
             this.comboBoxArea.Location = new System.Drawing.Point(520, 334);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxArea.TabIndex = 120;
+            this.comboBoxArea.TabIndex = 8;
             // 
             // comboBoxCity
             // 
@@ -182,7 +182,7 @@
             this.comboBoxCity.Location = new System.Drawing.Point(350, 334);
             this.comboBoxCity.Name = "comboBoxCity";
             this.comboBoxCity.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxCity.TabIndex = 119;
+            this.comboBoxCity.TabIndex = 7;
             this.comboBoxCity.SelectedIndexChanged += new System.EventHandler(this.comboBoxCity_SelectedIndexChanged);
             // 
             // textBoxAddress
@@ -191,7 +191,7 @@
             this.textBoxAddress.Location = new System.Drawing.Point(310, 373);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(410, 25);
-            this.textBoxAddress.TabIndex = 118;
+            this.textBoxAddress.TabIndex = 9;
             // 
             // label7
             // 
@@ -210,7 +210,7 @@
             this.radioButtonFemale.Location = new System.Drawing.Point(373, 298);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(37, 20);
-            this.radioButtonFemale.TabIndex = 116;
+            this.radioButtonFemale.TabIndex = 6;
             this.radioButtonFemale.TabStop = true;
             this.radioButtonFemale.Text = "女";
             this.radioButtonFemale.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@
             this.radioButtonMale.Location = new System.Drawing.Point(320, 298);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(37, 20);
-            this.radioButtonMale.TabIndex = 115;
+            this.radioButtonMale.TabIndex = 5;
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.Text = "男";
             this.radioButtonMale.UseVisualStyleBackColor = true;
@@ -243,7 +243,7 @@
             this.textBoxEmail.Location = new System.Drawing.Point(310, 254);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(331, 25);
-            this.textBoxEmail.TabIndex = 113;
+            this.textBoxEmail.TabIndex = 3;
             this.textBoxEmail.TextChanged += new System.EventHandler(this.textBoxEmail_TextChanged);
             // 
             // labelAlarm
@@ -252,7 +252,7 @@
             this.labelAlarm.BackColor = System.Drawing.SystemColors.Control;
             this.labelAlarm.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labelAlarm.ForeColor = System.Drawing.Color.Red;
-            this.labelAlarm.Location = new System.Drawing.Point(746, 260);
+            this.labelAlarm.Location = new System.Drawing.Point(723, 255);
             this.labelAlarm.Name = "labelAlarm";
             this.labelAlarm.Size = new System.Drawing.Size(114, 19);
             this.labelAlarm.TabIndex = 112;
@@ -275,7 +275,7 @@
             this.textBoxPhone.Location = new System.Drawing.Point(310, 210);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(100, 25);
-            this.textBoxPhone.TabIndex = 110;
+            this.textBoxPhone.TabIndex = 2;
             // 
             // label4
             // 
@@ -293,7 +293,7 @@
             this.textBoxPassword.Location = new System.Drawing.Point(310, 166);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(100, 25);
-            this.textBoxPassword.TabIndex = 108;
+            this.textBoxPassword.TabIndex = 1;
             // 
             // label3
             // 
@@ -311,7 +311,7 @@
             this.textBoxName.Location = new System.Drawing.Point(310, 122);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 25);
-            this.textBoxName.TabIndex = 106;
+            this.textBoxName.TabIndex = 0;
             // 
             // label2
             // 
@@ -330,7 +330,7 @@
             this.buttonCancelAdd.Location = new System.Drawing.Point(681, 568);
             this.buttonCancelAdd.Name = "buttonCancelAdd";
             this.buttonCancelAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancelAdd.TabIndex = 104;
+            this.buttonCancelAdd.TabIndex = 14;
             this.buttonCancelAdd.Text = "取消新增";
             this.buttonCancelAdd.UseVisualStyleBackColor = false;
             this.buttonCancelAdd.Click += new System.EventHandler(this.buttonCancelAdd_Click);
@@ -342,7 +342,7 @@
             this.buttonConfirmAdd.Location = new System.Drawing.Point(762, 568);
             this.buttonConfirmAdd.Name = "buttonConfirmAdd";
             this.buttonConfirmAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonConfirmAdd.TabIndex = 103;
+            this.buttonConfirmAdd.TabIndex = 13;
             this.buttonConfirmAdd.Text = "確認新增";
             this.buttonConfirmAdd.UseVisualStyleBackColor = false;
             this.buttonConfirmAdd.Click += new System.EventHandler(this.buttonConfirmAdd_Click);
@@ -374,6 +374,7 @@
             // 
             // FormCreateMember
             // 
+            this.AcceptButton = this.buttonConfirmAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 607);

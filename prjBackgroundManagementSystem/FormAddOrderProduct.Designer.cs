@@ -67,7 +67,7 @@
             this.textBoxProductName.Name = "textBoxProductName";
             this.textBoxProductName.ReadOnly = true;
             this.textBoxProductName.Size = new System.Drawing.Size(187, 25);
-            this.textBoxProductName.TabIndex = 83;
+            this.textBoxProductName.TabIndex = 0;
             // 
             // label3
             // 
@@ -98,7 +98,7 @@
             this.comboBoxSize.Location = new System.Drawing.Point(306, 208);
             this.comboBoxSize.Name = "comboBoxSize";
             this.comboBoxSize.Size = new System.Drawing.Size(187, 25);
-            this.comboBoxSize.TabIndex = 114;
+            this.comboBoxSize.TabIndex = 1;
             this.comboBoxSize.SelectedIndexChanged += new System.EventHandler(this.comboBoxSize_SelectedIndexChanged);
             // 
             // label7
@@ -120,7 +120,7 @@
             this.comboBoxColor.Location = new System.Drawing.Point(306, 253);
             this.comboBoxColor.Name = "comboBoxColor";
             this.comboBoxColor.Size = new System.Drawing.Size(187, 25);
-            this.comboBoxColor.TabIndex = 116;
+            this.comboBoxColor.TabIndex = 2;
             this.comboBoxColor.SelectedIndexChanged += new System.EventHandler(this.comboBoxColor_SelectedIndexChanged);
             // 
             // label2
@@ -165,7 +165,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(418, 409);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd.TabIndex = 120;
+            this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "加入";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -177,7 +177,7 @@
             this.buttonClose.Location = new System.Drawing.Point(306, 409);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
-            this.buttonClose.TabIndex = 121;
+            this.buttonClose.TabIndex = 5;
             this.buttonClose.Text = "返回";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -188,7 +188,7 @@
             this.textBoxQuantity.Location = new System.Drawing.Point(307, 294);
             this.textBoxQuantity.Name = "textBoxQuantity";
             this.textBoxQuantity.Size = new System.Drawing.Size(100, 25);
-            this.textBoxQuantity.TabIndex = 122;
+            this.textBoxQuantity.TabIndex = 3;
             // 
             // labelHint
             // 
@@ -210,13 +210,14 @@
             this.buttonSelectProduct.Location = new System.Drawing.Point(74, 409);
             this.buttonSelectProduct.Name = "buttonSelectProduct";
             this.buttonSelectProduct.Size = new System.Drawing.Size(75, 23);
-            this.buttonSelectProduct.TabIndex = 124;
+            this.buttonSelectProduct.TabIndex = 6;
             this.buttonSelectProduct.Text = "選擇商品";
             this.buttonSelectProduct.UseVisualStyleBackColor = false;
             this.buttonSelectProduct.Click += new System.EventHandler(this.buttonSelectProduct_Click);
             // 
             // FormAddOrderProduct
             // 
+            this.AcceptButton = this.buttonAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 515);

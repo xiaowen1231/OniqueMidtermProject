@@ -79,11 +79,17 @@ namespace prjBackgroundManagementSystem
         private void FormHomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             var result = MessageBox.Show("確定關閉系統嗎?","提示訊息!",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+                return;
+
+            }
+            else
             {
                 this.Owner.Show();
             }
-            
+
         }
 
 

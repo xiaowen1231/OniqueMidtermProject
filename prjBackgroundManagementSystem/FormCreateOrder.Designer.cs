@@ -117,7 +117,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
             this.textBoxName.Size = new System.Drawing.Size(228, 25);
-            this.textBoxName.TabIndex = 81;
+            this.textBoxName.TabIndex = 1;
             // 
             // comboBoxShippingMethod
             // 
@@ -127,7 +127,7 @@
             this.comboBoxShippingMethod.Location = new System.Drawing.Point(346, 206);
             this.comboBoxShippingMethod.Name = "comboBoxShippingMethod";
             this.comboBoxShippingMethod.Size = new System.Drawing.Size(228, 25);
-            this.comboBoxShippingMethod.TabIndex = 82;
+            this.comboBoxShippingMethod.TabIndex = 2;
             // 
             // textBoxAddress
             // 
@@ -136,7 +136,7 @@
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(228, 69);
-            this.textBoxAddress.TabIndex = 83;
+            this.textBoxAddress.TabIndex = 5;
             // 
             // comboBoxPayment
             // 
@@ -146,7 +146,7 @@
             this.comboBoxPayment.Location = new System.Drawing.Point(346, 251);
             this.comboBoxPayment.Name = "comboBoxPayment";
             this.comboBoxPayment.Size = new System.Drawing.Size(228, 25);
-            this.comboBoxPayment.TabIndex = 84;
+            this.comboBoxPayment.TabIndex = 3;
             // 
             // comboBoxDiscount
             // 
@@ -156,7 +156,7 @@
             this.comboBoxDiscount.Location = new System.Drawing.Point(346, 296);
             this.comboBoxDiscount.Name = "comboBoxDiscount";
             this.comboBoxDiscount.Size = new System.Drawing.Size(228, 25);
-            this.comboBoxDiscount.TabIndex = 85;
+            this.comboBoxDiscount.TabIndex = 4;
             // 
             // buttonSelectMember
             // 
@@ -165,7 +165,7 @@
             this.buttonSelectMember.Location = new System.Drawing.Point(499, 132);
             this.buttonSelectMember.Name = "buttonSelectMember";
             this.buttonSelectMember.Size = new System.Drawing.Size(75, 23);
-            this.buttonSelectMember.TabIndex = 89;
+            this.buttonSelectMember.TabIndex = 0;
             this.buttonSelectMember.Text = "選擇會員";
             this.buttonSelectMember.UseVisualStyleBackColor = false;
             this.buttonSelectMember.Click += new System.EventHandler(this.buttonSelectMember_Click);
@@ -186,7 +186,7 @@
             this.buttonCreate.Location = new System.Drawing.Point(499, 433);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(75, 23);
-            this.buttonCreate.TabIndex = 90;
+            this.buttonCreate.TabIndex = 6;
             this.buttonCreate.Text = "新增";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
@@ -198,13 +198,14 @@
             this.buttonClose.Location = new System.Drawing.Point(418, 433);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 23);
-            this.buttonClose.TabIndex = 91;
+            this.buttonClose.TabIndex = 7;
             this.buttonClose.Text = "關閉";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // FormCreateOrder
             // 
+            this.AcceptButton = this.buttonCreate;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(613, 477);

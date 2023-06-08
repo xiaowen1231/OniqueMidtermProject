@@ -79,7 +79,7 @@
             this.dateTimePickerRegister.Location = new System.Drawing.Point(306, 492);
             this.dateTimePickerRegister.Name = "dateTimePickerRegister";
             this.dateTimePickerRegister.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerRegister.TabIndex = 127;
+            this.dateTimePickerRegister.TabIndex = 11;
             this.dateTimePickerRegister.Value = new System.DateTime(2023, 5, 21, 13, 56, 47, 0);
             // 
             // label12
@@ -108,14 +108,14 @@
             this.comboBoxPosition.Location = new System.Drawing.Point(306, 453);
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxPosition.TabIndex = 124;
+            this.comboBoxPosition.TabIndex = 10;
             // 
             // dateTimePickerBirth
             // 
             this.dateTimePickerBirth.Location = new System.Drawing.Point(306, 412);
             this.dateTimePickerBirth.Name = "dateTimePickerBirth";
             this.dateTimePickerBirth.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerBirth.TabIndex = 123;
+            this.dateTimePickerBirth.TabIndex = 9;
             this.dateTimePickerBirth.ValueChanged += new System.EventHandler(this.dateTimePickerBirth_ValueChanged);
             // 
             // label10
@@ -154,7 +154,7 @@
             this.comboBoxArea.Location = new System.Drawing.Point(516, 329);
             this.comboBoxArea.Name = "comboBoxArea";
             this.comboBoxArea.Size = new System.Drawing.Size(121, 20);
-            this.comboBoxArea.TabIndex = 119;
+            this.comboBoxArea.TabIndex = 7;
             // 
             // comboboxCity
             // 
@@ -162,7 +162,7 @@
             this.comboboxCity.Location = new System.Drawing.Point(346, 329);
             this.comboboxCity.Name = "comboboxCity";
             this.comboboxCity.Size = new System.Drawing.Size(121, 20);
-            this.comboboxCity.TabIndex = 118;
+            this.comboboxCity.TabIndex = 6;
             this.comboboxCity.SelectedIndexChanged += new System.EventHandler(this.comboboxCity_SelectedIndexChanged);
             // 
             // txtAddress
@@ -171,7 +171,7 @@
             this.txtAddress.Location = new System.Drawing.Point(306, 368);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(410, 25);
-            this.txtAddress.TabIndex = 117;
+            this.txtAddress.TabIndex = 8;
             // 
             // label7
             // 
@@ -190,7 +190,7 @@
             this.radioButtonFemale.Location = new System.Drawing.Point(369, 293);
             this.radioButtonFemale.Name = "radioButtonFemale";
             this.radioButtonFemale.Size = new System.Drawing.Size(37, 20);
-            this.radioButtonFemale.TabIndex = 115;
+            this.radioButtonFemale.TabIndex = 5;
             this.radioButtonFemale.TabStop = true;
             this.radioButtonFemale.Text = "女";
             this.radioButtonFemale.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             this.radioButtonMale.Location = new System.Drawing.Point(316, 293);
             this.radioButtonMale.Name = "radioButtonMale";
             this.radioButtonMale.Size = new System.Drawing.Size(37, 20);
-            this.radioButtonMale.TabIndex = 114;
+            this.radioButtonMale.TabIndex = 4;
             this.radioButtonMale.TabStop = true;
             this.radioButtonMale.Text = "男";
             this.radioButtonMale.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.txtEmail.Location = new System.Drawing.Point(306, 249);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(331, 25);
-            this.txtEmail.TabIndex = 112;
+            this.txtEmail.TabIndex = 3;
             // 
             // label5
             // 
@@ -241,7 +241,7 @@
             this.txtPhone.Location = new System.Drawing.Point(306, 205);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 25);
-            this.txtPhone.TabIndex = 110;
+            this.txtPhone.TabIndex = 2;
             // 
             // label4
             // 
@@ -259,7 +259,7 @@
             this.txtPassword.Location = new System.Drawing.Point(306, 161);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(100, 25);
-            this.txtPassword.TabIndex = 108;
+            this.txtPassword.TabIndex = 1;
             // 
             // label3
             // 
@@ -277,7 +277,7 @@
             this.txtName.Location = new System.Drawing.Point(306, 117);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 25);
-            this.txtName.TabIndex = 106;
+            this.txtName.TabIndex = 0;
             // 
             // label2
             // 
@@ -296,7 +296,7 @@
             this.btnCancer.Location = new System.Drawing.Point(686, 589);
             this.btnCancer.Name = "btnCancer";
             this.btnCancer.Size = new System.Drawing.Size(75, 23);
-            this.btnCancer.TabIndex = 104;
+            this.btnCancer.TabIndex = 13;
             this.btnCancer.Text = "取消";
             this.btnCancer.UseVisualStyleBackColor = false;
             this.btnCancer.Click += new System.EventHandler(this.btnCancer_Click);
@@ -308,7 +308,7 @@
             this.btnComfirmAdd.Location = new System.Drawing.Point(767, 589);
             this.btnComfirmAdd.Name = "btnComfirmAdd";
             this.btnComfirmAdd.Size = new System.Drawing.Size(75, 23);
-            this.btnComfirmAdd.TabIndex = 103;
+            this.btnComfirmAdd.TabIndex = 12;
             this.btnComfirmAdd.Text = "編輯";
             this.btnComfirmAdd.UseVisualStyleBackColor = false;
             this.btnComfirmAdd.Click += new System.EventHandler(this.btnComfirmAdd_Click);
@@ -351,6 +351,7 @@
             // 
             // FormEditEmployee
             // 
+            this.AcceptButton = this.btnComfirmAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 623);
