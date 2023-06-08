@@ -17,6 +17,7 @@ namespace Onique.EStore.SqlDataLayer.Dto
         public int OrderQuantity { get; set; }
         public string ProductDescription { get; set; }
         public int StockQuantity { get; set; }
+        public int? ProductPhotoId { get; set; }
         public string PhotoPath { get; set; }
         public decimal Price { get; set; }
     }

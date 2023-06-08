@@ -49,7 +49,10 @@ namespace prjBackgroundManagementSystem
 
             comboBoxUpdateColor.Items.AddRange(repo.GetProductColor(textBoxProductName.Text).ToArray());
             comboBoxUpdateSize.Items.AddRange(repo.GetProductSize(textBoxProductName.Text).ToArray());
-
+            if (dto.PhotoPath == null)
+            {
+                dto.PhotoPath = "商品照片/defaultProductPhoto.jpg";
+            }
 
             string loadImage = dto.PhotoPath;
 
@@ -133,7 +136,10 @@ namespace prjBackgroundManagementSystem
 
                     labelQuantity.Text = $"庫存數量" + dto.StockQuantity;
                     this._stockQuantity = dto.StockQuantity;
-
+                    if (dto.PhotoPath == null)
+                    {
+                        dto.PhotoPath = "商品照片/defaultProductPhoto.jpg";
+                    }
                     FileStream fs = File.OpenRead(dto.PhotoPath);
                     pictureBoxProductPhoto.Image = Image.FromStream(fs);
                     fs.Close();

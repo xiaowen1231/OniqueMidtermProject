@@ -264,18 +264,30 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
                 (c => c.ColorName == color, s => s.ColorId);
 
             var query = from psd in db.ProductStockDetails
-                        join pp in db.ProductPhotos
-                        on psd.ProductPhotoId equals pp.ProductPhotoId
                         where psd.ProductId == id
                         && psd.SizeId == sizeId
                         && psd.ColorId == colorId
                         select new OrderDetailProductDto
                         {
                             StockQuantity = psd.Quantity,
-                            PhotoPath = pp.ProductPhotoPath
+                            ProductPhotoId = psd.ProductId,
                         };
-
-            return query.FirstOrDefault();
+           var dto = query.FirstOrDefault();
+            if (dto.ProductPhotoId == null)
+            {
+                dto.PhotoPath = null;
+            }
+            else
+            {
+                dto.PhotoPath = (from psd in db.ProductStockDetails
+                             join pp in db.ProductPhotos
+                             on psd.ProductPhotoId equals pp.ProductPhotoId
+                             where psd.ProductId == id
+                             && psd.SizeId == sizeId
+                             && psd.ColorId == colorId
+                             select pp.ProductPhotoPath).FirstOrDefault();
+            }
+            return dto;
         }
 
         public void CreateOrderDetail(int orderId, string product, int orderQuantity
