@@ -389,6 +389,12 @@
   <ItemGroup>
     <None Include="bin\Debug\ProjectPicture\notUploaded.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ONIQUE LOGO  2021更新版png白_工作區域 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\字.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

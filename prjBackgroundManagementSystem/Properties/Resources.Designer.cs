@@ -93,6 +93,26 @@ namespace prjBackgroundManagementSystem.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
+        internal static System.Drawing.Bitmap ONIQUE_LOGO__2021更新版png白_工作區域_1 {
+            get {
+                object obj = ResourceManager.GetObject("ONIQUE LOGO  2021更新版png白_工作區域 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 字 {
+            get {
+                object obj = ResourceManager.GetObject("字", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
         internal static System.Drawing.Bitmap 衣服圖1 {
             get {
                 object obj = ResourceManager.GetObject("衣服圖1", resourceCulture);

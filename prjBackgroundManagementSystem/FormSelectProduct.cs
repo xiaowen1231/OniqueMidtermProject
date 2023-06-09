@@ -32,7 +32,8 @@ namespace prjBackgroundManagementSystem
 
         private void Display()
         {
-            
+            comboBoxCategory.Items.Clear();
+
             string name = textBoxName.Text;
             string category = comboBoxCategory.Text;
 

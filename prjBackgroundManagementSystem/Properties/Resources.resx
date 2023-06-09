@@ -121,6 +121,9 @@
   <data name="Employee1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Employee1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ONIQUE LOGO  2021更新版png白_工作區域 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ONIQUE LOGO  2021更新版png白_工作區域 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -129,5 +132,8 @@
   </data>
   <data name="衣服圖1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\衣服圖1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="字" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\字.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
