@@ -49,6 +49,7 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             var query = from ps in db.ProductSizes.AsNoTracking()
                         select new SizeDto
                         {
+                            SizeId = ps.SizeId,
                             SizeName = ps.SizeName,
                         };
             if (!string.IsNullOrEmpty(SizeName))
