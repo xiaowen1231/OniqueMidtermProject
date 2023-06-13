@@ -1,6 +1,7 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +14,13 @@ using System.Windows.Forms;
 
 namespace prjBackgroundManagementSystem
 {
-    public partial class FormCreateSize : Form
+    public partial class FormCreateSize : Form,IGrid
     {
         List<SizeDto> data = new List<SizeDto>();
 
         public FormCreateSize(int id)
         {
             InitializeComponent();
-            this.Load += FormCreateSize_Load;
-
         }
 
         private void FormCreateSize_Load(object sender, EventArgs e)
@@ -42,13 +41,21 @@ namespace prjBackgroundManagementSystem
                     MessageBox.Show("請輸入想新增的尺寸!");
                     return;
                 }
+
                 var db = new AppDbContext();
-                var Productsize = db.ProductSizes.Where(ps => ps.SizeName == txtSize.Text).Select(ps => ps.SizeName).FirstOrDefault();
-                if (Productsize == txtSize.Text)
+
+                var Productsize = db.ProductSizes
+                    .Where(ps => ps.SizeName == txtSize.Text)
+                    .Select(ps => ps.SizeName)
+                    .FirstOrDefault();
+
+
+                if (Productsize != null)
                 {
                     MessageBox.Show("新增尺寸失敗，可能已有相同的尺寸，請確認後再試一次!");
                     return;
                 }
+
                 var dto = new SizeDto();
 
                 string SizeName = txtSize.Text;
@@ -74,6 +81,15 @@ namespace prjBackgroundManagementSystem
             dataGridView1.DataSource = data;
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
 
+            int sizeId = data[e.RowIndex].SizeId;
+
+            var frm = new FormEditSize(sizeId);
+            frm.Owner = this;
+            frm.ShowDialog();
+        }
     }
 }

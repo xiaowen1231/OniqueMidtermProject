@@ -19,8 +19,6 @@ namespace prjBackgroundManagementSystem
         public FormProduct()
         {
             InitializeComponent();
-            this.Load += FormProduct_Load;
-
         }
 
         private void FormProduct_Load(object sender, EventArgs e)
