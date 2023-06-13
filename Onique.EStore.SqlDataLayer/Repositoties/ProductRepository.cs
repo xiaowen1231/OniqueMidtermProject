@@ -56,23 +56,19 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             {
                 query = query.Where(ps => ps.SizeName == SizeName);
             }
-            query = query.OrderBy(ps => ps.SizeName);
             return query.ToList();
         }
 
-        public List<ColorDto> CreateColor(string ColorName)
+        public List<ColorDto> CreateColor()
         {
             AppDbContext db = new AppDbContext();
             var query = from pc in db.ProductColors.AsNoTracking()
                         select new ColorDto
                         {
+                            ColorId = pc.ColorId,
                             ColorName = pc.ColorName,
                         };
-            if (!string.IsNullOrEmpty(ColorName))
-            {
-                query = query.Where(pc => pc.ColorName == ColorName);
-            }
-            query = query.OrderByDescending(pc => pc.ColorName);
+            
             return query.ToList();
         }
 

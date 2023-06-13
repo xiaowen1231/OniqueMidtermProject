@@ -103,9 +103,9 @@ namespace prjBackgroundManagementSystem
             try
             {
                 db.ProductSizes.Remove(query);
-                MessageBox.Show("刪除成功!");
+               
                 db.SaveChanges();
-
+                MessageBox.Show("刪除成功!");
                 var parent = this.Owner as IGrid;
 
                 if (parent != null)
