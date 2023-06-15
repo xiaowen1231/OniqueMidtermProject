@@ -357,7 +357,10 @@ namespace Onique.EStore.SqlDataLayer.Repositoties
             int originalStock = productStockDetail.Quantity;
             
             productStockDetail.Quantity = originalStock-quantity;
-
+            if(productStockDetail.Quantity < 0)
+            {
+                throw new Exception("庫存不足!");
+            }
             db.SaveChanges();
 
         }
