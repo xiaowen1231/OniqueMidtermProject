@@ -57,3 +57,17 @@ C:\ISpan\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore
 C:\ISpan\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.pdb
 =======
 >>>>>>> Stashed changes
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.dll.config
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.dll
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\Onique.EStore.SqlDataLayer.pdb
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.dll
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.xml
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\zh-Hant\EntityFramework.resources.dll
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\bin\Debug\zh-Hant\EntityFramework.SqlServer.resources.dll
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.AssemblyReference.cache
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.csproj.CopyComplete
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.dll
+C:\Users\User\Documents\OniqueMidtermProject\Onique.EStore.SqlDataLayer\obj\Debug\Onique.EStore.SqlDataLayer.pdb
