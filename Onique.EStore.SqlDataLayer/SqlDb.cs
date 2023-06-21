@@ -20,7 +20,7 @@ namespace Onique.EStore.SqlDataLayer
                 return connStr;
 
             }
-            catch (Exception ex)
+            catch 
             {
                 throw new Exception($"找不到連線字串,名稱為{connName}, 請確認之後再試一次");
             }

@@ -53,7 +53,7 @@ namespace prjBackgroundManagementSystem
                     pictureBoxMemberPhoto.Image = Image.FromStream(fs);
                     fs.Close();
                 }
-            }catch (Exception ex)
+            }catch 
             {
                 MessageBox.Show("載入照片異常");
             }
