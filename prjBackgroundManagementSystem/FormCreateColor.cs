@@ -1,6 +1,7 @@
 ﻿using Onique.EStore.SqlDataLayer.Dto;
 using Onique.EStore.SqlDataLayer.EFModels;
 using Onique.EStore.SqlDataLayer.Repositoties;
+using prjBackgroundManagementSystem.interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,12 @@ using System.Windows.Forms;
 
 namespace prjBackgroundManagementSystem
 {
-    public partial class FormCreateColor : Form
+    public partial class FormCreateColor : Form ,IGrid
     {
         List<ColorDto> data = new List<ColorDto>();
         public FormCreateColor(int id)
         {
             InitializeComponent();
-            this.Load += FormCreateColor_Load;
         }
 
         private void FormCreateColor_Load(object sender, EventArgs e)
@@ -29,8 +29,7 @@ namespace prjBackgroundManagementSystem
 
         public void Display()
         {
-            string ColorName = string.Empty;
-            data = new ProductRepository().CreateColor(ColorName);
+            data = new ProductRepository().CreateColor();
             dataGridView1.DataSource = data;
         }
 
@@ -69,6 +68,17 @@ namespace prjBackgroundManagementSystem
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex < 0) { return; }
+
+            int id = this.data[e.RowIndex].ColorId;
+
+            var frm = new FormEditColor(id);
+            frm.Owner = this;
+            frm.ShowDialog();
         }
     }
 }

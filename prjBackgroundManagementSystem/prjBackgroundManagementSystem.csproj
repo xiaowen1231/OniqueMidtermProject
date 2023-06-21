@@ -133,6 +133,12 @@
     <Compile Include="FormEditCategory.Designer.cs">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEditColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditColor.Designer.cs">
+      <DependentUpon>FormEditColor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,12 @@
     </Compile>
     <Compile Include="FormEditPorduct.Designer.cs">
       <DependentUpon>FormEditPorduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditSize.Designer.cs">
+      <DependentUpon>FormEditSize.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEmployee.cs">
       <SubType>Form</SubType>
@@ -275,6 +287,9 @@
     <EmbeddedResource Include="FormEditCategory.resx">
       <DependentUpon>FormEditCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditColor.resx">
+      <DependentUpon>FormEditColor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEditEmployee.resx">
       <DependentUpon>FormEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditPorduct.resx">
       <DependentUpon>FormEditPorduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditSize.resx">
+      <DependentUpon>FormEditSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEmployee.resx">
       <DependentUpon>FormEmployee.cs</DependentUpon>

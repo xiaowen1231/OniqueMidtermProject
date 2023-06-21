@@ -143,8 +143,7 @@ namespace prjBackgroundManagementSystem
             try
             {
                 var service = new OrderService();
-                service.UpdateOrderStatus(_orderId, comboBoxStatus.Text
-                    , labelStatus.Text, labelPayment.Text);
+                
 
                 foreach (var productDetail in this.OrderProductsDetail)
                 {
@@ -156,6 +155,9 @@ namespace prjBackgroundManagementSystem
                         labelStatus.Text);
 
                 }
+
+                service.UpdateOrderStatus(_orderId, comboBoxStatus.Text
+                    , labelStatus.Text, labelPayment.Text);
 
                 MessageBox.Show("訂單狀態修改成功");
 

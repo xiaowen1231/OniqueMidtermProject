@@ -311,9 +311,9 @@
             // buttonUpdate
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.White;
-            this.buttonUpdate.Location = new System.Drawing.Point(306, 575);
+            this.buttonUpdate.Location = new System.Drawing.Point(306, 574);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 24);
             this.buttonUpdate.TabIndex = 2;
             this.buttonUpdate.Text = "確認更改";
             this.buttonUpdate.UseVisualStyleBackColor = false;
