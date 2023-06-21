@@ -362,3 +362,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 .vs/slnBackgroundManagementSystem/v17/.suo
+/slnBackgroundManagementSystem/v17/*.suo
+*.suo
+.vs/slnBackgroundManagementSystem/v17/*.suo
