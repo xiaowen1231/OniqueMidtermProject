@@ -367,3 +367,15 @@ FodyWeavers.xsd
 *.cache
 *.cache
 *.cache
+prjBackgroundManagementSystem/obj/Debug/prjBackgroundManagementSystem.pdb
+prjBackgroundManagementSystem/obj/Debug/prjBackgroundManagementSystem.exe
+prjBackgroundManagementSystem/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+prjBackgroundManagementSystem/bin/Debug/prjBackgroundManagementSystem.pdb
+prjBackgroundManagementSystem/bin/Debug/prjBackgroundManagementSystem.exe
+prjBackgroundManagementSystem/bin/Debug/Onique.EStore.SqlDataLayer.pdb
+prjBackgroundManagementSystem/bin/Debug/Onique.EStore.SqlDataLayer.dll
+Onique.EStore.SqlDataLayer/obj/Debug/Onique.EStore.SqlDataLayer.pdb
+Onique.EStore.SqlDataLayer/obj/Debug/Onique.EStore.SqlDataLayer.dll
+Onique.EStore.SqlDataLayer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Onique.EStore.SqlDataLayer/bin/Debug/Onique.EStore.SqlDataLayer.pdb
+Onique.EStore.SqlDataLayer/bin/Debug/Onique.EStore.SqlDataLayer.dll
